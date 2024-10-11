@@ -1,0 +1,53 @@
+.subAppTitle-div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem 0;
+  position: relative;
+}
+
+.subAppTitle-div img {
+  width: 3rem;
+}
+
+.subAppTitle-toolTip-div:hover p {
+  display: block;
+}
+
+.subAppTitle-toolTip-div {
+  position: relative;
+  /* Para que el tooltip se posicione respecto a este contenedor */
+  /*display: inline-block;*/
+  /* Permite que el tooltip se posicione adecuadamente */
+  height: fit-content;
+}
+
+.subAppTitle-div p {
+  display: none;
+  position: absolute;
+  background-color: white;
+  padding: 1rem;
+  z-index: 1;
+  color: black;
+  margin-top: 0.5rem;
+  border-radius: 20px;
+  transform: translateX(-45%);
+  left: 50%;
+  /* Comienza centrado en el contenedor */
+  transform: translate(-50%, -10px);
+  /* Ajusta para que esté centrado y ligeramente arriba */
+  width: 300px;
+  max-width: 500px;
+}
+
+@media (orientation: portrait) {
+  .subAppTitle-div h1 {
+    font-size: 1.5rem;
+  }
+
+  .subAppTitle-div img {
+    width: 2rem;
+  }
+}

@@ -1,0 +1,35 @@
+.languageOption-div {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+  height: 36px;
+  width: auto;
+  min-width: 140px;
+  /*border: solid 2px black;*/
+  border-radius: 10px;
+  cursor: pointer;
+  margin: -2px 0;
+  background-color: #1E1E1E;
+  transition: background-color 0.3s;
+}
+
+.languageOption-div img {
+  height: 1.5rem;
+}
+
+.languageOption-div:hover {
+  background-color: #000;
+}
+
+.expanded-language-options>div {
+  border-radius: 0;
+}
+
+.expanded-language-options>div:first-child {
+  border-radius: 10px 10px 0 0;
+}
+
+.expanded-language-options>div:last-child {
+  border-radius: 0 0 10px 10px;
+}

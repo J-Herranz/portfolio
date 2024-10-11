@@ -1,0 +1,67 @@
+.subAppCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 700px;
+  padding: 0.5rem;
+  border-radius: 20px;
+  box-shadow: 0 0 2px 0;
+  margin: 1rem;
+  transition: transform 0.15s ease;
+  background: radial-gradient(circle, #111 0%, #444 75%);
+}
+
+.subAppCard:hover {
+  background-color: white;
+  color: white;
+  transform: scale(1.05)
+}
+
+.subAppCard>img {
+  width: 65%;
+  height: auto;
+  border-radius: 50px;
+  /*border: 4px solid black;*/
+}
+
+.subAppCard>div {
+  width: 35%;
+  margin-top: 1rem;
+}
+
+.subAppCard h4 {
+  padding: 0.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.subAppCard p {
+  width: 100%;
+  padding: 0 0 0 1.5rem;
+  margin: auto;
+}
+
+@media (orientation: portrait) {
+  .subAppCard {
+    width: 100%;
+    flex-direction: column-reverse;
+    font-size: small;
+    margin-bottom: 3rem;
+    gap: 1rem
+  }
+
+  .subAppCard h4 {
+    font-size: 1rem;
+    font-weight: bold;
+    border-bottom: 1px solid white;
+    margin-bottom: 0.5rem;
+  }
+
+  .subAppCard>div {
+    width: 100%;
+  }
+
+  .subAppCard>img {
+    width: 100%;
+  }
+}

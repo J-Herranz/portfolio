@@ -1,0 +1,45 @@
+.homeApp h1 {
+  margin: auto;
+  width: fit-content;
+  padding: 1rem;
+}
+
+.homeApp hr {
+  color: white;
+  width: 90%;
+  margin: 1rem auto;
+}
+
+.homeApp section h2 {
+  margin: auto;
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+}
+
+.homeApp>section h3 {
+  margin: auto;
+  width: fit-content;
+  padding: 1rem;
+}
+
+.homeApp>section>p {
+  width: 80%;
+  padding: 1rem;
+  margin: auto;
+  text-align: center;
+}
+
+.subAppCards-section {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: auto;
+}
+
+.subAppCards-section>h2 {
+  width: 100%;
+  text-align: center
+}

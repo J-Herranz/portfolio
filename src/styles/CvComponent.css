@@ -1,0 +1,22 @@
+.cv-button-div {
+  width: 75px;
+  height: 36px;
+  padding: 0.5rem;
+  background-color: #1E1E1E;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 10px;
+  margin: -2px 0;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.cv-button-div:hover {
+  background-color: #000;
+}
+
+.cv-button-div>img {
+  height: 1.5rem;
+}
