@@ -117,6 +117,7 @@ git clone https://github.com/J-Herranz/portfolio.git
 2. Navega al directorio del proyecto:
 ```bash
 cd portafolio-react
+```
 
 3. Instala las dependencias:
 ```bash
