@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useCurrentApp } from './hooks/useCurrentApp.js';
 import { useTranslations } from './hooks/useTranslations.js';
 import { useDarkMode } from './hooks/useDarkMode.js';
@@ -17,11 +17,6 @@ function App() {
 
     //const darkmodeBool = useRef(true);
 
-
-    useEffect(() => { console.log(`app darkmodeBool ${darkmodeBool}`) }, [darkmodeBool])
-
-
-
     const sortedSubAppInfo = (translations && translations.subAppInfo) ? translations.subAppInfo.sort((a, b) => {
         if (a.appCode === 'home') return -1;
         if (b.appCode === 'home') return 1;
@@ -36,7 +31,7 @@ function App() {
                     <>
                         <Header setApp={setCurrentApp} setLanguage={setLanguage} languageCode={language} t={sortedSubAppInfo} />
                         <div className='subApp-div'>
-                            {renderApp({ darkmodeBool: darkmodeBool })}
+                            {renderApp({ darkmodeBool })}
                         </div>
 
                         <footer className="footer">

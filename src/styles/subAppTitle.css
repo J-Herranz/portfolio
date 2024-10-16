@@ -8,6 +8,10 @@
   position: relative;
 }
 
+.subAppTitle-div>h1 {
+  transition: 0.3s color;
+}
+
 .subAppTitle-div img {
   width: 3rem;
 }
@@ -50,4 +54,8 @@
   .subAppTitle-div img {
     width: 2rem;
   }
+}
+
+.subAppTitle-hr {
+  width: 90%;
 }

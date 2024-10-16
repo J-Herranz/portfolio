@@ -1,29 +1,3 @@
-/*import { useRef, useEffect } from 'react';
-import Darkmode from 'darkmode-js';
-
-const useDarkMode = () => {
-  const darkmodeBool = useRef(true);
-
-  useEffect(() => {
-    const options = {
-      bottom: '32px',
-      right: '32px',
-      label: '🌓',
-      time: '0.5s',
-      onToggle: (isDark) => {
-        darkmodeBool.current = isDark;
-      }
-    };
-
-    const darkmode = new Darkmode(options);
-    darkmode.showWidget();
-  }, []);
-
-  return darkmodeBool.current;
-};
-
-export { useDarkMode };*/
-
 import { useState, useEffect } from 'react';
 import Darkmode from 'darkmode-js';
 
@@ -32,25 +6,30 @@ const useDarkMode = () => {
 
   useEffect(() => {
     const options = {
-      bottom: '32px',
-      right: '32px',
-      label: '🌓',
       time: '0.5s',
-      onToggle: (isDark) => {
-        console.log(`onToggle called: ${isDark}`); // Verificar si se llama
-        setIsDarkMode(isDark);
-      }
+      label: '🌓',
     };
 
     const darkmode = new Darkmode(options);
     darkmode.showWidget();
-    console.log("pepito" + darkmode);
+
+    // Manejador de click en el botón del widget
+    const button = document.querySelector('.darkmode-toggle');
+    if (button) {
+      button.addEventListener('click', () => {
+        const currentMode = darkmode.isActivated();
+        setIsDarkMode(currentMode);
+      });
+    }
+
     return () => {
-      // Aquí podrías limpiar si es necesario
+      if (button) {
+        button.removeEventListener('click', () => { });
+      }
     };
   }, []);
 
   return isDarkMode;
 };
 
-export { useDarkMode };
+export { useDarkMode }

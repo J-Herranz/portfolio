@@ -1,0 +1,27 @@
+.subApp-div {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.countryNameDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+  height: calc(2 * 1.5em);
+  text-align: center;
+}
+
+
+.flagAndInfo-div {
+  min-height: 50vh;
+  width: 100%;
+  display: flex;
+}
+
+#newCountry-button {
+  margin: 2rem 0 0 0;
+}

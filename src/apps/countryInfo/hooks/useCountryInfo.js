@@ -3,7 +3,7 @@ import { getCountryInfo } from '../services/getCountryInfo.js';
 
 function useCountryInfo({ countryCode, setCountryName }) {
   const [countryInfo, setCountryInfo] = useState(null);
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
   const refreshCountryInfo = async () => {

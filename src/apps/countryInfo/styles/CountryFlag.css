@@ -1,0 +1,24 @@
+.flagDiv {
+  margin: 1rem;
+  flex: 0 0 33%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flagDiv>img {
+  width: 100%;
+}
+
+.flagDiv>p {
+  width: fit-content;
+  font-weight: bold;
+}
+
+.errorMessage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+  font-weight: bold;
+}
