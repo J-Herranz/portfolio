@@ -3,7 +3,7 @@ import { SubAppTitle } from "../../../components/SubAppTitle";
 function renderContent({ apiResponse, t, isLoading, error, content, darkmodeBool, renderAppTitle = false, countryCode = true }) {
   const buildReturn = (message, additionalComponents = null) => {
     return (<>
-      {renderAppTitle && <SubAppTitle appTitle={t?.subAppInfo?.appName} darkmodeBool={darkmodeBool} />}
+      {renderAppTitle && <SubAppTitle appTitle={t?.subAppInfo?.appName} darkmodeBool={darkmodeBool} toolTipInfo={t?.subAppInfo?.toolTipInfo} />}
       {message && <p className='errorMessage'>{message}</p>}
       {additionalComponents}
     </>);

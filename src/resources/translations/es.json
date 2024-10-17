@@ -6,6 +6,7 @@
       "appIconFile": "magnifingGlass1_white.png",
       "subAppThumbnailFileName": "APP1.png",
       "subAppDescription": "La aplicación \"Scraper de Amazon\" extrae información de productos proporcionando una URL, recuperando el nombre, la descripción, el precio y la imagen para simplificar la comparación y el análisis de los artículos.",
+      "toolTipInfo": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi molestias facilis explicabo similique omnis! Fuga nesciunt quia pariatur accusantium natus, quod ipsam, qui libero recusandae nobis inventore illum nemo! Id!",
       "appUrl": ""
     },
     {
@@ -14,14 +15,16 @@
       "appIconFile": "calculator1_white.png",
       "subAppThumbnailFileName": "APP2.png",
       "subAppDescription": "La aplicación de calculadora permite realizar operaciones matemáticas básicas como suma, resta, multiplicación y división, con una interfaz simple e intuitiva para cálculos rápidos.",
+      "toolTipInfo": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi molestias facilis explicabo similique omnis! Fuga nesciunt quia pariatur accusantium natus, quod ipsam, qui libero recusandae nobis inventore illum nemo! Id!",
       "appUrl": ""
     },
     {
       "appCode": "countryInfo",
-      "appName": "Información sobre un país al azar",
+      "appName": "Información de país al azar",
       "appIconFile": "countries2_white.png",
       "subAppThumbnailFileName": "countryInfo.png",
       "subAppDescription": "Obtén información sobre un país aleatorio utilizando dos APIs diferentes.",
+      "toolTipInfo": "Aplicación que selecciona un país al azar utilizando el paquete npm random-country. Con el código del país obtenido, se busca su nombre y bandera en la API de restcountries.com. Luego, se utiliza el nombre común obtenido de este fetch para buscar información adicional en la API de Wikipedia.",
       "emptyCode": "Código de país no asignado",
       "countryNotFound": "País no encontrado",
       "wikiInfoNotFound": "Información de Wikipedia no encontrada",
@@ -65,6 +68,7 @@
       "appIconFile": "eshop1_white.png",
       "subAppThumbnailFileName": "APP3.png",
       "subAppDescription": "La aplicación simula una e-shop, permitiendo a los usuarios navegar por productos, añadir artículos al carrito y realizar pedidos fácilmente, ofreciendo una experiencia de compra en línea realista.",
+      "toolTipInfo": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi molestias facilis explicabo similique omnis! Fuga nesciunt quia pariatur accusantium natus, quod ipsam, qui libero recusandae nobis inventore illum nemo! Id!",
       "appUrl": ""
     },
     {
@@ -73,6 +77,7 @@
       "appIconFile": "hangman1_white.png",
       "subAppThumbnailFileName": "APP4.png",
       "subAppDescription": "La aplicación del juego \"El ahorcado\" propone un juego de palabras donde los jugadores deben adivinar una palabra proponiendo letras, evitando completar un dibujo del ahorcado.",
+      "toolTipInfo": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi molestias facilis explicabo similique omnis! Fuga nesciunt quia pariatur accusantium natus, quod ipsam, qui libero recusandae nobis inventore illum nemo! Id!",
       "appUrl": ""
     },
     {
@@ -81,6 +86,7 @@
       "appIconFile": "home1_white.png",
       "subAppThumbnailFileName": "",
       "subAppDescription": "",
+      "toolTipInfo": "",
       "appUrl": ""
     },
     {
@@ -89,6 +95,7 @@
       "appIconFile": "bomb1_white.png",
       "subAppThumbnailFileName": "APP5.png",
       "subAppDescription": "Localiza minas ocultas en una cuadrícula evitando hacer clic en ellas, basándote en las pistas numéricas mostradas.",
+      "toolTipInfo": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi molestias facilis explicabo similique omnis! Fuga nesciunt quia pariatur accusantium natus, quod ipsam, qui libero recusandae nobis inventore illum nemo! Id!",
       "appUrl": ""
     },
     {
@@ -97,6 +104,7 @@
       "appIconFile": "survey2_white.png",
       "subAppThumbnailFileName": "APP6.png",
       "subAppDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem optio in cum animi rerum quis? Dolor autem ad velit nihil a, debitis laboriosam voluptatibus voluptas quidem quae repellat, numquam libero!",
+      "toolTipInfo": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi molestias facilis explicabo similique omnis! Fuga nesciunt quia pariatur accusantium natus, quod ipsam, qui libero recusandae nobis inventore illum nemo! Id!",
       "appUrl": ""
     },
     {
@@ -105,6 +113,7 @@
       "appIconFile": "tictactoe1_white.png",
       "subAppThumbnailFileName": "APP7.png",
       "subAppDescription": "La aplicación del juego \"Tres en raya\" permite a los usuarios jugar al famoso juego de tres en raya, donde dos jugadores compiten por alinear tres símbolos, ofreciendo una interfaz simple y opciones de juego en solitario o multijugador.",
+      "toolTipInfo": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi molestias facilis explicabo similique omnis! Fuga nesciunt quia pariatur accusantium natus, quod ipsam, qui libero recusandae nobis inventore illum nemo! Id!",
       "appUrl": ""
     },
     {
@@ -113,6 +122,7 @@
       "appIconFile": "dice1_white.png",
       "subAppThumbnailFileName": "APP8.png",
       "subAppDescription": "La aplicación simula el lanzamiento de un dado de 6 caras, generando un resultado aleatorio entre 1 y 6, ideal para juegos o para reemplazar un dado físico.",
+      "toolTipInfo": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi molestias facilis explicabo similique omnis! Fuga nesciunt quia pariatur accusantium natus, quod ipsam, qui libero recusandae nobis inventore illum nemo! Id!",
       "appUrl": ""
     },
     {
@@ -121,6 +131,10 @@
       "appIconFile": "wordle1_white.png",
       "subAppThumbnailFileName": "APP9.png",
       "subAppDescription": "La aplicación del juego \"Wordle\" propone un desafío de palabras donde los jugadores deben adivinar una palabra en seis intentos, recibiendo pistas sobre las letras correctas y su posición, favoreciendo la reflexión estratégica.",
+      "toolTipInfo": "Wordle desafía a los jugadores a adivinar una palabra oculta de 5 letras (sin acentos) en 6 intentos. Los usuarios pueden escribir letras utilizando el teclado del PC o móvil, o con un teclado virtual. En cada intento, las casillas muestran un fondo amarillo para las letras que están en la palabra pero no en la posición correcta, y verde para las letras que están en la posición correcta.",
+      "newGame": "Nueva partida",
+      "keyboardLanguageError": "No se pudo cargar el idioma del teclado para el código de idioma",
+      "openVirtualKeyboard": "Abrir teclado virtual",
       "appUrl": ""
     }
   ],

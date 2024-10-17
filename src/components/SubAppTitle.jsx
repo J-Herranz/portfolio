@@ -1,7 +1,9 @@
+import { useState } from 'react';
 import PropTypes from 'prop-types';
 import '../styles/subAppTitle.css'
 
-function SubAppTitle({ appTitle, darkmodeBool }) {
+function SubAppTitle({ appTitle, darkmodeBool, toolTipInfo }) {
+  const [isVisible, setIsVisible] = useState(false);
   let styles, srcLocation
 
   if (darkmodeBool) {
@@ -16,9 +18,12 @@ function SubAppTitle({ appTitle, darkmodeBool }) {
     <>
       <div className='subAppTitle-div'>
         <h1 style={styles}>{appTitle}</h1>
-        <div className='subAppTitle-toolTip-div'>
+        <div className='subAppTitle-toolTip-div'
+          onClick={() => setIsVisible(!isVisible)}
+          onMouseEnter={() => setIsVisible(true)}
+          onMouseLeave={() => setIsVisible(false)}>
           <img src={srcLocation} alt="Info Icon" />
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi molestias facilis explicabo similique omnis! Fuga nesciunt quia pariatur accusantium natus, quod ipsam, qui libero recusandae nobis inventore illum nemo! Id!</p>
+          <p style={{ display: isVisible ? "block" : "none" }}>{toolTipInfo}</p>
         </div>
       </div>
       <hr className='subAppTitle-hr' />
@@ -29,7 +34,8 @@ function SubAppTitle({ appTitle, darkmodeBool }) {
 // Prop validation
 SubAppTitle.propTypes = {
   appTitle: PropTypes.string.isRequired,
-  darkmodeBool: PropTypes.bool.isRequired
+  darkmodeBool: PropTypes.bool.isRequired,
+  toolTipInfo: PropTypes.string.isRequired,
 };
 
 export { SubAppTitle }

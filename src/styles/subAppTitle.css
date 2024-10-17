@@ -38,24 +38,35 @@
   margin-top: 0.5rem;
   border-radius: 20px;
   transform: translateX(-45%);
-  left: 50%;
-  /* Comienza centrado en el contenedor */
-  transform: translate(-50%, -10px);
-  /* Ajusta para que esté centrado y ligeramente arriba */
+  left: -120px;
   width: 300px;
   max-width: 500px;
 }
 
+.subAppTitle-hr {
+  width: 90%;
+}
+
 @media (orientation: portrait) {
+  .subAppTitle-div {
+    justify-content: space-between;
+    padding: 1rem 3rem;
+  }
+
   .subAppTitle-div h1 {
-    font-size: 1.5rem;
+    font-size: 1rem;
+  }
+
+  .subAppTitle-toolTip-div {
+    height: 32px;
   }
 
   .subAppTitle-div img {
     width: 2rem;
   }
-}
 
-.subAppTitle-hr {
-  width: 90%;
+  .subAppTitle-toolTip-div>p {
+    transform: 0;
+    left: -100px;
+  }
 }

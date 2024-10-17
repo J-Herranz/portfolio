@@ -1,14 +1,19 @@
 .subAppCard {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   width: 700px;
+  min-height: 320px;
   padding: 0.5rem;
   border-radius: 20px;
   box-shadow: 0 0 2px 0;
   margin: 1rem;
   transition: transform 0.15s ease;
   background: radial-gradient(circle, #111 0%, #444 75%);
+}
+
+.subAppCard>div {
+  align-self: flex-start;
 }
 
 .subAppCard:hover {

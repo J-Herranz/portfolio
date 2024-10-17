@@ -6,6 +6,7 @@
       "appIconFile": "magnifingGlass1_white.png",
       "subAppThumbnailFileName": "APP1.png",
       "subAppDescription": "L'application de scraping Amazon extrait les informations des produits en fournissant une URL, récupérant le nom, la description, le prix et l'image pour simplifier la comparaison et l'analyse des articles.",
+      "toolTipInfo": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi molestias facilis explicabo similique omnis! Fuga nesciunt quia pariatur accusantium natus, quod ipsam, qui libero recusandae nobis inventore illum nemo! Id!",
       "appUrl": ""
     },
     {
@@ -14,6 +15,7 @@
       "appIconFile": "calculator1_white.png",
       "subAppThumbnailFileName": "APP2.png",
       "subAppDescription": "L'application de calculatrice permet d'effectuer des opérations mathématiques de base telles que l'addition, la soustraction, la multiplication et la division, avec une interface simple et intuitive pour des calculs rapides.",
+      "toolTipInfo": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi molestias facilis explicabo similique omnis! Fuga nesciunt quia pariatur accusantium natus, quod ipsam, qui libero recusandae nobis inventore illum nemo! Id!",
       "appUrl": ""
     },
     {
@@ -22,6 +24,7 @@
       "appIconFile": "countries2_white.png",
       "subAppThumbnailFileName": "countryInfo.png",
       "subAppDescription": "Obtenez des informations sur un pays aléatoire en utilisant deux APIs différentes.",
+      "toolTipInfo": "Application qui tire au sort un pays en utilisant le package npm random-country. Avec le code du pays obtenu, elle recherche son nom et son drapeau sur l'API restcountries.com. Ensuite, elle utilise le nom commun obtenu de cette recherche pour récupérer des informations supplémentaires via l'API de Wikipedia.",
       "emptyCode": "Code pays non attribué",
       "countryNotFound": "Pays non trouvé",
       "wikiInfoNotFound": "Informations Wikipedia non trouvées",
@@ -65,6 +68,7 @@
       "appIconFile": "eshop1_white.png",
       "subAppThumbnailFileName": "APP3.png",
       "subAppDescription": "L'application simule une e-shop, permettant aux utilisateurs de parcourir des produits, d'ajouter des articles au panier et de passer des commandes facilement, offrant une expérience de shopping en ligne réaliste.",
+      "toolTipInfo": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi molestias facilis explicabo similique omnis! Fuga nesciunt quia pariatur accusantium natus, quod ipsam, qui libero recusandae nobis inventore illum nemo! Id!",
       "appUrl": "https://google.es"
     },
     {
@@ -73,6 +77,7 @@
       "appIconFile": "hangman1_white.png",
       "subAppThumbnailFileName": "APP4.png",
       "subAppDescription": "L'application du jeu \"Le pendu\" propose un jeu de mots où les joueurs doivent deviner un mot en proposant des lettres, tout en évitant de compléter un dessin de pendu.",
+      "toolTipInfo": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi molestias facilis explicabo similique omnis! Fuga nesciunt quia pariatur accusantium natus, quod ipsam, qui libero recusandae nobis inventore illum nemo! Id!",
       "appUrl": ""
     },
     {
@@ -81,6 +86,7 @@
       "appIconFile": "home1_white.png",
       "subAppThumbnailFileName": "",
       "subAppDescription": "",
+      "toolTipInfo": "",
       "appUrl": ""
     },
     {
@@ -89,6 +95,7 @@
       "appIconFile": "bomb1_white.png",
       "subAppThumbnailFileName": "APP5.png",
       "subAppDescription": "Localisez des mines cachées sur une grille en évitant de cliquer dessus, en se basant sur des indices numériques affichés",
+      "toolTipInfo": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi molestias facilis explicabo similique omnis! Fuga nesciunt quia pariatur accusantium natus, quod ipsam, qui libero recusandae nobis inventore illum nemo! Id!",
       "appUrl": ""
     },
     {
@@ -97,6 +104,7 @@
       "appIconFile": "survey2_white.png",
       "subAppThumbnailFileName": "APP6.png",
       "subAppDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem optio in cum animi rerum quis? Dolor autem ad velit nihil a, debitis laboriosam voluptatibus voluptas quidem quae repellat, numquam libero!",
+      "toolTipInfo": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi molestias facilis explicabo similique omnis! Fuga nesciunt quia pariatur accusantium natus, quod ipsam, qui libero recusandae nobis inventore illum nemo! Id!",
       "appUrl": ""
     },
     {
@@ -105,6 +113,7 @@
       "appIconFile": "tictactoe1_white.png",
       "subAppThumbnailFileName": "APP7.png",
       "subAppDescription": "L'application du jeu \"Morpion\" permet aux utilisateurs de jouer au célèbre jeu de tic-tac-toe, où deux joueurs s'affrontent pour aligner trois symboles, offrant une interface simple et des options de jeu en solo ou multijoueur.",
+      "toolTipInfo": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi molestias facilis explicabo similique omnis! Fuga nesciunt quia pariatur accusantium natus, quod ipsam, qui libero recusandae nobis inventore illum nemo! Id!",
       "appUrl": ""
     },
     {
@@ -113,6 +122,7 @@
       "appIconFile": "dice1_white.png",
       "subAppThumbnailFileName": "APP8.png",
       "subAppDescription": "L'application simule le lancer d'un dé à 6 faces, générant un résultat aléatoire entre 1 et 6, idéale pour les jeux ou pour remplacer un dé physique.",
+      "toolTipInfo": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi molestias facilis explicabo similique omnis! Fuga nesciunt quia pariatur accusantium natus, quod ipsam, qui libero recusandae nobis inventore illum nemo! Id!",
       "appUrl": ""
     },
     {
@@ -121,6 +131,10 @@
       "appIconFile": "wordle1_white.png",
       "subAppThumbnailFileName": "APP9.png",
       "subAppDescription": "L'application du jeu \"Motus\" propose un défi de mots où les joueurs doivent deviner un mot en six essais, en recevant des indices sur les lettres correctes et leur position, favorisant la réflexion stratégique.",
+      "toolTipInfo": "Motus défie les joueurs de deviner un mot caché de 5 lettres (sans accents) en 6 essais. Les utilisateurs peuvent saisir des lettres à l'aide du clavier de l'ordinateur ou du mobile, ou d'un clavier virtuel. À chaque tentative, les cases affichent un fond jaune pour les lettres présentes dans le mot mais pas à la bonne position, et vert pour les lettres à la bonne position",
+      "newGame": "Nouvelle partie",
+      "keyboardLanguageError": "Le langage du clavier n'a pas pu être chargé pour le code de langue",
+      "openVirtualKeyboard": "Ouvrir clavier virtuel",
       "appUrl": ""
     }
   ],

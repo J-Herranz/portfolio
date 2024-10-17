@@ -25,3 +25,33 @@
 #newCountry-button {
   margin: 2rem 0 0 0;
 }
+
+
+@media (orientation: portrait) {
+  .countryNameDiv {
+    font-size: xx-large;
+  }
+
+  .flagAndInfo-div {
+    width: 90vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .flagAndInfo-div>* {
+    width: 90vw;
+  }
+
+  .flagDiv {
+    width: 95%;
+  }
+
+  .flagDiv>img {
+    width: 100%;
+  }
+
+  .wikiInfo-div {
+    width: 100%;
+  }
+}
