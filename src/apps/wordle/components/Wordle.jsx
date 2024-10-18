@@ -1,19 +1,14 @@
 import { useState } from 'react'
 import { SubAppTitle } from "../../../components/SubAppTitle";
-import { GridCase } from "./GridCase";
-import { VirtualKeyword } from './VirtualKeyword';
+import { GridCell } from "./GridCell";
+import { VirtualKeyboard } from './VirtualKeyboard';
 import PropTypes from 'prop-types';
-import '../styles/wordleGrid.css'
+import '../styles/wordle.css'
 
-
-
-
-function WordleGrid({ t, languageCode, darkmodeBool }) {
+function Wordle({ t, languageCode, darkmodeBool }) {
 
   const [tryNb, setTryNb] = useState(1)
-  const [grid, setGrid] = useState(Array(6).fill(null).map(() => Array(5).fill('')));
-
-
+  const [grid, setGrid] = useState(Array(6).fill(null).map(() => Array(5).fill({ innerValue: '', state: 0 })));
 
   document.addEventListener('keydown', (event) => {
     const letter = event.key.toUpperCase(); // Convertir a mayúscula
@@ -26,6 +21,12 @@ function WordleGrid({ t, languageCode, darkmodeBool }) {
 
   }
 
+
+  function wordleWordPicker() {
+    const randomIndex = Math.floor(Math.random() * array.length);
+    return array[randomIndex];
+  }
+
   return (
     <>
       <SubAppTitle appTitle={t?.subAppInfo?.appName} darkmodeBool={darkmodeBool} toolTipInfo={t?.subAppInfo?.toolTipInfo} />
@@ -34,22 +35,22 @@ function WordleGrid({ t, languageCode, darkmodeBool }) {
       </div>
       <div className="wordleGrid">
         {grid.map((row, i) => (
-          row.map((letter, j) => (
-            <GridCase key={`${i}-${j}`} letter={letter} />
+          row.map((gridCellValue, j) => (
+            <GridCell key={`${i}-${j}`} gridCellValue={gridCellValue} />
           ))
         ))}
       </div>
       <button>{t?.subAppInfo?.newGame}</button>
-      <VirtualKeyword t={t} languageCode={languageCode} darkmodeBool={darkmodeBool} />
+      <VirtualKeyboard t={t} languageCode={languageCode} darkmodeBool={darkmodeBool} />
     </>
   );
 }
 
 // Prop validation
-WordleGrid.propTypes = {
+Wordle.propTypes = {
   t: PropTypes.object.isRequired,
   languageCode: PropTypes.string.isRequired,
   darkmodeBool: PropTypes.bool.isRequired,
 };
 
-export { WordleGrid }
+export { Wordle }

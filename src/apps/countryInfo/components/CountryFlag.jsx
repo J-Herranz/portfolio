@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 import '../styles/CountryFlag.css'
 
 function CountryFlag({ countryInfo, countryCode, t }) {
-  console.log(t)
   return (
     <>
       <div className="flagDiv">

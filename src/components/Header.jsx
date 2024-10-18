@@ -17,7 +17,7 @@ function Header({ setApp, setLanguage, languageCode, t }) {
       <nav>
         <CvComponent languageCode={languageCode} />
 
-        <div style={{ display: "flex", gap: "4rem", marginRight: "2rem" }}>
+        <div style={{ display: "flex", gap: "2rem", marginRight: "2rem" }}>
           <LanguageOptionSelectionComponent setLanguage={setLanguage} currentLanguageCode={languageCode} />
 
           <div ref={menuRef}>

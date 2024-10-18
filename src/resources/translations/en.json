@@ -135,6 +135,7 @@
       "newGame": "New game",
       "keyboardLanguageError": "Keyboard language coudn't be charged for language code",
       "openVirtualKeyboard": "Open virtual keyboard",
+      "closeVirtualKeyboard": "Close virtual keyboard",
       "appUrl": ""
     }
   ],

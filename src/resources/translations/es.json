@@ -135,6 +135,7 @@
       "newGame": "Nueva partida",
       "keyboardLanguageError": "No se pudo cargar el idioma del teclado para el código de idioma",
       "openVirtualKeyboard": "Abrir teclado virtual",
+      "closeVirtualKeyboard": "Cerrar teclado virtual",
       "appUrl": ""
     }
   ],

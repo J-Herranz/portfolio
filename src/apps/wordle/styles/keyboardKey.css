@@ -1,0 +1,17 @@
+.keyboard-button {
+  min-width: 40px;
+  height: 40px;
+  font-size: 0.8rem;
+  border-radius: 5px;
+}
+
+@media (orientation: portrait) {
+  .keyboard-button {
+    min-width: 19px;
+    height: 40px;
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

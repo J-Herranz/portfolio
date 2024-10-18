@@ -135,6 +135,7 @@
       "newGame": "Nouvelle partie",
       "keyboardLanguageError": "Le langage du clavier n'a pas pu être chargé pour le code de langue",
       "openVirtualKeyboard": "Ouvrir clavier virtuel",
+      "closeVirtualKeyboard": "Fermer clavier virtuel",
       "appUrl": ""
     }
   ],
