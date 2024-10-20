@@ -30,7 +30,6 @@ function Header({ setApp, setLanguage, languageCode, t }) {
             >
               <div className="burgerBar-options-div">
                 {t.map((value) => (
-                  /*<SubAppOption key={value.appCode} appCode={value.appCode} appName={value.appName} appIconFile={value.appIconFile} onClick={() => { closeMenu(); setApp(value.appCode) }} />*/
                   <SubAppOption key={value.appCode} appCode={value.appCode} appName={value.appName} appIconFile={value.appIconFile} onClick={() => { closeMenu(); handleSubAppSelection({ setCurrentApp: setApp, appUrl: value.appUrl, appCode: value.appCode }) }} />
                 ))}
               </div>

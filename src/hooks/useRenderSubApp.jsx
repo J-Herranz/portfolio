@@ -1,19 +1,42 @@
 import { useCallback } from 'react';
+import { LanguageContext } from '../context/LanguageContext.js';
+import { ThemeContext } from '../context/ThemeContext.js';
 import { CountryInfo } from '../apps/countryInfo/components/CountryInfo';
 import { Home } from '../apps/home/components/Home';
 import { Wordle } from '../apps/wordle/components/Wordle';
 
-const useRenderSubApp = (currentApp, translations, setCurrentApp, language) => {
-  return useCallback(({ darkmodeBool }) => {
+const useRenderSubApp = ({ currentApp, setCurrentApp, darkmodeBool, languageCode, t }) => {
+
+  const renderApp = useCallback(() => {
+    let AppComponent
+    let translations
+
     switch (currentApp) {
       case 'countryInfo':
-        return <CountryInfo darkmodeBool={darkmodeBool} t={{ subAppInfo: { ...translations.subAppInfo.find(app => app.appCode === 'countryInfo') }, countryInfo: { ...translations.countryInfo } }} languageCode={language} />;
+        AppComponent = CountryInfo
+        translations = { subAppInfo: { ...t?.subAppInfo.find(app => app.appCode === 'countryInfo') }, countryInfo: { ...t?.countryInfo } }
+        break;
       case 'wordle':
-        return <Wordle darkmodeBool={darkmodeBool} t={{ subAppInfo: { ...translations.subAppInfo.find(app => app.appCode === 'wordle') } }} languageCode={language} />;
+        AppComponent = Wordle
+        translations = { subAppInfo: { ...t?.subAppInfo.find(app => app.appCode === 'wordle'), wordle: { ...t?.wordle } } }
+        break;
       default:
-        return <Home t={{ subAppInfo: [...translations.subAppInfo], home: { ...translations.home } }} setCurrentApp={setCurrentApp} />;
+        AppComponent = Home
+        translations = { subAppInfo: [...t?.subAppInfo], home: { ...t?.home } }
     }
-  }, [currentApp, translations, setCurrentApp, language]);
+    //console.log(translations)
+    return (
+      <ThemeContext.Provider value={{ darkmodeBool }}>
+        <LanguageContext.Provider value={{ languageCode, t: { ...translations } }}>
+          <AppComponent
+            setCurrentApp={setCurrentApp}
+          />
+        </LanguageContext.Provider>
+      </ThemeContext.Provider>
+    );
+  }, [currentApp, darkmodeBool, languageCode, t, setCurrentApp]);
+
+  return renderApp;
 };
 
 export { useRenderSubApp };

@@ -13,7 +13,7 @@ function CountryFlag({ countryInfo, countryCode, t }) {
 
 // Prop validation
 CountryFlag.propTypes = {
-  countryInfo: PropTypes.object.isRequired,
+  countryInfo: PropTypes.object,
   countryCode: PropTypes.string.isRequired,
   t: PropTypes.object.isRequired,
 };

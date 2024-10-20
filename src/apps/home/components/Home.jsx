@@ -1,14 +1,17 @@
+import { useContext } from "react";
 import { SubAppCard } from "./SubAppCard";
+import { LanguageContext } from "../../../context/LanguageContext";
 import PropTypes from 'prop-types';
 import "../styles/home.css";
 
-function Home({ t, setCurrentApp }) {
+function Home({ setCurrentApp }) {
+  const { t } = useContext(LanguageContext)
+
   const sortedApps = t?.subAppInfo.sort((a, b) => {
     if (a.appName < b.appName) return -1;
     if (a.appName > b.appName) return 1;
     return 0;
   });
-
   return (
     <>
       <div className="homeApp">
@@ -47,8 +50,7 @@ function Home({ t, setCurrentApp }) {
 
 // Prop validation
 Home.propTypes = {
-  t: PropTypes.object.isRequired,
   setCurrentApp: PropTypes.func.isRequired,
-};
+}
 
 export { Home };

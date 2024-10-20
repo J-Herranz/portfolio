@@ -1,10 +1,14 @@
-import { useState, useEffect } from 'react';
+import { useState, useContext, useEffect } from 'react';
 import { KeyboardKey } from './KeyboardKey.jsx';
 import { openCloseVirtualKeyboard } from '../service/openCloseVirtualKeyboard.js';
+import { LanguageContext } from '../../../context/LanguageContext.js';
+import { ThemeContext } from '../../../context/ThemeContext.js';
 import PropTypes from 'prop-types';
 import '../styles/virtualKeyboard.css';
 
-function VirtualKeyboard({ t, languageCode, darkmodeBool }) {
+function VirtualKeyboard() {
+  const { t, languageCode } = useContext(LanguageContext)
+  const { darkmodeBool } = useContext(ThemeContext)
   const [keyboardLayout, setKeyboardLayout] = useState(null);
   const [showVirtualKeyboard, setShowVirtualKeyboard] = useState(false);
 
@@ -50,9 +54,6 @@ function VirtualKeyboard({ t, languageCode, darkmodeBool }) {
 
 // Prop validation
 VirtualKeyboard.propTypes = {
-  t: PropTypes.object.isRequired,
-  languageCode: PropTypes.string.isRequired,
-  darkmodeBool: PropTypes.bool.isRequired,
 };
 
 export { VirtualKeyboard };
