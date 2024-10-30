@@ -1,21 +1,21 @@
-import { useState } from 'react'
+import { useContext } from 'react'
+import { ThemeContext } from '../../../context/ThemeContext.js';
 import PropTypes from 'prop-types';
 import '../styles/gridCell.css'
 
+function GridCell({ cellInnerValue, cellState }) {
 
-
-function GridCell({ gridCellValue }) {
-  const [cellState, setCellState] = useState(0)
+  const { darkmodeBool } = useContext(ThemeContext)
 
   const stateStyles = [
-    'cell-empty',
-    'cell-present',
-    'cell-correct'
+    'notPresent',
+    'wrongPosition',
+    'rightPosition'
   ]
 
   return (
-    <div className={`gridCell-div ${stateStyles[cellState]}`}>
-      <p className={stateStyles[gridCellValue?.state]}>{gridCellValue?.innerValue}</p>
+    <div className={`gridCell-div ${stateStyles[cellState]}`} style={{ borderColor: darkmodeBool ? '#ccc' : '#333' }}>
+      <p className={stateStyles[cellState]} style={{ color: darkmodeBool ? '#ccc' : '#333' }}>{cellInnerValue}</p>
     </div>
   );
 
@@ -23,7 +23,8 @@ function GridCell({ gridCellValue }) {
 
 // Prop validation
 GridCell.propTypes = {
-  gridCellValue: PropTypes.object.isRequired,
+  cellInnerValue: PropTypes.string.isRequired,
+  cellState: PropTypes.number.isRequired,
 };
 
 export { GridCell }

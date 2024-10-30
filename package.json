@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "canvas-confetti": "^1.9.3",
     "darkmode-js": "^1.5.7",
     "proptypes": "^1.1.0",
     "random-country": "^1.0.1",

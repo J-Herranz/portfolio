@@ -1,5 +1,5 @@
-import { capitalizeFirstLetter } from '../service/capitalizeFirstLetter.js'
-import { virtualButtonClick } from '../service/virtualButtonClick.js'
+import { capitalizeFirstLetter } from '../services/capitalizeFirstLetter.js'
+import { virtualButtonClick } from '../services/virtualButtonClick.js'
 import PropTypes from 'prop-types';
 import '../styles/keyboardKey.css'
 

@@ -42,11 +42,14 @@
 @media (orientation: portrait) {
   .openCloseKeyboard {
     width: 95%;
+    min-width: 385px;
+    max-width: 500px;
   }
 
   .virtual-keyboard-container {
     width: 98%;
-
+    min-width: 385px;
+    max-width: 500px;
   }
 
   .virtual-keyboard {

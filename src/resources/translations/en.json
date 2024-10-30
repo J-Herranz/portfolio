@@ -69,7 +69,7 @@
       "subAppThumbnailFileName": "APP3.png",
       "subAppDescription": "The app simulates an e-shop, allowing users to browse products, add items to their cart, and place orders easily, providing a realistic online shopping experience.",
       "toolTipInfo": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi molestias facilis explicabo similique omnis! Fuga nesciunt quia pariatur accusantium natus, quod ipsam, qui libero recusandae nobis inventore illum nemo! Id!",
-      "appUrl": ""
+      "appUrl": "https://google.es"
     },
     {
       "appCode": "hangman",
@@ -136,6 +136,10 @@
       "keyboardLanguageError": "Keyboard language coudn't be charged for language code",
       "openVirtualKeyboard": "Open virtual keyboard",
       "closeVirtualKeyboard": "Close virtual keyboard",
+      "incorrectLengthMessage": "Not enough letters",
+      "wordNotFoundMessage": "Not in word list",
+      "defeatMessage": "Sorry, you didn't guess the word. The word was:",
+      "victoryMessage": "Congratulations! You've guessed the word:",
       "appUrl": ""
     }
   ],

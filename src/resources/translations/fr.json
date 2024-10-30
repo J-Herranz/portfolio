@@ -136,6 +136,10 @@
       "keyboardLanguageError": "Le langage du clavier n'a pas pu être chargé pour le code de langue",
       "openVirtualKeyboard": "Ouvrir clavier virtuel",
       "closeVirtualKeyboard": "Fermer clavier virtuel",
+      "incorrectLengthMessage": "Veuillez entrer un mot de 5 lettres",
+      "wordNotFoundMessage": "Ce mot n'est pas dans la liste",
+      "defeatMessage": "Désolé, vous n'avez pas deviné le mot. Le mot était :",
+      "victoryMessage": "Félicitations ! Vous avez deviné le mot :",
       "appUrl": ""
     }
   ],

@@ -1,6 +1,7 @@
-import { useState, useContext, useEffect } from 'react';
+import { useState, useContext } from 'react';
+import { useVirtualKeyboard } from '../hooks/useVirtualKeyboard.js';
 import { KeyboardKey } from './KeyboardKey.jsx';
-import { openCloseVirtualKeyboard } from '../service/openCloseVirtualKeyboard.js';
+import { openCloseVirtualKeyboard } from '../services/openCloseVirtualKeyboard.js';
 import { LanguageContext } from '../../../context/LanguageContext.js';
 import { ThemeContext } from '../../../context/ThemeContext.js';
 import PropTypes from 'prop-types';
@@ -9,33 +10,14 @@ import '../styles/virtualKeyboard.css';
 function VirtualKeyboard() {
   const { t, languageCode } = useContext(LanguageContext)
   const { darkmodeBool } = useContext(ThemeContext)
-  const [keyboardLayout, setKeyboardLayout] = useState(null);
   const [showVirtualKeyboard, setShowVirtualKeyboard] = useState(false);
-
-  const languageCodeToDemonym = { en: "english", es: "spanish", fr: "french" };
-
-  useEffect(() => {
-    const loadKeyboard = async () => {
-      if (languageCodeToDemonym[languageCode]) {
-        try {
-          const keyboardData = await import(`../resources/keyboards/${languageCodeToDemonym[languageCode]}_keyboard.json`);
-          setKeyboardLayout(keyboardData.default);
-        } catch (error) {
-          console.error('Error loading keyboard layout:', error);
-        }
-      } else {
-        console.log(`${t?.subAppInfo?.keyboardLanguageError} "${languageCode}"`);
-      }
-    };
-
-    loadKeyboard();
-  }, [languageCode, t]);
+  const { keyboardLayout } = useVirtualKeyboard({ languageCode })
 
   return (
     <>
       {keyboardLayout &&
         <div className="openCloseKeyboard"
-          onClick={() => openCloseVirtualKeyboard({ setShowVirtualKeyboard, showVirtualKeyboard, openCloseMessageArray: [t?.subAppInfo?.closeVirtualKeyboard, t?.subAppInfo?.openVirtualKeyboard] })}>
+          onClick={() => openCloseVirtualKeyboard({ setShowVirtualKeyboard, showVirtualKeyboard, openCloseMessageObj: { close: t?.subAppInfo?.closeVirtualKeyboard, open: t?.subAppInfo?.openVirtualKeyboard } })}>
           {t?.subAppInfo?.openVirtualKeyboard}</div>}
       <div className="virtual-keyboard-container">
         <div className="virtual-keyboard" style={darkmodeBool ? { backgroundColor: "#ccc" } : { backgroundColor: "#999" }}>

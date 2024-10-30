@@ -23,7 +23,7 @@ function WikiInfo({ countryName }) {
 
 // Prop validation
 WikiInfo.propTypes = {
-  countryName: PropTypes.string.isRequired,
+  countryName: PropTypes.string,
   languageCode: PropTypes.string.isRequired,
   t: PropTypes.object.isRequired,
 };

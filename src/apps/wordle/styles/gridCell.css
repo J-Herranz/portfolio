@@ -1,0 +1,20 @@
+.gridCell-div {
+  min-width: 60px;
+  height: 60px;
+  border: 2px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  border-radius: 5px;
+  transition: border-color 1s;
+  transition: background-color 0.3s;
+}
+
+.wrongPosition {
+  background-color: #b89c3c
+}
+
+.rightPosition {
+  background-color: #588c4c;
+}

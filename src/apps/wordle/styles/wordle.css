@@ -1,19 +1,84 @@
-.wordleGrid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
+.gridRow-container-div {
+
+  display: flex;
+  flex-direction: column;
   gap: 5px;
-  width: 90%;
   width: fit-content;
   margin: 1.5rem;
+  position: relative;
 }
 
-.wordleGrid div {
-  min-width: 60px;
-  height: 60px;
-  border: 2px solid #ccc;
+#messagePanel {
+  padding: 0.5rem 1rem;
+  position: absolute;
+  top: 7rem;
+  z-index: 10;
   display: flex;
-  align-items: center;
   justify-content: center;
-  font-size: 24px;
+  align-items: center;
+  width: auto;
   border-radius: 5px;
+  font-weight: bold;
+}
+
+.messagePanel-dark {
+  background-color: #ccc;
+  color: black;
+}
+
+.messagePanel-light {
+  background-color: #333;
+  color: white;
+}
+
+/* ---------------------------------------------------
+trembling animation
+*/
+@keyframes tremble {
+  0% {
+    transform: translate(4px, 0);
+  }
+
+  25% {
+    transform: translate(-4px, 0);
+  }
+
+  50% {
+    transform: translate(4px, 0);
+  }
+
+  75% {
+    transform: translate(-4px, 0);
+  }
+
+  100% {
+    transform: translate(0);
+  }
+}
+
+.trembling {
+  animation: tremble 0.2s linear infinite;
+}
+
+/* ---------------------------------------------------
+grow animation
+*/
+@keyframes grow {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  /* Crece 10% (2px en cada dimensión) */
+  100% {
+    transform: scale(1);
+  }
+}
+
+.grow-animation {
+  animation: grow 0.2s ease forwards;
+  /* Duración de 0.2s */
 }
