@@ -129,7 +129,7 @@
       "appCode": "wordle",
       "appName": "Wordle",
       "appIconFile": "wordle1_white.png",
-      "subAppThumbnailFileName": "APP9.png",
+      "subAppThumbnailFileName": "wordle.png",
       "subAppDescription": "The Wordle game app presents a word challenge where players must guess a word in six attempts, receiving clues about the correct letters and their positions, promoting strategic thinking.",
       "toolTipInfo": "Wordle challenges players to guess a hidden 5-letter word (without accents) in 6 attempts. Users can input letters using the PC or mobile keyboard, or a virtual keyboard. With each attempt, the boxes display a yellow background for letters that are in the word but not in the correct position, and green for letters that are in the correct position.",
       "newGame": "New game",

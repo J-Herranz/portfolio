@@ -129,7 +129,7 @@
       "appCode": "wordle",
       "appName": "Wordle",
       "appIconFile": "wordle1_white.png",
-      "subAppThumbnailFileName": "APP9.png",
+      "subAppThumbnailFileName": "wordle.png",
       "subAppDescription": "La aplicación del juego \"Wordle\" propone un desafío de palabras donde los jugadores deben adivinar una palabra en seis intentos, recibiendo pistas sobre las letras correctas y su posición, favoreciendo la reflexión estratégica.",
       "toolTipInfo": "Wordle desafía a los jugadores a adivinar una palabra oculta de 5 letras (sin acentos) en 6 intentos. Los usuarios pueden escribir letras utilizando el teclado del PC o móvil, o con un teclado virtual. En cada intento, las casillas muestran un fondo amarillo para las letras que están en la palabra pero no en la posición correcta, y verde para las letras que están en la posición correcta.",
       "newGame": "Nueva partida",

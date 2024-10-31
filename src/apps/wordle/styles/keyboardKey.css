@@ -5,6 +5,34 @@
   border-radius: 5px;
 }
 
+.key-notChecked {
+  background-color: #1a1a1a;
+}
+
+.key-wrongPosition {
+  background-color: #b89c3c;
+}
+
+.key-wrongPosition:hover {
+  background-color: #cea615;
+}
+
+.key-rightPosition {
+  background-color: #588c4c;
+}
+
+.key-rightPosition:hover {
+  background-color: #3ea10c;
+}
+
+.key-notPresent {
+  background-color: #8c4c4c;
+}
+
+.key-notPresent:hover {
+  background-color: #772121;
+}
+
 @media (orientation: portrait) {
   .keyboard-button {
     min-width: 19px;

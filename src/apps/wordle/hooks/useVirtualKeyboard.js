@@ -5,8 +5,6 @@ function useVirtualKeyboard({ languageCode }) {
   const [keyboardLayout, setKeyboardLayout] = useState(null);
   const languageCodeToDemonym = { en: "english", es: "spanish", fr: "french" };
 
-
-
   useEffect(() => {
     const loadKeyboard = async () => {
       if (languageCodeToDemonym[languageCode]) {
@@ -17,11 +15,6 @@ function useVirtualKeyboard({ languageCode }) {
           console.error('Error loading keyboard layout:', error);
         }
       }
-      /*
-      else {
-        console.log(`${t?.subAppInfo?.keyboardLanguageError} "${languageCode}"`);
-      }
-        */
     };
 
     loadKeyboard();
