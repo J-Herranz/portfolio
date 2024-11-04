@@ -1,5 +1,5 @@
 .backgroundImage-countryInfo {
-  background-image: url('../../public/background-images/backgroundImage-countryInfo.jpg');
+  background-image: url('/background-images/backgroundImage-countryInfo.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
