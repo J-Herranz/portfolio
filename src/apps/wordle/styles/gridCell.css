@@ -11,6 +11,16 @@
   transition: background-color 0.3s;
 }
 
+.notPresent-dark {
+  background-color: #333;
+  color: #ccc;
+}
+
+.notPresent-light {
+  background-color: #ccc;
+  color: #333;
+}
+
 .wrongPosition {
   background-color: #b89c3c
 }

@@ -1,5 +1,11 @@
+.backgroundImage-countryInfo {
+  background-image: url('../../public/background-images/backgroundImage-countryInfo.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .subApp-div {
-  height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -10,16 +16,30 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem 0;
+  padding: 1rem;
   height: calc(2 * 1.5em);
+  width: fit-content;
   text-align: center;
+  background-color: rgba(7, 35, 67, 0.8);
+  border-radius: 20px;
+  margin-top: 1rem;
 }
 
-
 .flagAndInfo-div {
-  min-height: 50vh;
+  min-height: 49vh;
   width: 100%;
   display: flex;
+  align-items: center;
+}
+
+.flagAndInfo-div>div {
+  /*background-color: rgba(248, 220, 188, 0.6);*/
+  background-color: rgba(7, 35, 67, 0.6);
+  border-radius: 20px;
+  padding: 1rem;
+  color: white;
+  font-weight: bold;
+  margin: 1rem;
 }
 
 #newCountry-button {

@@ -9,7 +9,7 @@ import randomCountry from 'random-country';
 import '../styles/countryInfo.css'
 
 function CountryInfo() {
-  const [countryCode, setCountryCode] = useState('fr')
+  const [countryCode, setCountryCode] = useState('FR')
   const [countryName, setCountryName] = useState('France')
   const { countryInfo, isLoading, error } = useCountryInfo({ countryCode, setCountryName })
   const { t, languageCode } = useContext(LanguageContext)
@@ -22,7 +22,7 @@ function CountryInfo() {
   // Content to show in case of success
   const content = (
     <>
-      <h1 className="countryNameDiv">{countryInfo?.name?.official}</h1>
+      <h1 className="countryNameDiv" style={{ display: countryInfo?.name?.official ? 'flex' : 'none' }}>{countryInfo?.name?.official}</h1>
       <div className='flagAndInfo-div'>
         <CountryFlag
           countryInfo={countryInfo}

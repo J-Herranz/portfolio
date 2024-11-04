@@ -13,8 +13,10 @@ function GridCell({ cellInnerValue, cellState }) {
     'rightPosition'
   ]
 
+  const cssClass = cellState === 0 ? darkmodeBool ? 'notPresent-dark' : 'notPresent-light' : stateStyles[cellState]
+
   return (
-    <div className={`gridCell-div ${stateStyles[cellState]}`} style={{ borderColor: darkmodeBool ? '#ccc' : '#333' }}>
+    <div className={`gridCell-div ${cssClass}`} style={{ borderColor: darkmodeBool ? '#ccc' : '#333' }}>
       <p className={stateStyles[cellState]} style={{ color: darkmodeBool ? '#ccc' : '#333' }}>{cellInnerValue}</p>
     </div>
   );

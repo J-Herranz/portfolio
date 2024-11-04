@@ -20,7 +20,7 @@ function SubAppTitle() {
 
   return (
     <>
-      <div className='subAppTitle-div'>
+      <div className='subAppTitle-div' style={{ backgroundColor: darkmodeBool ? '#1E1E1E' : '#E1E1E1' }}>
         <h1 style={styles}>{t?.subAppInfo?.appName}</h1>
         <div className='subAppTitle-toolTip-div'
           onClick={() => setIsVisible(!isVisible)}
@@ -30,7 +30,7 @@ function SubAppTitle() {
           <p style={{ display: isVisible ? "block" : "none" }}>{t?.subAppInfo?.toolTipInfo}</p>
         </div>
       </div>
-      <hr className='subAppTitle-hr' />
+      {/*<hr className='subAppTitle-hr' />*/}
     </>
   );
 }

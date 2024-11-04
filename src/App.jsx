@@ -32,7 +32,7 @@ function App() {
 
     return (
         <>
-            <div className="App">
+            <div className={currentApp === "countryInfo" ? "App backgroundImage-countryInfo" : "App"}>
                 <Header setApp={setCurrentApp} setLanguage={setLanguage} languageCode={language} t={sortedSubAppInfo} />
                 <div className='subApp-div'>
                     {renderApp()}

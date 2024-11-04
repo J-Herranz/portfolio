@@ -5,21 +5,29 @@
   font-family: Helvetica, Arial, sans-serif;
 }
 
+/*
 body {
-  background-color: #333;
+  background-image: url('../../public/hexagonal-background.jpg');
+  background-size: contain;
+  background-position: center;
+  background-repeat: repeat;
 }
+*/
 
 .subApp-div {
   width: 100vw;
+  min-height: 85.5vh;
   height: fit-content;
+  padding-bottom: 1rem;
+  margin-top: 4.5rem;
 }
 
 .footer {
-  margin-top: 2rem;
   border-top: 1px solid #555;
   color: white;
   padding: 20px;
   text-align: center;
+  background-color: #1E1E1E;
 }
 
 /*
@@ -33,3 +41,10 @@ body {
   height: 100vh;
   width: 100vw;
 }*/
+
+.geometrical-background {
+  background-color: #1c1c1c;
+  opacity: 1;
+  background: linear-gradient(135deg, #2f2f2f55 25%, transparent 25%) -80px 0/ 160px 160px, linear-gradient(225deg, #2f2f2f 25%, transparent 25%) -80px 0/ 160px 160px, linear-gradient(315deg, #2f2f2f55 25%, transparent 25%) 0px 0/ 160px 160px, linear-gradient(45deg, #2f2f2f 25%, #1c1c1c 25%) 0px 0/ 160px 160px;
+
+}
