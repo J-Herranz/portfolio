@@ -13,11 +13,11 @@ function SubAppTitle() {
   if (darkmodeBool) {
     styles = { color: "white" }
     srcLocation = "/assets/app-icons/info1_white.png"
-    backgroundColor = '#1E1E1E'
+    backgroundColor = '#E1E1E1'
   } else {
     styles = { color: "black" }
     srcLocation = "/assets/app-icons/info1_black.png"
-    backgroundColor = '#E1E1E1'
+    backgroundColor = '#1E1E1E'
   }
 
   console.log(`SubAppTitle, darkmodeBool value : ${darkmodeBool}`)
