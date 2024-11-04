@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import Darkmode from 'darkmode-js';
 
 const useDarkMode = () => {
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
     const options = {
@@ -12,6 +12,8 @@ const useDarkMode = () => {
 
     const darkmode = new Darkmode(options);
     darkmode.showWidget();
+    const currentMode = darkmode.isActivated();
+    setIsDarkMode(currentMode);
 
     // Manejador de click en el botón del widget
     const button = document.querySelector('.darkmode-toggle');
