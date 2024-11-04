@@ -8,19 +8,23 @@ function SubAppTitle() {
   const { t } = useContext(LanguageContext)
   const { darkmodeBool } = useContext(ThemeContext)
 
-  let styles, srcLocation
+  let styles, srcLocation, backgroundColor
 
   if (darkmodeBool) {
     styles = { color: "white" }
     srcLocation = "/assets/app-icons/info1_white.png"
+    backgroundColor = '#1E1E1E'
   } else {
     styles = { color: "black" }
     srcLocation = "/assets/app-icons/info1_black.png"
+    backgroundColor = '#E1E1E1'
   }
+
+  console.log(`SubAppTitle, darkmodeBool value : ${darkmodeBool}`)
 
   return (
     <>
-      <div className='subAppTitle-div' style={{ backgroundColor: darkmodeBool ? '#1E1E1E' : '#E1E1E1' }}>
+      <div className='subAppTitle-div' style={{ backgroundColor: backgroundColor }}>
         <h1 style={styles}>{t?.subAppInfo?.appName}</h1>
         <div className='subAppTitle-toolTip-div'
           onClick={() => setIsVisible(!isVisible)}
