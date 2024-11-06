@@ -34,7 +34,6 @@ function SubAppTitle() {
           <p style={{ display: isVisible ? "block" : "none" }}>{t?.subAppInfo?.toolTipInfo}</p>
         </div>
       </div>
-      {/*<hr className='subAppTitle-hr' />*/}
     </>
   );
 }

@@ -28,3 +28,21 @@
 .rightPosition {
   background-color: #588c4c;
 }
+
+@media (orientation: portrait) {
+
+  .gridCell-div {
+    min-width: unset;
+    height: 100%;
+    aspect-ratio: 1/1;
+  }
+
+  /*
+  .gridCell-div {
+    min-width: auto;
+    min-height: auto;
+    width: 45px;
+    height: 45px;
+  }
+  */
+}

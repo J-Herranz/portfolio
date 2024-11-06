@@ -11,7 +11,7 @@
     },
     {
       "appCode": "calculator",
-      "appName": "Calculatrise",
+      "appName": "Calculatrice",
       "appIconFile": "calculator1_white.png",
       "subAppThumbnailFileName": "APP2.png",
       "subAppDescription": "L'application de calculatrice permet d'effectuer des opérations mathématiques de base telles que l'addition, la soustraction, la multiplication et la division, avec une interface simple et intuitive pour des calculs rapides.",
@@ -23,7 +23,7 @@
       "appName": "Infos sur un pays au hasard",
       "appIconFile": "countries2_white.png",
       "subAppThumbnailFileName": "countryInfo.jpg",
-      "subAppDescription": "Obtenez des informations sur un pays aléatoire en utilisant deux APIs différentes.",
+      "subAppDescription": "Obtenez des informations sur un pays au hasard en utilisant deux API différentes, la deuxième requête dépendant des informations récupérées de la première.",
       "toolTipInfo": "Application qui tire au sort un pays en utilisant le package npm random-country. Avec le code du pays obtenu, elle recherche son nom et son drapeau sur l'API restcountries.com. Ensuite, elle utilise le nom commun obtenu de cette recherche pour récupérer des informations supplémentaires via l'API de Wikipedia.",
       "emptyCode": "Code pays non attribué",
       "countryNotFound": "Pays non trouvé",
@@ -153,7 +153,7 @@
   "hangman": {},
   "home": {
     "jobTitle": "Développeur Full Stack",
-    "userDescription": "Je souhaite me spécialiser dans le développement web, notamment avec React et Node.js. Développeur web, j'ai mené trois solutions de leur conception à leur déploiement et réalisé plusieurs projets personnels en React.js. J'ai des solides compétences en JavaScript, HTML, CSS, PHP, Git/Github, SQL et PL/SQL, ainsi que la capacité à transformer les besoins des utilisateurs en solutions web concrètes.",
+    "userDescription": "Je souhaite me spécialiser dans le développement web, en particulier avec React et Node.js. En tant que développeur web, j'ai mené à bien trois projets professionnels, de leur conception à leur déploiement, et réalisé plusieurs projets personnels avec React.js. Je maîtrise des compétences solides en JavaScript, HTML, CSS, PHP, Git/GitHub, SQL et PL/SQL, et je suis capable de transformer les besoins des utilisateurs en solutions web concrètes. Sur ce site, vous pourrez découvrir certains de mes projets personnels.",
     "projects": "Projets"
   },
   "mineSweeper": {},

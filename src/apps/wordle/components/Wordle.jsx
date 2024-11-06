@@ -26,8 +26,7 @@ function Wordle() {
           <GridRow key={index} rowNumber={index} rowContent={value} />
         ))}
       </div>
-
-      <button onClick={handleNewGameClick}>{t?.subAppInfo?.newGame}</button>
+      <button className='newGame-button' onClick={handleNewGameClick}>{t?.subAppInfo?.newGame}</button>
 
       <VirtualKeyboard alphabetArray={alphabetArray} />
     </>

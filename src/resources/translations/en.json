@@ -23,7 +23,7 @@
       "appName": "Random Country Info",
       "appIconFile": "countries2_white.png",
       "subAppThumbnailFileName": "countryInfo.jpg",
-      "subAppDescription": "Get information about a random country using two different APIs.",
+      "subAppDescription": "Get information about a random country using two different APIs, with the second query depending on the information fetched from the first.",
       "toolTipInfo": "Application that randomly selects a country using the npm package random-country. With the country code obtained, it fetches the name and flag from the restcountries.com API. Then, it uses the common name obtained from this fetch to retrieve additional information from the Wikipedia API.",
       "emptyCode": "Country code not assigned",
       "countryNotFound": "Country not found",
@@ -121,7 +121,7 @@
       "appName": "Virtual Dice",
       "appIconFile": "dice1_white.png",
       "subAppThumbnailFileName": "APP8.png",
-      "subAppDescription": "The app simulates rolling a 6-sided die, generating a random result between 1 and 6, ideal for games or to replace a physical die.",
+      "subAppDescription": "The app simulates rolling a 6-sided dice, generating a random result between 1 and 6, ideal for games or to replace a physical dice.",
       "toolTipInfo": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi molestias facilis explicabo similique omnis! Fuga nesciunt quia pariatur accusantium natus, quod ipsam, qui libero recusandae nobis inventore illum nemo! Id!",
       "appUrl": ""
     },
@@ -153,7 +153,7 @@
   "hangman": {},
   "home": {
     "jobTitle": "Full Stack Developer",
-    "userDescription": "I want to specialize in web development, particularly with React and Node.js. As a web developer, I have led three solutions from conception to deployment and completed several personal projects in React.js. I have strong skills in JavaScript, HTML, CSS, PHP, Git/GitHub, SQL, and PL/SQL, as well as the ability to turn user needs into concrete web solutions.",
+    "userDescription": "I aim to specialize in web development, particularly with React and Node.js. As a web developer, I have successfully led three professional projects, from their design to deployment, and have completed several personal projects using React.js. I possess strong skills in JavaScript, HTML, CSS, PHP, Git/GitHub, SQL, and PL/SQL, with the ability to turn user needs into concrete web solutions. On this site, you can explore some of my personal projects.",
     "projects": "Projects"
   },
   "mineSweeper": {},

@@ -16,24 +16,26 @@ function VirtualKeyboard({ alphabetArray }) {
   const backgroundColorClassSelector = (letter) => {
     const a = alphabetArray.find(item => item.letter === letter)?.state
 
-    return a ? a : ''
+    return a ? a : 'key-notChecked'
   }
 
   return (
     <>
-      {keyboardLayout &&
-        <div className="openCloseKeyboard"
-          onClick={() => openCloseVirtualKeyboard({ setShowVirtualKeyboard, showVirtualKeyboard, openCloseMessageObj: { close: t?.subAppInfo?.closeVirtualKeyboard, open: t?.subAppInfo?.openVirtualKeyboard } })}>
-          {t?.subAppInfo?.openVirtualKeyboard}</div>}
-      <div className="virtual-keyboard-container">
-        <div className="virtual-keyboard" style={darkmodeBool ? { backgroundColor: "#ccc" } : { backgroundColor: "#999" }}>
-          {keyboardLayout && showVirtualKeyboard && keyboardLayout.map((keyboardLine, i) => (
-            <div key={i} className="keyboard-line">
-              {keyboardLine.map((letter, j) => (
-                <KeyboardKey letter={letter} key={`${i}${j}`} backgroundColorClass={backgroundColorClassSelector(letter)} />
-              ))}
-            </div>
-          ))}
+      <div className='virtualKeyboardContainer-div'>
+        {keyboardLayout &&
+          <div className="openCloseKeyboard"
+            onClick={() => openCloseVirtualKeyboard({ setShowVirtualKeyboard, showVirtualKeyboard, openCloseMessageObj: { close: t?.subAppInfo?.closeVirtualKeyboard, open: t?.subAppInfo?.openVirtualKeyboard } })}>
+            {t?.subAppInfo?.openVirtualKeyboard}</div>}
+        <div className="virtual-keyboard-container">
+          <div className="virtual-keyboard" style={darkmodeBool ? { backgroundColor: "#ccc" } : { backgroundColor: "#999" }}>
+            {keyboardLayout && showVirtualKeyboard && keyboardLayout.map((keyboardLine, i) => (
+              <div key={i} className="keyboard-line">
+                {keyboardLine.map((letter, j) => (
+                  <KeyboardKey letter={letter} key={`${i}${j}`} backgroundColorClass={backgroundColorClassSelector(letter)} />
+                ))}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </>

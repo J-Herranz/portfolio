@@ -4,9 +4,8 @@
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  padding: 1rem 0;
+  padding: 0.2rem 0;
   position: relative;
-  /*background-color: #1E1E1E;*/
 }
 
 .subAppTitle-div>h1 {
@@ -22,10 +21,8 @@
 }
 
 .subAppTitle-toolTip-div {
+  display: flex;
   position: relative;
-  /* Para que el tooltip se posicione respecto a este contenedor */
-  /*display: inline-block;*/
-  /* Permite que el tooltip se posicione adecuadamente */
   height: fit-content;
 }
 
@@ -52,6 +49,7 @@
   .subAppTitle-div {
     justify-content: space-between;
     padding: 1rem 3rem;
+    height: 3rem;
   }
 
   .subAppTitle-div h1 {

@@ -2,3 +2,13 @@
   display: flex;
   gap: 5px
 }
+
+@media (orientation: portrait) {
+
+  .gridCell-container-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 18%;
+  }
+}

@@ -23,7 +23,7 @@
       "appName": "Información de país al azar",
       "appIconFile": "countries2_white.png",
       "subAppThumbnailFileName": "countryInfo.jpg",
-      "subAppDescription": "Obtén información sobre un país aleatorio utilizando dos APIs diferentes.",
+      "subAppDescription": "Obtén información sobre un país aleatorio utilizando dos APIs diferentes, siendo la segunda consulta dependiente de la información obtenida de la primera.",
       "toolTipInfo": "Aplicación que selecciona un país al azar utilizando el paquete npm random-country. Con el código del país obtenido, se busca su nombre y bandera en la API de restcountries.com. Luego, se utiliza el nombre común obtenido de este fetch para buscar información adicional en la API de Wikipedia.",
       "emptyCode": "Código de país no asignado",
       "countryNotFound": "País no encontrado",
@@ -153,7 +153,7 @@
   "hangman": {},
   "home": {
     "jobTitle": "Desarrollador Full Stack",
-    "userDescription": "Quiero especializarme en el desarrollo web, especialmente con React y Node.js. Como desarrollador web, he llevado a cabo tres soluciones desde su concepción hasta su despliegue y he realizado varios proyectos personales en React.js. Tengo sólidas habilidades en JavaScript, HTML, CSS, PHP, Git/GitHub, SQL y PL/SQL, así como la capacidad de transformar las necesidades de los usuarios en soluciones web concretas.",
+    "userDescription": "Mi objetivo es especializarme en el desarrollo web, especialmente con React y Node.js. Como desarrollador web, he llevado a cabo tres proyectos profesionales, desde su concepción hasta su despliegue, y he realizado varios proyectos personales con React.js. Poseo sólidos conocimientos en JavaScript, HTML, CSS, PHP, Git/GitHub, SQL y PL/SQL, además de la capacidad de transformar las necesidades de los usuarios en soluciones web concretas. En este sitio, podrás explorar algunos de mis proyectos personales.",
     "projects": "Proyectos"
   },
   "mineSweeper": {},
