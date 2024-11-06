@@ -60,8 +60,8 @@ body {
 }
 
 @media (orientation: portrait) {
-  .darkmode-toggle {
+  /*.darkmode-toggle {
     right: 20px !important;
     bottom: 20px !important;
-  }
+  }*/
 }
