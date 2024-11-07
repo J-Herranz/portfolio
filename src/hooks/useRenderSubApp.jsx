@@ -1,6 +1,8 @@
 import { useCallback } from 'react';
 import { LanguageContext } from '../context/LanguageContext.js';
 import { ThemeContext } from '../context/ThemeContext.js';
+//import { AmazonScraper } from '../apps/amazonScrapper/components/AmazonScraper.jsx';
+import { Calculator } from '../apps/calculator/components/Calculator.jsx';
 import { CountryInfo } from '../apps/countryInfo/components/CountryInfo';
 import { Home } from '../apps/home/components/Home';
 import { Wordle } from '../apps/wordle/components/Wordle';
@@ -12,6 +14,16 @@ const useRenderSubApp = ({ currentApp, setCurrentApp, darkmodeBool, languageCode
     let translations
 
     switch (currentApp) {
+      /*
+      case 'amazonScraper':
+        AppComponent = AmazonScraper
+        translations = { subAppInfo: { ...t?.subAppInfo.find(app => app.appCode === 'amazonScraper') }, amazonScraper: { ...t?.amazonScraper } }
+        break;
+      */
+      case 'calculator':
+        AppComponent = Calculator
+        translations = { subAppInfo: { ...t?.subAppInfo.find(app => app.appCode === 'calculator') }, calculator: { ...t?.calculator } }
+        break;
       case 'countryInfo':
         AppComponent = CountryInfo
         translations = { subAppInfo: { ...t?.subAppInfo.find(app => app.appCode === 'countryInfo') }, countryInfo: { ...t?.countryInfo } }

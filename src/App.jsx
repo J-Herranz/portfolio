@@ -30,11 +30,29 @@ function App() {
         return a.appName.localeCompare(b.appName);
     }) : [];
 
+    const appDivClassNameSelector = () => {
+        switch (currentApp) {
+            case 'calculator':
+                return 'App background-calculator'
+            case 'countryInfo':
+                return 'App backgroundImage-countryInfo'
+            default:
+                return 'App'
+        }
+    }
+
+    const subAppDivClassNameSelector = () => {
+        if (currentApp === 'calculator') return 'subApp-div subApp-div-flexStart'
+
+        return 'subApp-div'
+    }
+
+
     return (
         <>
-            <div className={currentApp === "countryInfo" ? "App backgroundImage-countryInfo" : "App"}>
+            <div className={appDivClassNameSelector()}>
                 <Header setApp={setCurrentApp} setLanguage={setLanguage} languageCode={language} t={sortedSubAppInfo} />
-                <div className='subApp-div'>
+                <div className={subAppDivClassNameSelector(currentApp)}>
                     {renderApp()}
                 </div>
                 <footer className="footer">

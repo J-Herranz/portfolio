@@ -178,6 +178,27 @@ function handlePlayerInput_enter({ setGridContent, dictionnary, targetWord, atte
 }
 
 
+// -----------------------------------------------------------------------------------------------
+// -----------------------------------------------------------------------------------------------
+/**
+ * Adds the error animation to the current attempt row by adding and removing the trembling class
+ * 
+ */
+function inputBeforeGameStartAnimation() {
+  const newGameButton = document.getElementsByClassName('newGame-button')[0]
+
+  if (!newGameButton) return
+
+  // adding flickering class
+  newGameButton.classList.add('flickering')
+
+  // taking out flickering class after 1000ms
+  setTimeout(() => {
+    newGameButton.classList.remove('flickering')
+  }, 1000)
+}
+
+
 // -----------------------------------------------------------------------------------------------------------------------------
 // -----------------------------------------------------------------------------------------------------------------------------
 /**
@@ -401,6 +422,7 @@ export {
   handlePlayerInput_backspace,
   handlePlayerInput_characters,
   handlePlayerInput_enter,
+  inputBeforeGameStartAnimation,
   resetAlphabetArray,
   resetBoard,
   setVirtualKeyboardKeyBackgroundColor,

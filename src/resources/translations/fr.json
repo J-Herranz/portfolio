@@ -112,7 +112,7 @@
       "appName": "Morpion",
       "appIconFile": "tictactoe1_white.png",
       "subAppThumbnailFileName": "APP7.png",
-      "subAppDescription": "L'application du jeu \"Morpion\" permet aux utilisateurs de jouer au célèbre jeu de tic-tac-toe, où deux joueurs s'affrontent pour aligner trois symboles, offrant une interface simple et des options de jeu en solo ou multijoueur.",
+      "subAppDescription": "L'application du jeu \"Morpion\" permet aux utilisateurs de jouer au célèbre jeu Morpion, où deux joueurs s'affrontent pour aligner trois symboles, offrant une interface simple et des options de jeu en solo ou multijoueur.",
       "toolTipInfo": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi molestias facilis explicabo similique omnis! Fuga nesciunt quia pariatur accusantium natus, quod ipsam, qui libero recusandae nobis inventore illum nemo! Id!",
       "appUrl": ""
     },

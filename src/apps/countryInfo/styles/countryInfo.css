@@ -5,13 +5,6 @@
   background-repeat: no-repeat;
 }
 
-.subApp-div {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .countryNameDiv {
   display: flex;
   justify-content: center;

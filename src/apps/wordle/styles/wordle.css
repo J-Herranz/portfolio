@@ -12,7 +12,7 @@
   color: #1a1a1a;
   font-weight: bold;
   transition: 0.2s;
-  box-shadow: 2px 2px 5px #fff;
+  /*box-shadow: 2px 2px 5px #fff;*/
 }
 
 .newGame-button:hover {
@@ -93,6 +93,50 @@ grow animation
 .grow-animation {
   animation: grow 0.2s ease forwards;
   /* Duración de 0.2s */
+}
+
+/* ---------------------------------------------------
+flicker animation
+*/
+@keyframes flicker {
+  0% {
+    background-color: #e5e5e5;
+    color: #1a1a1a;
+  }
+
+  16.66% {
+    background-color: #1a1a1a;
+    color: #e5e5e5;
+  }
+
+  32.32% {
+    background-color: #e5e5e5;
+    color: #1a1a1a;
+  }
+
+  48.98% {
+    background-color: #1a1a1a;
+    color: #e5e5e5;
+  }
+
+  65.64% {
+    background-color: #e5e5e5;
+    color: #1a1a1a;
+  }
+
+  82.3% {
+    background-color: #1a1a1a;
+    color: #e5e5e5;
+  }
+
+  100% {
+    background-color: #e5e5e5;
+    color: #1a1a1a;
+  }
+}
+
+.flickering {
+  animation: flicker 1s ease forwards;
 }
 
 @media (orientation: portrait) {

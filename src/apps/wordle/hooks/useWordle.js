@@ -3,7 +3,7 @@ import { useDictionnary } from '../hooks/useDictionnary.js';
 import { useGrid } from '../hooks/useGrid.js';
 import { LanguageContext } from '../../../context/LanguageContext';
 
-import { handlePlayerInput_backspace, handlePlayerInput_characters, handlePlayerInput_enter, resetAlphabetArray, resetBoard, wordleWordPicker } from '../services/gameLogic.js'
+import { handlePlayerInput_backspace, handlePlayerInput_characters, handlePlayerInput_enter, inputBeforeGameStartAnimation, resetAlphabetArray, resetBoard, wordleWordPicker } from '../services/gameLogic.js'
 
 const useWordle = () => {
   const { languageCode, t } = useContext(LanguageContext);
@@ -18,18 +18,21 @@ const useWordle = () => {
   }, [languageCode]);
 
   const handlePlayerInput = (letter) => {
-    if (gameStart) {
-      if (letter.match(/^[A-ZÑ]$/)) {
-        handlePlayerInput_characters({ setGridContent, letter, attempNb, currentCell, setCurrentCell })
-      }
+    if (!gameStart) {
+      inputBeforeGameStartAnimation()
+      return
+    }
 
-      if (letter === 'BACKSPACE') {
-        handlePlayerInput_backspace({ setGridContent, attempNb, currentCell, setCurrentCell })
-      }
+    if (letter.match(/^[A-ZÑ]$/)) {
+      handlePlayerInput_characters({ setGridContent, letter, attempNb, currentCell, setCurrentCell })
+    }
 
-      if (letter === 'ENTER') {
-        handlePlayerInput_enter({ setGridContent, dictionnary, targetWord, attempNb, setAttempNb, t, setCurrentCell, setGameStart, alphabetArray })
-      }
+    if (letter === 'BACKSPACE') {
+      handlePlayerInput_backspace({ setGridContent, attempNb, currentCell, setCurrentCell })
+    }
+
+    if (letter === 'ENTER') {
+      handlePlayerInput_enter({ setGridContent, dictionnary, targetWord, attempNb, setAttempNb, t, setCurrentCell, setGameStart, alphabetArray })
     }
   };
 
