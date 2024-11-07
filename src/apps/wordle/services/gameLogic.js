@@ -406,7 +406,7 @@ function wordEvaluation({ targetWord, attempNb, prevGridContent }) {
 function wordleWordPicker({ dictionnary }) {
   if (dictionnary?.length > 0) {
     const randomIndex = Math.floor(Math.random() * dictionnary.length)
-    console.log(`wordleWordPicker / targetword : ${dictionnary[randomIndex]}`) // Debug
+    //console.log(`wordleWordPicker / targetword : ${dictionnary[randomIndex]}`) // Debug
     return dictionnary[randomIndex]
   }
   return ''
