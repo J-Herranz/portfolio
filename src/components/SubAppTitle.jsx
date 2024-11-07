@@ -20,7 +20,7 @@ function SubAppTitle() {
     backgroundColor = '#1E1E1E'
   }
 
-  console.log(`SubAppTitle, darkmodeBool value : ${darkmodeBool}`)
+  //console.log(`SubAppTitle, darkmodeBool value : ${darkmodeBool}`)
 
   return (
     <>
