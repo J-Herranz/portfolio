@@ -103,8 +103,8 @@
       "appName": "Questionnaire",
       "appIconFile": "survey2_white.png",
       "subAppThumbnailFileName": "APP6.png",
-      "subAppDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem optio in cum animi rerum quis? Dolor autem ad velit nihil a, debitis laboriosam voluptatibus voluptas quidem quae repellat, numquam libero!",
-      "toolTipInfo": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi molestias facilis explicabo similique omnis! Fuga nesciunt quia pariatur accusantium natus, quod ipsam, qui libero recusandae nobis inventore illum nemo! Id!",
+      "subAppDescription": "Cette application web propose un quiz où les utilisateurs voient une photo d'un membre de la famille des félidés et doivent sélectionner la bonne espèce parmi une liste d'options. Que ce soit un lion, un tigre, un léopard ou un chat domestique, l'utilisateur doit associer l'animal à son espèce. C’est un moyen amusant et interactif d’en apprendre davantage sur ces animaux fascinants et d’améliorer ses compétences en reconnaissance !",
+      "toolTipInfo": "Le questionnaire est basé sur des informations et des images extraites de Wikipedia. Il consiste en un tirage au sort de 10 images, dans lesquelles l'utilisateur doit identifier l'espèce montrée. En cas d'échec, un indice sera tiré au hasard et affiché à l'utilisateur pour l'aider à répondre correctement.",
       "appUrl": ""
     },
     {
@@ -164,10 +164,11 @@
       "medium": "Bon travail ! Vous avez répondu correctement à de nombreuses questions, mais il y a encore quelques domaines à améliorer. Continuez à vous entraîner et vous maîtriserez le monde des félins !",
       "bad": "Ne vous inquiétez pas ! Bien que le résultat n'ait pas été à la hauteur de vos attentes, vous avez l'opportunité d'apprendre et de vous améliorer. Révisez le contenu et vous serez bien mieux préparé la prochaine fois. Vous pouvez le faire !"
     },
-    "prepareSurvey": "Préparez-vous en révisant",
+    "mainPageTitle": "Apprendre sur les félins",
     "nextQuestion": "Question suivante",
+    "prepareSurvey": "Rencontrez les Félins",
     "question": "Qui suis-je ?",
-    "scoreExplanation": "La notation du test est la suivante :\n- 3 points pour chaque réponse correcte sans erreurs.\n- 2 points pour chaque réponse correcte avec 1 erreur.\n- 1 point pour chaque réponse correcte avec 2 erreurs.\n- 0 point si la réponse comporte plus de 3 erreurs.",
+    "scoreExplanation": "La notation du test est la suivante :\n- 3 points pour chaque réponse correcte sans erreurs.\n- 2 points pour chaque réponse correcte avec 1 erreur.\n- 1 point pour chaque réponse correcte avec 2 erreurs.\n- 0 point si la réponse comporte 3 erreurs ou plus.",
     "startSurvey": "Commencer le questionnaire",
     "species": [
       {
@@ -196,6 +197,15 @@
             "The fastest land animal, capable of reaching speeds of 93 to 104 km/h (58 to 65 mph).",
             "Small, rounded head with a short snout and distinctive black tear-like facial streaks.",
             "Found mainly in northwestern, eastern, and southern Africa, as well as central Iran."
+          ]
+        },
+        "cloudedLeopard": {
+          "name": "Panthère nébuleuse",
+          "info": "La Panthère nébuleuse (Neofelis nebulosa), aussi appelée Panthère longibande d’Indochine ou Léopard nébuleux, est un félin sauvage qui habite les forêts denses des contreforts de l’Himalaya, en passant par le nord-est de l’Inde et le Bhoutan jusqu'à l’Asie du Sud-Est continentale et le sud de la Chine. La panthère nébuleuse a de grandes taches gris foncé et des taches et rayures irrégulières qui rappellent les nuages. Sa longueur de la tête au corps varie de 68,6 à 108 cm (27 à 42,5 pouces), avec une queue de 61 à 91 cm (24 à 36 pouces) de long. Elle utilise sa queue pour s’équilibrer en se déplaçant dans les arbres et est capable de descendre les troncs d’arbres verticaux la tête en avant. Elle se repose dans les arbres pendant la journée et chasse la nuit sur le sol de la forêt.",
+          "clues": [
+            "Habite les forêts denses depuis les contreforts de l'Himalaya, à travers le nord-est de l'Inde et le Bhoutan jusqu'au sud-est asiatique continental et le sud de la Chine.",
+            "Présente de grandes taches gris foncé, avec des motifs irréguliers et des rayures rappelant des nuages.",
+            "Se repose dans les arbres le jour et chasse au sol la nuit."
           ]
         },
         "cougar": {

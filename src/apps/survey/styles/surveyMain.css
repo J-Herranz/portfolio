@@ -1,0 +1,30 @@
+.surveyMainDiv {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 4rem
+}
+
+.surveyMainButtonDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.surveyMainButtonDiv>button {
+  width: 250px;
+  padding: 1rem;
+  ;
+}
+
+
+@media (orientation: portrait) {
+  /*.surveyMainDiv {
+    margin-top: 3rem;
+  }*/
+}

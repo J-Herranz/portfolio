@@ -103,8 +103,8 @@
       "appName": "Cuestionario",
       "appIconFile": "survey2_white.png",
       "subAppThumbnailFileName": "APP6.png",
-      "subAppDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem optio in cum animi rerum quis? Dolor autem ad velit nihil a, debitis laboriosam voluptatibus voluptas quidem quae repellat, numquam libero!",
-      "toolTipInfo": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi molestias facilis explicabo similique omnis! Fuga nesciunt quia pariatur accusantium natus, quod ipsam, qui libero recusandae nobis inventore illum nemo! Id!",
+      "subAppDescription": "Esta aplicación web presenta un cuestionario en el que el usuario ve una foto de un miembro de la familia Felidae y debe seleccionar la especie correcta de entre varias opciones. Ya sea un león, un tigre, un leopardo o un gato doméstico, la tarea del usuario es asociar el animal con su especie. Es una forma divertida e interactiva de aprender sobre estos animales fascinantes y mejorar tus habilidades de reconocimiento.",
+      "toolTipInfo": "El cuestionario está basado en información e imágenes extraídas de Wikipedia. Consiste en un sorteo aleatorio de 10 imágenes, en las cuales el usuario debe identificar correctamente la especie que se muestra. En caso de no acertar, se proporcionará una pista de forma aleatoria que será mostrada al usuario para ayudarle en su respuesta.",
       "appUrl": ""
     },
     {
@@ -164,10 +164,11 @@
       "medium": "¡Buen trabajo! Has respondido correctamente a muchas preguntas, pero aún hay algunas áreas en las que puedes mejorar. ¡Sigue practicando y dominarás el mundo de los felinos!",
       "bad": "¡No te preocupes! Aunque el resultado no fue el esperado, tienes la oportunidad de aprender y mejorar. Repasa el material y estarás mucho más preparado la próxima vez. ¡Tú puedes!"
     },
-    "prepareSurvey": "Prepárate revisando",
+    "mainPageTitle": "Aprende sobre los felinos",
     "nextQuestion": "Siguiente pregunta",
+    "prepareSurvey": "Conoce a los felinos",
     "question": "¿Quién soy?",
-    "scoreExplanation": "La puntuación del test se otorga de la siguiente manera:\n- 3 puntos por cada respuesta correcta sin errores.\n- 2 puntos por cada respuesta correcta con 1 error.\n- 1 punto por cada respuesta correcta con 2 errores.\n- 0 puntos si la respuesta tiene más de 3 errores.",
+    "scoreExplanation": "La puntuación del test se otorga de la siguiente manera:\n- 3 puntos por cada respuesta correcta sin errores.\n- 2 puntos por cada respuesta correcta con 1 error.\n- 1 punto por cada respuesta correcta con 2 errores.\n- 0 puntos si la respuesta tiene 3 o más errores.",
     "startSurvey": "Comenzar el cuestionario",
     "species": [
       {
@@ -196,6 +197,15 @@
             "El animal terrestre más rápido, capaz de alcanzar velocidades de 93 a 104 km/h (58 a 65 mph).",
             "Cabeza pequeña y redondeada, con un hocico corto y marcas faciales negras similares a lágrimas.",
             "Se encuentra principalmente en el noroeste, este y sur de África, así como en el centro de Irán."
+          ]
+        },
+        "cloudedLeopard": {
+          "name": "Pantera Nebulosa",
+          "info": "La pantera nebulosa (Neofelis nebulosa), también llamado leopardo longibando, es un felino salvaje que habita en bosques densos desde las estribaciones del Himalaya a través del noreste de India y Bután hasta el sudeste asiático continental y el sur de China. El leopardo nebuloso tiene grandes manchas grisáceas oscuras y manchas y rayas irregulares que recuerdan a las nubes. Su longitud de cabeza y cuerpo varía de 68.6 a 108 cm (27.0 a 42.5 pulgadas) con una cola de 61 a 91 cm (24 a 36 pulgadas) de largo. Utiliza su cola para equilibrarse al moverse entre los árboles y es capaz de bajar troncos verticales cabeza abajo. Descansa en los árboles durante el día y caza de noche en el suelo del bosque.",
+          "clues": [
+            "Habita en bosques densos desde las estribaciones del Himalaya, pasando por el noreste de la India y Bután, hasta el sudeste asiático continental y el sur de China.",
+            "Posee grandes manchas gris oscuro con patrones irregulares y rayas que recuerdan a las nubes.",
+            "Descansa en los árboles durante el día y caza en el suelo del bosque por la noche."
           ]
         },
         "cougar": {
