@@ -1,0 +1,179 @@
+/*.tree { 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tree>div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}*/
+
+.tree {
+  height: fit-content;
+  width: 60%;
+  min-height: 100vh;
+}
+
+.tree>div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.tree>div>* {
+  height: 100%;
+}
+
+.tree .tree-vertical-text {
+  transform: rotate(-90deg);
+  padding: 0.5rem;
+  display: block;
+  min-height: fit-content;
+  height: 100%;
+  width: 2rem;
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: center;
+}
+
+.tree-vertical-text-div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 2rem 1rem;
+}
+
+
+.no-padding-top {
+  padding-top: 0;
+}
+
+.no-padding-bottom {
+  padding-bottom: 0;
+}
+
+.no-padding-left {
+  padding-left: 0;
+}
+
+
+
+.left-border {
+  border-left: 2px solid;
+  padding-left: 0.5rem;
+  position: relative;
+  width: 100%;
+}
+
+.left-border::before,
+.left-border::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 2px;
+}
+
+.left-border::before {
+  top: 0;
+  /* Borde superior */
+  left: 0;
+  /* Comienza en el extremo izquierdo */
+}
+
+.left-border::after {
+  bottom: 0;
+  /* Borde inferior */
+  left: 0;
+  /* Comienza en el extremo izquierdo */
+}
+
+.left-border.dark::before,
+.left-border.dark::after {
+  background-color: #0b0b0b;
+}
+
+/* Para el modo claro */
+.left-border.light::before,
+.left-border.light::after {
+  background-color: #f4f4f4;
+}
+
+
+
+
+
+
+
+
+
+
+.phylogeneticTree_entry {
+  min-height: 3rem;
+  padding: 0 1rem;
+  border-radius: 0 10px 10px 0;
+  transition: 0.5s;
+}
+
+.phylogeneticTree_entry>p {
+  height: 3rem;
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/*
+.phylogeneticTree_entry>p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}*/
+
+.phylogeneticTree_entry>p>i {
+  padding-left: 0.5rem;
+}
+
+.phylogeneticTree_entry img {
+  padding-left: 1rem;
+  height: 2.5rem;
+  width: auto;
+}
+
+.phylogeneticTree_entry.workingHover.light:hover {
+  background-color: #c9c7c7;
+  color: #0b0b0b;
+}
+
+.phylogeneticTree_entry.workingHover.dark:hover {
+  background-color: #a19f9f;
+  color: #f4f4f4;
+}
+
+@media (orientation:portrait) {
+  .tree {
+    width: 100%;
+    max-width: 500px;
+    padding: 0 0.5rem;
+    margin-top: 0;
+  }
+
+  .left-border {
+    padding-left: 0;
+  }
+
+  .phylogeneticTree_entry img {
+    height: 1.75rem;
+  }
+
+  .tree-vertical-text-div {
+    padding: 2rem 0;
+  }
+
+  .phylogeneticTree_entry {
+    min-width: 240px;
+  }
+}

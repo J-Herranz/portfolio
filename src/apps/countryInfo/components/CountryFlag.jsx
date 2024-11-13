@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types'
 import '../styles/CountryFlag.css'
 
 function CountryFlag({ countryInfo, countryCode, t }) {
@@ -16,6 +16,6 @@ CountryFlag.propTypes = {
   countryInfo: PropTypes.object,
   countryCode: PropTypes.string.isRequired,
   t: PropTypes.object.isRequired,
-};
+}
 
 export { CountryFlag }
