@@ -14,8 +14,9 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  cursor: pointer;
+  text-align: left;
 }
-
 
 .burgerBar-option>img {
   height: 2rem;
@@ -26,12 +27,3 @@
   background-color: black;
   color: white;
 }
-
-/*
-.bm-menu {
-  background-color: blue !important;
-  background-color: #1a1a1a !important;
-  background-color: #242424 !important;
-  background-color: #333 !important; 
-
-}*/

@@ -13,6 +13,8 @@
   "dependencies": {
     "canvas-confetti": "^1.9.3",
     "darkmode-js": "^1.5.7",
+    "dompurify": "^3.2.0",
+    "jsdom": "^25.0.1",
     "proptypes": "^1.1.0",
     "random-country": "^1.0.1",
     "react": "^18.3.1",

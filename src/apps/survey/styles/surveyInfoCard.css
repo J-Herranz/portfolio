@@ -1,0 +1,36 @@
+.surveyInfoCard-div {
+  margin-top: 50px;
+  flex: 1;
+  margin-right: 4rem;
+}
+
+.surveyInfoCard-div>div {
+  position: sticky;
+  top: 20px;
+}
+
+.surveyInfoCard-div img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.surveyInfoCard-div p {
+  margin-top: 1rem;
+  width: 100%;
+  border-radius: 10px;
+  background-color: #c9c6c6;
+  color: #0b0b0b;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+@media (orientation:portrait) {
+
+  .surveyInfoCard-div {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+  }
+}

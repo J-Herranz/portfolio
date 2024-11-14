@@ -2,6 +2,7 @@ import { useContext } from 'react'
 import { LanguageContext } from '../../../context/LanguageContext.js'
 import { ThemeContext } from '../../../context/ThemeContext.js'
 import { PhylogeneticTree_entry } from './PhylogeneticTree_entry.jsx'
+import PropTypes from 'prop-types'
 import '../styles/phylogeneticTree.css'
 
 import img_caracal from '/assets/survey_images/species_icons/caracal.png';
@@ -18,7 +19,7 @@ import img_serval from '/assets/survey_images/species_icons/serval.png';
 import img_snowLeopard from '/assets/survey_images/species_icons/snowLeopard.png';
 import img_tiger from '/assets/survey_images/species_icons/tiger.png';
 
-function PhylogeneticTree() {
+function PhylogeneticTree({ setCardSpecies }) {
   const { t } = useContext(LanguageContext);
   const { darkmodeBool } = useContext(ThemeContext);
 
@@ -26,14 +27,6 @@ function PhylogeneticTree() {
   function leftBorderClass() {
     return `left-border ${darkmodeBool ? 'dark' : 'light'}`
   }
-
-
-
-
-  console.log(t)
-
-
-
 
   return (
     <div className="tree" style={darkmodeBool ? { color: '#0b0b0b', borderColor: '#0b0b0b' } : { color: '#f4f4f4', borderColor: '#f4f4f4' }}>
@@ -46,18 +39,18 @@ function PhylogeneticTree() {
               <div className='tree-vertical-text-div'>
                 <p className='tree-vertical-text'>Neofelis</p>
                 <div className={leftBorderClass()}>
-                  <PhylogeneticTree_entry name={t?.survey?.species?.cloudedLeopard?.name} binomialNomenclature={t?.survey?.species?.cloudedLeopard?.binomialNomenclature} img={img_cloudedLeopard} />
+                  <PhylogeneticTree_entry name={t?.survey?.species?.cloudedLeopard?.name} binomialNomenclature={t?.survey?.species?.cloudedLeopard?.binomialNomenclature} img={img_cloudedLeopard} setCardSpecies={setCardSpecies} />
                   <PhylogeneticTree_entry />
                 </div>
               </div>
               <div className='tree-vertical-text-div'>
                 <p className='tree-vertical-text'>Panthera</p>
                 <div className={leftBorderClass()}>
-                  <PhylogeneticTree_entry name={t?.survey?.species?.tiger?.name} binomialNomenclature={t?.survey?.species?.tiger?.binomialNomenclature} img={img_tiger} />
-                  <PhylogeneticTree_entry name={t?.survey?.species?.snowLeopard?.name} binomialNomenclature={t?.survey?.species?.snowLeopard?.binomialNomenclature} img={img_snowLeopard} />
-                  <PhylogeneticTree_entry name={t?.survey?.species?.jaguar?.name} binomialNomenclature={t?.survey?.species?.jaguar?.binomialNomenclature} img={img_jaguar} />
-                  <PhylogeneticTree_entry name={t?.survey?.species?.lion?.name} binomialNomenclature={t?.survey?.species?.lion?.binomialNomenclature} img={img_lion} />
-                  <PhylogeneticTree_entry name={t?.survey?.species?.leopard?.name} binomialNomenclature={t?.survey?.species?.leopard?.binomialNomenclature} img={img_leopard} />
+                  <PhylogeneticTree_entry name={t?.survey?.species?.tiger?.name} binomialNomenclature={t?.survey?.species?.tiger?.binomialNomenclature} img={img_tiger} setCardSpecies={setCardSpecies} />
+                  <PhylogeneticTree_entry name={t?.survey?.species?.snowLeopard?.name} binomialNomenclature={t?.survey?.species?.snowLeopard?.binomialNomenclature} img={img_snowLeopard} setCardSpecies={setCardSpecies} />
+                  <PhylogeneticTree_entry name={t?.survey?.species?.jaguar?.name} binomialNomenclature={t?.survey?.species?.jaguar?.binomialNomenclature} img={img_jaguar} setCardSpecies={setCardSpecies} />
+                  <PhylogeneticTree_entry name={t?.survey?.species?.lion?.name} binomialNomenclature={t?.survey?.species?.lion?.binomialNomenclature} img={img_lion} setCardSpecies={setCardSpecies} />
+                  <PhylogeneticTree_entry name={t?.survey?.species?.leopard?.name} binomialNomenclature={t?.survey?.species?.leopard?.binomialNomenclature} img={img_leopard} setCardSpecies={setCardSpecies} />
                 </div>
               </div>
             </div>
@@ -70,23 +63,24 @@ function PhylogeneticTree() {
               <div className='tree-vertical-text-div'>
                 <p className='tree-vertical-text'>Leptailurus</p>
                 <div className={leftBorderClass()}>
-                  <PhylogeneticTree_entry name={t?.survey?.species?.serval?.name} binomialNomenclature={t?.survey?.species?.serval?.binomialNomenclature} img={img_serval} />
+                  <PhylogeneticTree_entry name={t?.survey?.species?.serval?.name} binomialNomenclature={t?.survey?.species?.serval?.binomialNomenclature} img={img_serval} setCardSpecies={setCardSpecies} />
                 </div>
               </div>
               <div className='tree-vertical-text-div'>
                 <p className='tree-vertical-text'>Caracal</p>
                 <div className={leftBorderClass()}>
-                  <PhylogeneticTree_entry name={t?.survey?.species?.caracal?.name} binomialNomenclature={t?.survey?.species?.caracal?.binomialNomenclature} img={img_caracal} />
+                  <PhylogeneticTree_entry name={t?.survey?.species?.caracal?.name} binomialNomenclature={t?.survey?.species?.caracal?.binomialNomenclature} img={img_caracal} setCardSpecies={setCardSpecies} />
                   <PhylogeneticTree_entry />
                 </div>
               </div>
               <div className='tree-vertical-text-div'>
                 <p className='tree-vertical-text'>Leopardus</p>
                 <div className={leftBorderClass()}>
-                  <PhylogeneticTree_entry name={t?.survey?.species?.ocelot?.name} binomialNomenclature={t?.survey?.species?.ocelot?.binomialNomenclature} img={img_ocelot} />
+                  <PhylogeneticTree_entry name={t?.survey?.species?.ocelot?.name} binomialNomenclature={t?.survey?.species?.ocelot?.binomialNomenclature} img={img_ocelot} setCardSpecies={setCardSpecies} />
                   <PhylogeneticTree_entry />
                 </div>
               </div>
+              {/*
               <div className='tree-vertical-text-div'>
                 <p className='tree-vertical-text'>Pardofelis</p>
                 <div className={leftBorderClass()}>
@@ -99,30 +93,34 @@ function PhylogeneticTree() {
                   <PhylogeneticTree_entry />
                 </div>
               </div>
+              */}
               <div className='tree-vertical-text-div'>
                 <p className='tree-vertical-text'>Lynx</p>
                 <div className={leftBorderClass()}>
-                  <PhylogeneticTree_entry name={t?.survey?.species?.lynx?.name} binomialNomenclature={t?.survey?.species?.lynx?.binomialNomenclature} img={img_lynx} />
+                  <PhylogeneticTree_entry name={t?.survey?.species?.lynx?.name} binomialNomenclature={t?.survey?.species?.lynx?.binomialNomenclature} img={img_lynx} setCardSpecies={setCardSpecies} />
                 </div>
               </div>
               <div className='tree-vertical-text-div'>
                 <p className='tree-vertical-text'>Acinonyx</p>
                 <div className={leftBorderClass()}>
-                  <PhylogeneticTree_entry name={t?.survey?.species?.cheetah?.name} binomialNomenclature={t?.survey?.species?.cheetah?.binomialNomenclature} img={img_cheetah} />
+                  <PhylogeneticTree_entry name={t?.survey?.species?.cheetah?.name} binomialNomenclature={t?.survey?.species?.cheetah?.binomialNomenclature} img={img_cheetah} setCardSpecies={setCardSpecies} />
                 </div>
               </div>
+              {/*
               <div className='tree-vertical-text-div'>
                 <p className='tree-vertical-text'>Herpailurus</p>
                 <div className={leftBorderClass()}>
                   <PhylogeneticTree_entry />
                 </div>
               </div>
+              */}
               <div className='tree-vertical-text-div'>
                 <p className='tree-vertical-text'>Puma</p>
                 <div className={leftBorderClass()}>
-                  <PhylogeneticTree_entry name={t?.survey?.species?.cougar?.name} binomialNomenclature={t?.survey?.species?.cougar?.binomialNomenclature} img={img_cougar} />
+                  <PhylogeneticTree_entry name={t?.survey?.species?.cougar?.name} binomialNomenclature={t?.survey?.species?.cougar?.binomialNomenclature} img={img_cougar} setCardSpecies={setCardSpecies} />
                 </div>
               </div>
+              {/*
               <div className='tree-vertical-text-div'>
                 <p className='tree-vertical-text'>Otocolobus</p>
                 <div className={leftBorderClass()}>
@@ -135,10 +133,11 @@ function PhylogeneticTree() {
                   <PhylogeneticTree_entry />
                 </div>
               </div>
+              */}
               <div className='tree-vertical-text-div no-padding-bottom'>
                 <p className='tree-vertical-text'>Felis</p>
                 <div className={leftBorderClass()}>
-                  <PhylogeneticTree_entry name={t?.survey?.species?.cat?.name} binomialNomenclature={t?.survey?.species?.cat?.binomialNomenclature} img={img_cat} />
+                  <PhylogeneticTree_entry name={t?.survey?.species?.cat?.name} binomialNomenclature={t?.survey?.species?.cat?.binomialNomenclature} img={img_cat} setCardSpecies={setCardSpecies} />
                   <PhylogeneticTree_entry />
                 </div>
               </div>
@@ -148,6 +147,10 @@ function PhylogeneticTree() {
       </div>
     </div>
   );
+}
+
+PhylogeneticTree.propTypes = {
+  setCardSpecies: PropTypes.func
 }
 
 export { PhylogeneticTree }

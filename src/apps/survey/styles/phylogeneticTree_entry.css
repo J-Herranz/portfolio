@@ -1,0 +1,48 @@
+.phylogeneticTree_entry {
+  max-width: 400px;
+  min-height: 3rem;
+  padding: 0 1rem;
+  border-radius: 0 10px 10px 0;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.phylogeneticTree_entry>p {
+  height: 3rem;
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.phylogeneticTree_entry>p>i {
+  padding-left: 0.5rem;
+}
+
+.phylogeneticTree_entry img {
+  padding-left: 1rem;
+  height: 2.5rem;
+  width: auto;
+}
+
+.phylogeneticTree_entry.workingHover.light:hover {
+  background-color: #c9c7c7;
+  color: #0b0b0b;
+}
+
+.phylogeneticTree_entry.workingHover.dark:hover {
+  background-color: #a19f9f;
+  color: #f4f4f4;
+}
+
+@media (orientation:portrait) {
+  .phylogeneticTree_entry {
+    max-width: 240px;
+    min-width: 240px;
+  }
+
+  .phylogeneticTree_entry img {
+    height: 1.75rem;
+  }
+}

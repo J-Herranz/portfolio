@@ -1,6 +1,7 @@
 import { useState, useContext } from 'react';
 import { LanguageContext } from '../context/LanguageContext';
 import { ThemeContext } from '../context/ThemeContext';
+import DOMPurify from 'dompurify'
 import '../styles/subAppTitle.css'
 
 function SubAppTitle() {
@@ -9,6 +10,8 @@ function SubAppTitle() {
   const { darkmodeBool } = useContext(ThemeContext)
 
   let styles, srcLocation, backgroundColor
+
+  const sanitizedHTML = DOMPurify.sanitize(t?.subAppInfo?.toolTipInfo)
 
   if (darkmodeBool) {
     styles = { color: "black" }
@@ -20,8 +23,6 @@ function SubAppTitle() {
     backgroundColor = '#1E1E1E'
   }
 
-  //console.log(`SubAppTitle, darkmodeBool value : ${darkmodeBool}`) // Debug
-
   return (
     <>
       <div className='subAppTitle-div' style={{ backgroundColor: backgroundColor }}>
@@ -31,7 +32,7 @@ function SubAppTitle() {
           onMouseEnter={() => setIsVisible(true)}
           onMouseLeave={() => setIsVisible(false)}>
           <img src={srcLocation} alt="Info Icon" />
-          <p style={{ display: isVisible ? "block" : "none" }}>{t?.subAppInfo?.toolTipInfo}</p>
+          <p style={{ display: isVisible ? "block" : "none" }} dangerouslySetInnerHTML={{ __html: sanitizedHTML }} />
         </div>
       </div>
     </>

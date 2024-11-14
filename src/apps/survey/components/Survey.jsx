@@ -14,11 +14,6 @@ function Survey() {
   const { darkmodeBool } = useContext(ThemeContext);
   const [page, setPage] = useState('main')
 
-
-
-
-
-
   const changeSurveyPage = (pageName) => {
     //console.log('click on changeSurveyPage')
     setPage(pageName)
@@ -28,7 +23,7 @@ function Survey() {
   const renderSurveyPage = () => {
     switch (page) {
       case 'learn':
-        return <SurveyLearn />
+        return <SurveyLearn returnButtonFunc={() => setPage('main')} />
       case 'questions':
         return <SurveyQuestions />
       case 'results':
@@ -38,17 +33,6 @@ function Survey() {
     }
   }
 
-
-
-
-
-
-
-
-
-
-  console.log(t)
-  console.log('survey render')
   return (
     <>
       <SubAppTitle />
