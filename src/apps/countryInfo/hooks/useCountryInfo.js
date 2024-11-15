@@ -11,7 +11,7 @@ function useCountryInfo({ countryCode, setCountryName }) {
     setError(null);
 
     try {
-      const newInfo = await getCountryInfo(countryCode);
+      const newInfo = await getCountryInfo({ countryCode });
       setCountryInfo(newInfo);
 
       if (newInfo.error) {

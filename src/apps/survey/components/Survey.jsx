@@ -25,7 +25,7 @@ function Survey() {
       case 'learn':
         return <SurveyLearn returnButtonFunc={() => setPage('main')} />
       case 'questions':
-        return <SurveyQuestions />
+        return <SurveyQuestions returnButtonFunc={() => setPage('main')} />
       case 'results':
         return <SurveyResults />
       default:

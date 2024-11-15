@@ -169,6 +169,7 @@
     "nextQuestion": "Question suivante",
     "prepareSurvey": "Rencontrez les Félins",
     "question": "Qui suis-je ?",
+    "quitSurvey": "Quitter le questionnaire",
     "scoreExplanation": "La notation du test est la suivante :\n- 3 points pour chaque réponse correcte sans erreurs.\n- 2 points pour chaque réponse correcte avec 1 erreur.\n- 1 point pour chaque réponse correcte avec 2 erreurs.\n- 0 point si la réponse comporte 3 erreurs ou plus.",
     "startSurvey": "Commencer le questionnaire",
     "species": {

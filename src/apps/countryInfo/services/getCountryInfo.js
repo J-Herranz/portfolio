@@ -1,7 +1,16 @@
-const COUNTRY_INFO_URL_PREFIX = 'https://restcountries.com/v3.1/alpha?codes=';
+import { COUNTRY_INFO_URL_PREFIX } from "./constants";
 
-async function getCountryInfo(countryCode) {
-  // Validación de parámetro
+// -----------------------------------------------------------------------------------------------
+// -----------------------------------------------------------------------------------------------
+/**
+ * Gets the country info from the endpoint affected to the constant COUNTRY_INFO_URL_PREFIX
+ * 
+ * @param {Object} params - Object containing all parameters
+ * @param {string} params.countryCode - string containing the country code (2 letters)
+ * @returns {Object} - object containing the country's info
+ */
+async function getCountryInfo({ countryCode }) {
+  // verifying the parameters
   if (!countryCode) {
     return Promise.resolve({
       error: true,
@@ -9,6 +18,7 @@ async function getCountryInfo(countryCode) {
     });
   }
 
+  // fetching from the API
   try {
     const response = await fetch(`${COUNTRY_INFO_URL_PREFIX}${countryCode}`);
     if (!response.ok) {
@@ -36,6 +46,7 @@ async function getCountryInfo(countryCode) {
 
 export { getCountryInfo };
 
+// forecast API data
 /*
 const API_ENDPOINT = 'https://api.open-meteo.com/v1/forecast'
 const COORDS = 'latitude=48.87&longitude=2.33'

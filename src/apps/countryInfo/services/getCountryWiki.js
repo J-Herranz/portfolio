@@ -1,7 +1,18 @@
-function getCountryWiki(countryName, languageCode) {
-  //const COUNTRY_WIKI_URL_PREFIX = `https://${languageCode}.wikipedia.org/api/rest_v1/page/summary/`
-  const COUNTRY_WIKI_URL_PREFIX = `https://en.wikipedia.org/api/rest_v1/page/summary/`;
+import { COUNTRY_WIKI_URL_PREFIX } from "./constants";
 
+// -----------------------------------------------------------------------------------------------
+// -----------------------------------------------------------------------------------------------
+/**
+ * Gets the country info from the endpoint affected to the constant COUNTRY_WIKI_URL_PREFIX
+ * 
+ * @param {Object} params - Object containing all parameters
+ * @param {string} params.countryName - string containing the country name
+ * @param {string} params.languageCode - string containing the language code
+ * @returns {Object} - object containing the country's info
+ */
+function getCountryWiki(countryName, languageCode) {
+
+  // verifying valitidity of parameters
   if (!countryName || !languageCode) {
     return Promise.resolve({
       error: true,
@@ -9,6 +20,7 @@ function getCountryWiki(countryName, languageCode) {
     });
   }
 
+  // fetching from the API
   return fetch(`${COUNTRY_WIKI_URL_PREFIX}${countryName}`)
     .then(res => {
       if (!res.ok) {

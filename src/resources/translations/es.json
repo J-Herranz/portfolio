@@ -169,6 +169,7 @@
     "nextQuestion": "Siguiente pregunta",
     "prepareSurvey": "Conoce a los felinos",
     "question": "¿Quién soy?",
+    "quitSurvey": "Salir del cuestionario",
     "scoreExplanation": "La puntuación del test se otorga de la siguiente manera:\n- 3 puntos por cada respuesta correcta sin errores.\n- 2 puntos por cada respuesta correcta con 1 error.\n- 1 punto por cada respuesta correcta con 2 errores.\n- 0 puntos si la respuesta tiene 3 o más errores.",
     "startSurvey": "Comenzar el cuestionario",
     "species": {

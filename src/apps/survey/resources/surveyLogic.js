@@ -1,0 +1,119 @@
+import { SPECIES_NAME_ARRAY } from "./constants";
+
+/**
+ * Retrieves an array with the species name passed as a parameter, and three other randomly chosen species 
+ * from the species array, with random positions.
+ * 
+ * @param {Object} params - Object containing all parameters
+ * @param {string} params.speciesName - The name of the species passed as a parameter
+ * @returns {Array<string>} - An array with 4 species names, including the one passed as a parameter
+ */
+function getRandomSpecies({ speciesName }) {
+  // ensure the species name exists in the speciesArray
+  if (!SPECIES_NAME_ARRAY.includes(speciesName)) {
+    console.error(`The species name ${speciesName} is not found in the array.`);
+    return [];
+  }
+
+  // create a copy of the array to avoid modifying the original
+  const speciesCopy = [...SPECIES_NAME_ARRAY];
+
+  // remove the passed species name from the array to avoid selecting it again
+  const speciesIndex = speciesCopy.indexOf(speciesName);
+  if (speciesIndex !== -1) {
+    speciesCopy.splice(speciesIndex, 1); // remove the species from the copy
+  }
+
+  // randomly select 3 species from the remaining species
+  const randomSpecies = [];
+  for (let i = 0; i < 3; i++) {
+    const randomIndex = Math.floor(Math.random() * speciesCopy.length); // random index
+    randomSpecies.push(speciesCopy[randomIndex]); // add the selected species to the result array
+    speciesCopy.splice(randomIndex, 1); // remove the selected species to avoid duplicates
+  }
+
+  // combine the passed species name with the 3 randomly selected species
+  const result = [speciesName, ...randomSpecies];
+
+  // randomly shuffle the order of the elements in the result array
+  for (let i = result.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [result[i], result[j]] = [result[j], result[i]]; // swap elements
+  }
+
+  return result;
+}
+
+
+// -----------------------------------------------------------------------------------------------
+// -----------------------------------------------------------------------------------------------
+/**
+ * Selects a number of randomly selected species picked from the SPECIES_NAME_ARRAY constant
+ * 
+ * @param {Object} params - Object containing all parameters
+ * @param {number} params.speciesNb - number of species to be selected (default is 10)
+ * @returns {Array<string>} - array containing randomly selected species names
+ */
+function getSpeciesAtRandom({ speciesNb = 10 }) {
+  const copiedArray = [...SPECIES_NAME_ARRAY];  // copy the array to avoid modifying the original
+  const result = [];
+
+  // make sure that we do not select more items than those present on the array
+  const numberOfItemsToSelect = Math.min(speciesNb, copiedArray.length);
+
+  // select randomly until the required number of elements is reached
+  for (let i = 0; i < numberOfItemsToSelect; i++) {
+    const randomIndex = Math.floor(Math.random() * copiedArray.length);
+    // extract the element at the random index and add it to the result array
+    result.push(copiedArray[randomIndex]);
+    // remove the selected element from the copied array to avoid duplicates
+    copiedArray.splice(randomIndex, 1);
+  }
+
+  return result;
+}
+
+
+// -----------------------------------------------------------------------------------------------
+// -----------------------------------------------------------------------------------------------
+/**
+ * Gets the info required to build the survey (images + info)
+ * 
+ * @param {Object} params - Object containing all parameters
+ * @param {number} params.speciesObject - the species object containing detailed species info
+ * @param {number} params.speciesNb - number of species to be selected (default is 10)
+ * @returns {Array<string>} - array containing the selected species objects
+ */
+function getSurveyInfo({ speciesObject, speciesNb = 10 }) {
+  // validate speciesObject (ensure it is an object)
+  if (!speciesObject || typeof speciesObject !== 'object') {
+    console.error("speciesObject es inválido o no es un objeto");
+    return [] // Return an empty array if speciesObject is invalid
+  }
+
+  // get random species names
+  const selectedSpeciesNames = getSpeciesAtRandom({ speciesNb });
+
+  // map species names to their corresponding objects from speciesObject
+  return selectedSpeciesNames
+    .map(name => {
+      const species = speciesObject[name];  // get the species object
+      if (species) {
+        // generate a random number between 1 and 5
+        const randomImageNumber = Math.floor(Math.random() * 5) + 1;
+        // build the image path
+        const imagePath = `/assets/survey_images/species_photos/${name}/${name}${randomImageNumber}.jpg`;
+
+        // add the image path to the species object
+        return {
+          ...species,  // spread the existing species object properties
+          imagePath: imagePath  // add the image path
+        };
+      }
+      return null;  // if species not found, return null
+    })
+    .filter(speciesObject => speciesObject !== undefined);  // filter out any undefined values (in case the name doesn't exist)
+}
+
+
+export { getSurveyInfo, getRandomSpecies }

@@ -169,6 +169,7 @@
     "nextQuestion": "Next Question",
     "prepareSurvey": "Meet the Felines",
     "question": "Who am I?",
+    "quitSurvey": "Quit survey",
     "scoreExplanation": "The scoring for the test is as follows:\n- 3 points for each answer with no mistakes.\n- 2 points for each answer correct with 1 mistake.\n- 1 point for each answer correct with 2 mistakes.\n- 0 points if the answer has 3 mistakes or more.",
     "startSurvey": "Start the Survey",
     "species": {
