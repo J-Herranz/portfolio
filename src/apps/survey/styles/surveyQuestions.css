@@ -27,7 +27,8 @@
 .clues-div {
   display: flex;
   flex-direction: column;
-  width: calc(100vw - 4rem - 320px);
+  /*width: calc(100vw - 4rem - 320px);*/
+  width: 40vw;
   padding-right: 2rem;
 }
 
@@ -100,14 +101,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 25% !important;
+  /*width: 25% !important;*/
   height: 3rem;
   border-radius: 10px;
   user-select: none;
   width: 300px;
-}
-
-.surveyQuestionsButtons-div>div {
   transition: transform 0.3s ease;
 }
 
@@ -148,4 +146,55 @@ div.disabled {
 
 .questionButtons-disabled {
   pointer-events: none;
+}
+
+@media (orientation: portrait) {
+  .surveyQuestions-div {
+    margin-top: 0.5rem;
+  }
+
+  .imageToGuess-clues-div {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .imageToGuess-clues-div>img {
+    width: 95vw;
+    height: auto;
+    padding: 0;
+  }
+
+  .clues-div p {
+    padding: 1rem 0 0 0
+  }
+
+  .optionsDiv-container {
+    width: 95vw;
+  }
+
+  .clues-div {
+    margin-top: 2rem;
+    width: 95vw;
+    padding-right: 0;
+  }
+
+  .surveyQuestionsButtons-div {
+    gap: 1rem
+  }
+
+  .surveyQuestionsButtons-div>.survey-button {
+    width: 45vw;
+  }
+
+  .optionsDiv-container>div:hover {
+    font-size: 1rem;
+  }
+
+  .hoverLeft:hover {
+    transform: translateX(0px);
+  }
+
+  .hoverRight:hover {
+    transform: translateX(0px);
+  }
 }

@@ -160,16 +160,19 @@
   "survey": {
     "backToSurveyMain": "Volver",
     "clueTitle": "Pistas",
-    "endingMessage": {
-      "good": "¡Felicidades! Has acertado todas las preguntas sobre felinos correctamente. ¡El mundo felino no tiene misterios para ti!",
-      "medium": "¡Buen trabajo! Has respondido correctamente a muchas preguntas, pero aún hay algunas áreas en las que puedes mejorar. ¡Sigue practicando y dominarás el mundo de los felinos!",
-      "bad": "¡No te preocupes! Aunque el resultado no fue el esperado, tienes la oportunidad de aprender y mejorar. Repasa el material y estarás mucho más preparado la próxima vez. ¡Tú puedes!"
-    },
     "mainPageTitle": "Aprende sobre los felinos",
     "nextQuestion": "Siguiente pregunta",
     "prepareSurvey": "Conoce a los felinos",
     "question": "¿Quién soy?",
     "quitSurvey": "Salir del cuestionario",
+    "results": "Resultados del cuestionario",
+    "resultsMessage": {
+      "good": "¡Felicidades! Has acertado todas las preguntas sobre felinos correctamente. ¡El mundo felino no tiene misterios para ti!",
+      "medium": "¡Buen trabajo! Has respondido correctamente a muchas preguntas, pero aún hay algunas áreas en las que puedes mejorar. ¡Sigue practicando y dominarás el mundo de los felinos!",
+      "bad": "¡No te preocupes! Aunque el resultado no fue el esperado, tienes la oportunidad de aprender y mejorar. Repasa el material y estarás mucho más preparado la próxima vez. ¡Tú puedes!"
+    },
+    "resultsScore1": "Has obtenido",
+    "resultsScore2": "puntos sobre un total de 30.",
     "scoreExplanation": "La puntuación del test se otorga de la siguiente manera:\n- 3 puntos por cada respuesta correcta sin errores.\n- 2 puntos por cada respuesta correcta con 1 error.\n- 1 punto por cada respuesta correcta con 2 errores.\n- 0 puntos si la respuesta tiene 3 o más errores.",
     "startSurvey": "Comenzar el cuestionario",
     "species": {

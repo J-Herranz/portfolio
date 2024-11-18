@@ -7,6 +7,10 @@
   gap: 4rem
 }
 
+.surveyMainDiv {
+  text-wrap: balance;
+}
+
 .surveyMainButtonDiv {
   display: flex;
   justify-content: center;

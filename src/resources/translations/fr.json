@@ -160,16 +160,19 @@
   "survey": {
     "backToSurveyMain": "Retourner",
     "clueTitle": "Indices",
-    "endingMessage": {
-      "good": "Félicitations ! Vous avez répondu correctement à toutes les questions sur les félins. Le monde des félins n'a aucun secret pour vous !",
-      "medium": "Bon travail ! Vous avez répondu correctement à de nombreuses questions, mais il y a encore quelques domaines à améliorer. Continuez à vous entraîner et vous maîtriserez le monde des félins !",
-      "bad": "Ne vous inquiétez pas ! Bien que le résultat n'ait pas été à la hauteur de vos attentes, vous avez l'opportunité d'apprendre et de vous améliorer. Révisez le contenu et vous serez bien mieux préparé la prochaine fois. Vous pouvez le faire !"
-    },
     "mainPageTitle": "Apprendre sur les félins",
     "nextQuestion": "Question suivante",
     "prepareSurvey": "Rencontrez les Félins",
     "question": "Qui suis-je ?",
     "quitSurvey": "Quitter le questionnaire",
+    "results": "Résultats du questionnaire",
+    "resultsMessage": {
+      "good": "Félicitations ! Vous avez répondu correctement à toutes les questions sur les félins. Le monde des félins n'a aucun secret pour vous !",
+      "medium": "Bon travail ! Vous avez répondu correctement à de nombreuses questions, mais il y a encore quelques domaines à améliorer. Continuez à vous entraîner et vous maîtriserez le monde des félins !",
+      "bad": "Ne vous inquiétez pas ! Bien que le résultat n'ait pas été à la hauteur de vos attentes, vous avez l'opportunité d'apprendre et de vous améliorer. Révisez le contenu et vous serez bien mieux préparé la prochaine fois. Vous pouvez le faire !"
+    },
+    "resultsScore1": "Vous avez obtenu",
+    "resultsScore2": "points sur un total de 30.",
     "scoreExplanation": "La notation du test est la suivante :\n- 3 points pour chaque réponse correcte sans erreurs.\n- 2 points pour chaque réponse correcte avec 1 erreur.\n- 1 point pour chaque réponse correcte avec 2 erreurs.\n- 0 point si la réponse comporte 3 erreurs ou plus.",
     "startSurvey": "Commencer le questionnaire",
     "species": {

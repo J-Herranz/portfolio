@@ -160,16 +160,19 @@
   "survey": {
     "backToSurveyMain": "Go back",
     "clueTitle": "Clues",
-    "endingMessage": {
-      "good": "Congratulations! You answered all the questions about felines correctly. The feline world holds no mysteries for you!",
-      "medium": "Good job! You answered many questions correctly, but there are still some areas to improve. Keep practicing, and you'll master the world of felines!",
-      "bad": "Don't worry! Although the result wasn't what you hoped for, you have the chance to learn and improve. Review the material, and you'll be much more prepared next time. You can do it!"
-    },
     "mainPageTitle": "Learn about felines",
     "nextQuestion": "Next Question",
     "prepareSurvey": "Meet the Felines",
     "question": "Who am I?",
     "quitSurvey": "Quit survey",
+    "results": "Survey results",
+    "resultsMessage": {
+      "good": "Congratulations! You answered all the questions about felines correctly. The feline world holds no mysteries for you!",
+      "medium": "Good job! You answered many questions correctly, but there are still some areas to improve. Keep practicing, and you'll master the world of felines!",
+      "bad": "Don't worry! Although the result wasn't what you hoped for, you have the chance to learn and improve. Review the material, and you'll be much more prepared next time. You can do it!"
+    },
+    "resultsScore1": "You scored",
+    "resultsScore2": "points out of a total of 30.",
     "scoreExplanation": "The scoring for the test is as follows:\n- 3 points for each answer with no mistakes.\n- 2 points for each answer correct with 1 mistake.\n- 1 point for each answer correct with 2 mistakes.\n- 0 points if the answer has 3 mistakes or more.",
     "startSurvey": "Start the Survey",
     "species": {
