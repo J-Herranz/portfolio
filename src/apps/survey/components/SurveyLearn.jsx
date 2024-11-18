@@ -45,7 +45,7 @@ function SurveyLearn({ returnButtonFunc }) {
             setIsSpotDifferencesImgVisible={setIsSpotDifferencesImgVisible}
           />}
       </div>
-      <button onClick={() => returnButtonFunc()}>{t?.survey?.backToSurveyMain}</button>
+      <button className="surveyLearn-button survey-button" onClick={() => returnButtonFunc()}>{t?.survey?.backToSurveyMain}</button>
 
       {isSpotDifferencesImgVisible && (
         <div className="popup-overlay" onClick={closePopup}>

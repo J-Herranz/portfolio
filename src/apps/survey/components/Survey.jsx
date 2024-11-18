@@ -10,9 +10,10 @@ import { SurveyQuestions } from '../components/SurveyQuestions'
 import { SurveyResults } from '../components/SurveyResults'
 
 function Survey() {
-  const { t } = useContext(LanguageContext);
+  const { t, languageCode } = useContext(LanguageContext);
   const { darkmodeBool } = useContext(ThemeContext);
   const [page, setPage] = useState('main')
+  const [totalPoints, setTotalPoints] = useState(0)
 
   const changeSurveyPage = (pageName) => {
     //console.log('click on changeSurveyPage')
@@ -25,9 +26,9 @@ function Survey() {
       case 'learn':
         return <SurveyLearn returnButtonFunc={() => setPage('main')} />
       case 'questions':
-        return <SurveyQuestions returnButtonFunc={() => setPage('main')} />
+        return <SurveyQuestions key={languageCode} returnButtonFunc={() => setPage('main')} goToResults={() => setPage('results')} setTotalPoints={setTotalPoints} />
       case 'results':
-        return <SurveyResults />
+        return <SurveyResults returnButtonFunc={() => setPage('main')} totalPoints={totalPoints} />
       default:
         return <SurveyMain changeSurveyPage={changeSurveyPage} />
     }

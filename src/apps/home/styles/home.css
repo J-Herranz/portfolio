@@ -10,11 +10,23 @@
   margin: 1rem auto;
 }
 
+.personalInfo-card {
+  background-color: rgba(80, 80, 80, 0.4);
+  width: 90%;
+  margin: auto;
+  border-radius: 10px;
+}
+
+.personalInfo-card>* {
+  font-family: 'Verdana', sans-serif;
+}
+
 .homeApp section h2 {
   margin: auto;
   width: 100%;
   padding: 1rem;
   text-align: center;
+  font-size: 2rem;
 }
 
 .homeApp>section h3 {
@@ -28,6 +40,7 @@
   padding: 1rem;
   margin: auto;
   text-align: center;
+  text-wrap: balance;
 }
 
 .subAppCards-section {

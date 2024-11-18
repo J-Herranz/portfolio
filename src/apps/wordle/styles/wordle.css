@@ -1,3 +1,9 @@
+.background-wordle {
+  background-color: #e5e5f7;
+  background: repeating-linear-gradient(-45deg, #63584C, #63584C 3px, #1A1A08 3px, #1A1A08 12px);
+}
+
+
 .gridRow-container-div {
   display: flex;
   flex-direction: column;

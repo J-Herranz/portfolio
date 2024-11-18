@@ -12,8 +12,8 @@ function SurveyMain({ changeSurveyPage }) {
     <div className='surveyMainDiv'>
       <h1>{t?.survey?.mainPageTitle}</h1>
       <div className='surveyMainButtonDiv'>
-        <button onClick={() => changeSurveyPage('learn')}>{t?.survey?.prepareSurvey}</button>
-        <button onClick={() => changeSurveyPage('questions')}>{t?.survey?.startSurvey}</button>
+        <button className='survey-button' onClick={() => changeSurveyPage('learn')}>{t?.survey?.prepareSurvey}</button>
+        <button className='survey-button' onClick={() => changeSurveyPage('questions')}>{t?.survey?.startSurvey}</button>
       </div>
     </div>
   );

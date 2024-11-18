@@ -1,0 +1,38 @@
+.optionDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2b4e95;
+  padding: 10px;
+  height: 3rem;
+  user-select: none;
+  cursor: pointer;
+  transition: background-color 0.25s;
+  /*border: solid 1px white;*/
+  box-shadow: #5982d4 3px 3px 10px 0;
+  transition: font-size 0.3s;
+}
+
+.optionsDiv-container>div:hover {
+  font-size: 1.3rem;
+}
+
+.optionDiv.button-incorrect-dark {
+  background-color: #A72845;
+  pointer-events: none;
+}
+
+.optionDiv.button-incorrect-light {
+  background-color: #3ecfae;
+  pointer-events: none;
+}
+
+.optionDiv.button-correct-dark {
+  background-color: #28A745;
+  pointer-events: none;
+}
+
+.optionDiv.button-correct-light {
+  background-color: #bb46a0;
+  pointer-events: none;
+}

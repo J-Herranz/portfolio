@@ -36,6 +36,10 @@ function App() {
                 return 'App background-calculator'
             case 'countryInfo':
                 return 'App backgroundImage-countryInfo'
+            case 'survey':
+                return 'App background-survey'
+            case 'wordle':
+                return 'App background-wordle'
             default:
                 return 'App'
         }

@@ -1,25 +1,25 @@
-import { SPECIES_NAME_ARRAY } from "./constants";
+import { SPECIES_NAME_BY_LANGUAGE } from "./constants"
 
 /**
  * Retrieves an array with the species name passed as a parameter, and three other randomly chosen species 
  * from the species array, with random positions.
  * 
  * @param {Object} params - Object containing all parameters
- * @param {string} params.speciesName - The name of the species passed as a parameter
+ * @param {string} params.binomialNomenclature - The binomial nomenclature of the species passed as a parameter
  * @returns {Array<string>} - An array with 4 species names, including the one passed as a parameter
  */
-function getRandomSpecies({ speciesName }) {
+function getRandomSpecies({ speciesCode }) {
   // ensure the species name exists in the speciesArray
-  if (!SPECIES_NAME_ARRAY.includes(speciesName)) {
-    console.error(`The species name ${speciesName} is not found in the array.`);
+  if (!Object.keys(SPECIES_NAME_BY_LANGUAGE).includes(speciesCode)) {
+    console.error(`The species code ${speciesCode} is not found in the array.`);
     return [];
   }
 
   // create a copy of the array to avoid modifying the original
-  const speciesCopy = [...SPECIES_NAME_ARRAY];
+  const speciesCopy = [...Object.keys(SPECIES_NAME_BY_LANGUAGE)];
 
   // remove the passed species name from the array to avoid selecting it again
-  const speciesIndex = speciesCopy.indexOf(speciesName);
+  const speciesIndex = speciesCopy.indexOf(speciesCode);
   if (speciesIndex !== -1) {
     speciesCopy.splice(speciesIndex, 1); // remove the species from the copy
   }
@@ -33,7 +33,7 @@ function getRandomSpecies({ speciesName }) {
   }
 
   // combine the passed species name with the 3 randomly selected species
-  const result = [speciesName, ...randomSpecies];
+  const result = [speciesCode, ...randomSpecies];
 
   // randomly shuffle the order of the elements in the result array
   for (let i = result.length - 1; i > 0; i--) {
@@ -48,14 +48,14 @@ function getRandomSpecies({ speciesName }) {
 // -----------------------------------------------------------------------------------------------
 // -----------------------------------------------------------------------------------------------
 /**
- * Selects a number of randomly selected species picked from the SPECIES_NAME_ARRAY constant
+ * Selects a number of randomly selected species picked from the SPECIES_NAME_BY_LANGUAGE constant
  * 
  * @param {Object} params - Object containing all parameters
  * @param {number} params.speciesNb - number of species to be selected (default is 10)
  * @returns {Array<string>} - array containing randomly selected species names
  */
 function getSpeciesAtRandom({ speciesNb = 10 }) {
-  const copiedArray = [...SPECIES_NAME_ARRAY];  // copy the array to avoid modifying the original
+  const copiedArray = [...Object.keys(SPECIES_NAME_BY_LANGUAGE)];  // copy the array to avoid modifying the original
   const result = [];
 
   // make sure that we do not select more items than those present on the array
@@ -87,7 +87,7 @@ function getSpeciesAtRandom({ speciesNb = 10 }) {
 function getSurveyInfo({ speciesObject, speciesNb = 10 }) {
   // validate speciesObject (ensure it is an object)
   if (!speciesObject || typeof speciesObject !== 'object') {
-    console.error("speciesObject es inválido o no es un objeto");
+    console.error("Species object has not valable info");
     return [] // Return an empty array if speciesObject is invalid
   }
 
@@ -97,7 +97,7 @@ function getSurveyInfo({ speciesObject, speciesNb = 10 }) {
   // map species names to their corresponding objects from speciesObject
   return selectedSpeciesNames
     .map(name => {
-      const species = speciesObject[name];  // get the species object
+      const species = { ...speciesObject[name], code: name };  // get the species object
       if (species) {
         // generate a random number between 1 and 5
         const randomImageNumber = Math.floor(Math.random() * 5) + 1;

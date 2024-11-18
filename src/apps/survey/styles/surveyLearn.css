@@ -10,6 +10,17 @@ body {
   display: flex;
 }
 
+.surveyLearn-button {
+  width: 250px;
+  height: 3rem;
+}
+
+/*
+.surveLearn-button:hover {
+  width: 250px;
+  height: 3rem;
+}*/
+
 .species-spot-pattern {
   cursor: pointer;
   background-color: white;

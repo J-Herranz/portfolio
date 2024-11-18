@@ -1,0 +1,14 @@
+.background-survey {
+  background: linear-gradient(to right, #13367e, #011036)
+}
+
+.survey-button {
+  background-color: #82a2e2;
+  color: white;
+  transition: font-size 0.3s;
+}
+
+.survey-button:hover {
+  font-size: 1.25rem;
+  background-color: #82a2e2;
+}

@@ -1,0 +1,151 @@
+.surveyQuestions-div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.surveyQuestions-div>h2 {
+  margin-bottom: 2rem;
+}
+
+.imageToGuess-clues-div {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+.imageToGuess-clues-div>img {
+  height: 320px;
+  width: auto;
+  border-radius: 10px;
+  padding: 0 2rem;
+  transition: transform 0.5s ease-in-out;
+}
+
+.clues-div {
+  display: flex;
+  flex-direction: column;
+  width: calc(100vw - 4rem - 320px);
+  padding-right: 2rem;
+}
+
+.clues-div>h2 {
+  width: fit-content;
+  height: fit-content;
+  padding-bottom: 1rem;
+  align-self: center;
+}
+
+.clues-div p {
+  align-self: center;
+  text-wrap: balance;
+  width: fit-content;
+  padding: 1rem 1rem;
+}
+
+.optionsDiv-container {
+  margin: 2rem 0;
+  display: grid;
+  /* Activa el sistema de cuadrícula */
+  grid-template-columns: repeat(2, 1fr);
+  /* Define 2 columnas de igual tamaño */
+  grid-template-rows: repeat(2, 1fr);
+  /* Define 2 filas de igual tamaño */
+  gap: 1rem;
+  width: 50vw;
+  align-items: center;
+}
+
+/*
+.optionsDiv-container>div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightblue;
+  padding: 10px;
+  height: 3rem;
+  user-select: none;
+}
+*/
+
+.optionsDiv-container>:nth-child(1) {
+  border-radius: 20px 0 0 0;
+}
+
+.optionsDiv-container>:nth-child(2) {
+  border-radius: 0 20px 0 0;
+}
+
+.optionsDiv-container>:nth-child(3) {
+  border-radius: 0 0 0 20px;
+}
+
+.optionsDiv-container>:nth-child(4) {
+  border-radius: 0 0 20px 0;
+}
+
+.surveyQuestionsButtons-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+
+.surveyQuestionsButtons-div>div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25% !important;
+  height: 3rem;
+  border-radius: 10px;
+  user-select: none;
+  width: 300px;
+}
+
+.surveyQuestionsButtons-div>div {
+  transition: transform 0.3s ease;
+}
+
+.hoverLeft:hover {
+  transform: translateX(-30px);
+  font-size: 1.15rem;
+  background-color: #785c24;
+}
+
+.hoverRight:hover {
+  transform: translateX(+30px);
+}
+
+.surveyQuestionsButtons-div>div>img {
+  width: auto;
+}
+
+.surveyQuestionsButtons-div>div>img:nth-child(1) {
+  height: 2rem;
+  margin-right: 0.5rem;
+}
+
+.surveyQuestionsButtons-div>div>img:nth-child(2) {
+  height: 1.5rem;
+  margin-left: 0.5rem;
+}
+
+.button:disabled,
+div.disabled {
+  background-color: #d6d6d6;
+  color: #a1a1a1;
+  border: 1px solid #a1a1a1;
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: 0.6;
+  user-select: none;
+}
+
+.questionButtons-disabled {
+  pointer-events: none;
+}

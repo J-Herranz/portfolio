@@ -19,7 +19,7 @@ function Home({ setCurrentApp }) {
         <h1>{t?.subAppInfo?.filter(app => app.appCode === "home")[0].appName}</h1>
         <hr />
 
-        <section>
+        <section className="personalInfo-card">
           <h2>Joel Herranz</h2>
           <h3>{t?.home?.jobTitle}</h3>
           <p>{t?.home?.userDescription}</p>
