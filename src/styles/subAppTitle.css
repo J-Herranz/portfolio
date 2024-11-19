@@ -35,7 +35,7 @@
   color: black;
   margin-top: 0.5rem;
   border-radius: 20px;
-  transform: translateX(-45%);
+  transform: translateX(-45%) translatey(15%);
   left: -120px;
   width: 300px;
   max-width: 500px;
@@ -68,5 +68,9 @@
   .subAppTitle-toolTip-div>p {
     transform: 0;
     left: -100px;
+  }
+
+  .subAppTitle-div p {
+    transform: translateX(-55%) translatey(10%);
   }
 }

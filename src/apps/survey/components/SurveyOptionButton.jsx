@@ -10,7 +10,7 @@ function SurveyOptionButton({ returnToParent, species, languageCode, rightAnswer
 
   const classSelector = () => {
     if (clicked) {
-      const lightOrDark = darkmodeBool ? '-dark' : '-light'
+      const lightOrDark = darkmodeBool ? '-light' : '-dark'
       return species === rightAnswer
         ? `button-correct${lightOrDark}`
         : `button-incorrect${lightOrDark}`

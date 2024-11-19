@@ -158,7 +158,7 @@
   },
   "mineSweeper": {},
   "survey": {
-    "backToSurveyMain": "Go back",
+    "backToSurveyMain": "Back to Menu",
     "clueTitle": "Clues",
     "mainPageTitle": "Learn about felines",
     "nextQuestion": "Next Question",
@@ -173,7 +173,8 @@
     },
     "resultsScore1": "You scored",
     "resultsScore2": "points out of a total of 30.",
-    "scoreExplanation": "The scoring for the test is as follows:\n- 3 points for each answer with no mistakes.\n- 2 points for each answer correct with 1 mistake.\n- 1 point for each answer correct with 2 mistakes.\n- 0 points if the answer has 3 mistakes or more.",
+    "scoreExplanation": "The scoring for the test is as follows:<br><br><ul><li>3 points for each answer with no mistakes.</li><li>2 points for each answer correct with 1 mistake.</li><li>1 point for each answer correct with 2 mistakes.</li><li>0 points if the answer has 3 mistakes or more.</li></ul>",
+    "scoreExplanationTitle": "Scoring Guide",
     "startSurvey": "Start the Survey",
     "species": {
       "caracal": {

@@ -20,7 +20,7 @@
   height: 320px;
   width: auto;
   border-radius: 10px;
-  padding: 0 2rem;
+  margin: 0 2rem;
   transition: transform 0.5s ease-in-out;
 }
 
@@ -36,14 +36,15 @@
   width: fit-content;
   height: fit-content;
   padding-bottom: 1rem;
-  align-self: center;
+  align-self: flex-start;
+  padding-left: 1rem;
 }
 
 .clues-div p {
-  align-self: center;
   text-wrap: balance;
   width: fit-content;
   padding: 1rem 1rem;
+  text-align: left;
 }
 
 .optionsDiv-container {
@@ -111,7 +112,6 @@
 
 .hoverLeft:hover {
   transform: translateX(-30px);
-  font-size: 1.15rem;
   background-color: #785c24;
 }
 
@@ -159,9 +159,13 @@ div.disabled {
   }
 
   .imageToGuess-clues-div>img {
-    width: 95vw;
+    width: 90vw;
     height: auto;
     padding: 0;
+  }
+
+  .clues-div h2 {
+    padding: 0
   }
 
   .clues-div p {
@@ -169,12 +173,12 @@ div.disabled {
   }
 
   .optionsDiv-container {
-    width: 95vw;
+    width: 90vw;
   }
 
   .clues-div {
     margin-top: 2rem;
-    width: 95vw;
+    width: 90vw;
     padding-right: 0;
   }
 
@@ -183,7 +187,7 @@ div.disabled {
   }
 
   .surveyQuestionsButtons-div>.survey-button {
-    width: 45vw;
+    width: 42.5vw;
   }
 
   .optionsDiv-container>div:hover {
@@ -196,5 +200,9 @@ div.disabled {
 
   .hoverRight:hover {
     transform: translateX(0px);
+  }
+
+  .survey-button:hover {
+    font-size: 1rem;
   }
 }

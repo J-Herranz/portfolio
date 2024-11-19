@@ -20,11 +20,11 @@ function SurveyQuestions({ returnButtonFunc, goToResults, setTotalPoints }) {
   const [rightAnswerFound, setRightAnswerFound] = useState(false)
   const [questionPoints, setQuestionPoints] = useState(3)
   const [clues, setClues] = useState()
-
-  useEffect(() => {
-    setSurveyInfo(getSurveyInfo({ speciesObject: t?.survey?.species }))
-  }, [t])
-
+  /*
+    useEffect(() => {
+      setSurveyInfo(getSurveyInfo({ speciesObject: t?.survey?.species }))
+    }, [t])
+    */
   useEffect(() => {
     setSurveyResponseOptions(getRandomSpecies({ speciesCode: surveyInfo?.[questionNb]?.code }))
   }, [surveyInfo])
@@ -32,6 +32,7 @@ function SurveyQuestions({ returnButtonFunc, goToResults, setTotalPoints }) {
   useEffect(() => {
     setClues(shuffleClues())
   }, [surveyInfo, questionNb])
+
 
   useEffect(() => { setTotalPoints(0) }, [])
 

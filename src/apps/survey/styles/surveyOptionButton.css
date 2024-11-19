@@ -10,7 +10,7 @@
   transition: background-color 0.25s;
   /*border: solid 1px white;*/
   box-shadow: #5982d4 3px 3px 10px 0;
-  transition: font-size 0.3s;
+  transition: font-size 0.3s, background-color 0.7s;
 }
 
 .optionsDiv-container>div:hover {
