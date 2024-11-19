@@ -121,12 +121,12 @@ function SurveyQuestions({ returnButtonFunc, goToResults, setTotalPoints }) {
           <img src={darkmodeBool ? next_icon_black : next_icon_white} />
         </div>
       </div >
-      <button onClick={() => {
+      {/*<button onClick={() => {
         console.log('surveyInfo')
         console.log(surveyInfo)
         console.log('t.survey.species')
         console.log(t.survey.species)
-      }}>print</button>
+      }}>print</button>*/}
     </>
   );
 }

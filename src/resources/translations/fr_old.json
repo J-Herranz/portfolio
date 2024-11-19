@@ -1,6 +1,24 @@
 {
   "subAppInfo": [
     {
+      "appCode": "amazonScraper",
+      "appName": "Scraper Amazon",
+      "appIconFile": "magnifingGlass1_white.png",
+      "subAppThumbnailFileName": "APP1.png",
+      "subAppDescription": "L'application de scraping Amazon extrait les informations des produits en fournissant une URL, récupérant le nom, la description, le prix et l'image pour simplifier la comparaison et l'analyse des articles.",
+      "toolTipInfo": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi molestias facilis explicabo similique omnis! Fuga nesciunt quia pariatur accusantium natus, quod ipsam, qui libero recusandae nobis inventore illum nemo! Id!",
+      "appUrl": ""
+    },
+    {
+      "appCode": "calculator",
+      "appName": "Calculatrice",
+      "appIconFile": "calculator1_white.png",
+      "subAppThumbnailFileName": "APP2.png",
+      "subAppDescription": "L'application de calculatrice permet d'effectuer des opérations mathématiques de base telles que l'addition, la soustraction, la multiplication et la division, avec une interface simple et intuitive pour des calculs rapides.",
+      "toolTipInfo": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi molestias facilis explicabo similique omnis! Fuga nesciunt quia pariatur accusantium natus, quod ipsam, qui libero recusandae nobis inventore illum nemo! Id!",
+      "appUrl": ""
+    },
+    {
       "appCode": "countryInfo",
       "appName": "Infos sur un pays au hasard",
       "appIconFile": "countries2_white.png",
@@ -45,6 +63,24 @@
       "appUrl": ""
     },
     {
+      "appCode": "eshop",
+      "appName": "Boutique en ligne",
+      "appIconFile": "eshop1_white.png",
+      "subAppThumbnailFileName": "APP3.png",
+      "subAppDescription": "L'application simule une e-shop, permettant aux utilisateurs de parcourir des produits, d'ajouter des articles au panier et de passer des commandes facilement, offrant une expérience de shopping en ligne réaliste.",
+      "toolTipInfo": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi molestias facilis explicabo similique omnis! Fuga nesciunt quia pariatur accusantium natus, quod ipsam, qui libero recusandae nobis inventore illum nemo! Id!",
+      "appUrl": "https://google.es"
+    },
+    {
+      "appCode": "hangman",
+      "appName": "Le pendu",
+      "appIconFile": "hangman1_white.png",
+      "subAppThumbnailFileName": "APP4.png",
+      "subAppDescription": "L'application du jeu \"Le pendu\" propose un jeu de mots où les joueurs doivent deviner un mot en proposant des lettres, tout en évitant de compléter un dessin de pendu.",
+      "toolTipInfo": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi molestias facilis explicabo similique omnis! Fuga nesciunt quia pariatur accusantium natus, quod ipsam, qui libero recusandae nobis inventore illum nemo! Id!",
+      "appUrl": ""
+    },
+    {
       "appCode": "home",
       "appName": "Accueil",
       "appIconFile": "home1_white.png",
@@ -54,12 +90,39 @@
       "appUrl": ""
     },
     {
+      "appCode": "mineSweeper",
+      "appName": "Démineur",
+      "appIconFile": "bomb1_white.png",
+      "subAppThumbnailFileName": "APP5.png",
+      "subAppDescription": "Localisez des mines cachées sur une grille en évitant de cliquer dessus, en se basant sur des indices numériques affichés",
+      "toolTipInfo": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi molestias facilis explicabo similique omnis! Fuga nesciunt quia pariatur accusantium natus, quod ipsam, qui libero recusandae nobis inventore illum nemo! Id!",
+      "appUrl": ""
+    },
+    {
       "appCode": "survey",
       "appName": "Questionnaire",
       "appIconFile": "survey2_white.png",
-      "subAppThumbnailFileName": "survey.jpg",
+      "subAppThumbnailFileName": "APP6.png",
       "subAppDescription": "Cette application web propose un quiz où les utilisateurs voient une photo d'un membre de la famille des félidés et doivent sélectionner la bonne espèce parmi une liste d'options. Que ce soit un lion, un tigre, un léopard ou un chat domestique, l'utilisateur doit associer l'animal à son espèce. C’est un moyen amusant et interactif d’en apprendre davantage sur ces animaux fascinants et d’améliorer ses compétences en reconnaissance !",
       "toolTipInfo": "Le questionnaire est basé sur des informations et des images extraites de Wikipedia.<br><br>Il consiste en un tirage au sort de 10 images, dans lesquelles l'utilisateur doit identifier l'espèce montrée.<br><br>En cas d'échec, un indice sera tiré au hasard et affiché à l'utilisateur pour l'aider à répondre correctement.",
+      "appUrl": ""
+    },
+    {
+      "appCode": "tictactoe",
+      "appName": "Morpion",
+      "appIconFile": "tictactoe1_white.png",
+      "subAppThumbnailFileName": "APP7.png",
+      "subAppDescription": "L'application du jeu \"Morpion\" permet aux utilisateurs de jouer au célèbre jeu Morpion, où deux joueurs s'affrontent pour aligner trois symboles, offrant une interface simple et des options de jeu en solo ou multijoueur.",
+      "toolTipInfo": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi molestias facilis explicabo similique omnis! Fuga nesciunt quia pariatur accusantium natus, quod ipsam, qui libero recusandae nobis inventore illum nemo! Id!",
+      "appUrl": ""
+    },
+    {
+      "appCode": "virtualDice",
+      "appName": "Dés virtuels",
+      "appIconFile": "dice1_white.png",
+      "subAppThumbnailFileName": "APP8.png",
+      "subAppDescription": "L'application simule le lancer d'un dé à 6 faces, générant un résultat aléatoire entre 1 et 6, idéale pour les jeux ou pour remplacer un dé physique.",
+      "toolTipInfo": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi molestias facilis explicabo similique omnis! Fuga nesciunt quia pariatur accusantium natus, quod ipsam, qui libero recusandae nobis inventore illum nemo! Id!",
       "appUrl": ""
     },
     {
