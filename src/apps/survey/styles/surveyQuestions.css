@@ -119,9 +119,12 @@
   transform: translateX(+30px);
 }
 
-.surveyQuestionsButtons-light:hover,
-.surveyQuestionsButtons-light:not(:hover) {
+.surveyQuestionsButtons-light:hover {
   background-color: #785c24;
+}
+
+.surveyQuestionsButtons-light:not(:hover) {
+  background-color: #82a2e2;
 }
 
 .surveyQuestionsButtons-div>div>img {
