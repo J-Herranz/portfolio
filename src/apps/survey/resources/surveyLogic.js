@@ -33,15 +33,19 @@ function getRandomSpecies({ speciesCode }) {
   }
 
   // combine the passed species name with the 3 randomly selected species
-  const result = [speciesCode, ...randomSpecies];
+  const chosenSpeciesArray = [speciesCode, ...randomSpecies];
 
-  // randomly shuffle the order of the elements in the result array
-  for (let i = result.length - 1; i > 0; i--) {
+  // create an array with the original positions of the elements
+  const chosenSpeciesArrayWithPosition = chosenSpeciesArray.map((speciesName, index) => ({ originalPosition: index, speciesName }));
+
+  // perform the shuffle on the original array (Fisher-Yates algorithm or Knuth shuffle)
+  for (let i = chosenSpeciesArrayWithPosition.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
-    [result[i], result[j]] = [result[j], result[i]]; // swap elements
+    [chosenSpeciesArrayWithPosition[i], chosenSpeciesArrayWithPosition[j]] = [chosenSpeciesArrayWithPosition[j], chosenSpeciesArrayWithPosition[i]]; // swap elements
   }
 
-  return result;
+  // return an array of objects with the original position and species
+  return chosenSpeciesArrayWithPosition;
 }
 
 
@@ -94,6 +98,8 @@ function getSurveyInfo({ speciesObject, speciesNb = 10 }) {
   // get random species names
   const selectedSpeciesNames = getSpeciesAtRandom({ speciesNb });
 
+  let indexPosition = 0
+
   // map species names to their corresponding objects from speciesObject
   return selectedSpeciesNames
     .map(name => {
@@ -106,6 +112,7 @@ function getSurveyInfo({ speciesObject, speciesNb = 10 }) {
 
         // add the image path to the species object
         return {
+          index: ++indexPosition,
           ...species,  // spread the existing species object properties
           imagePath: imagePath  // add the image path
         };
@@ -116,4 +123,17 @@ function getSurveyInfo({ speciesObject, speciesNb = 10 }) {
 }
 
 
-export { getSurveyInfo, getRandomSpecies }
+function shuffleClues({ cluesArray }) {
+  // copies the array passed as a parameter to avoid undesired modifications
+  const shuffledClues = [...cluesArray];
+
+  // Fisher-Yates algorithm to shuffle the array
+  for (let i = shuffledClues.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1)); // Indice aleatorio entre 0 y i
+    [shuffledClues[i], shuffledClues[j]] = [shuffledClues[j], shuffledClues[i]]; // Intercambiar los elementos
+  }
+
+  return shuffledClues;
+};
+
+export { getSurveyInfo, getRandomSpecies, shuffleClues }

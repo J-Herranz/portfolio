@@ -54,7 +54,6 @@ function PhylogeneticTree({ setCardSpecies }) {
                 </div>
               </div>
             </div>
-
           </div>
 
           <div className='tree-vertical-text-div no-padding-bottom'>

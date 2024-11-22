@@ -33,8 +33,9 @@ function SurveyInfoCard({ cardInfo, speciesEnglishName, setIsSpotDifferencesImgV
   };
 
   return (
-    <div className='surveyInfoCard-div'>
+    <div id="surveyInfoCard" className='surveyInfoCard-div'>
       <div>
+        <h2 className={darkmodeBool ? 'surveyInfoCard-h2-black' : 'surveyInfoCard-h2-white'}>{cardInfo?.binomialNomenclature}</h2>
         {imageSrc ? <img src={imageSrc} alt={`${speciesEnglishName} image`} /> : <p>Image not found</p>}
         <p dangerouslySetInnerHTML={{ __html: sanitizedHTML }} />
       </div>

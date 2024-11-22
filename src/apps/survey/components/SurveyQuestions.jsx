@@ -2,7 +2,7 @@ import { useContext, useState, useEffect } from 'react'
 import { SurveyOptionButton } from './SurveyOptionButton'
 import { LanguageContext } from '../../../context/LanguageContext.js'
 import { ThemeContext } from '../../../context/ThemeContext.js'
-import { getSurveyInfo, getRandomSpecies } from '../resources/surveyLogic.js'
+import { getSurveyInfo, getRandomSpecies, shuffleClues } from '../resources/surveyLogic.js'
 import PropTypes from 'prop-types'
 import quit_icon_black from '/assets/app-icons/quit_black.png'
 import quit_icon_white from '/assets/app-icons/quit_white.png'
@@ -20,26 +20,34 @@ function SurveyQuestions({ returnButtonFunc, goToResults, setTotalPoints }) {
   const [rightAnswerFound, setRightAnswerFound] = useState(false)
   const [questionPoints, setQuestionPoints] = useState(3)
   const [clues, setClues] = useState()
-  /*
-    useEffect(() => {
-      setSurveyInfo(getSurveyInfo({ speciesObject: t?.survey?.species }))
-    }, [t])
-    */
-  useEffect(() => {
-    setSurveyResponseOptions(getRandomSpecies({ speciesCode: surveyInfo?.[questionNb]?.code }))
-  }, [surveyInfo])
 
+  // initializes or affects the survey info state if the user changed the language
   useEffect(() => {
-    setClues(shuffleClues())
+    if (t) {
+      const newSurveyInfo = surveyInfo.map((speciesInfo) => {
+        return {
+          index: speciesInfo?.index,
+          imagePath: speciesInfo?.imagePath,
+          code: speciesInfo.code,
+          ...t?.survey?.species[speciesInfo.code]
+        }
+      })
+      setSurveyInfo(newSurveyInfo)
+    } else {
+      setSurveyInfo(getSurveyInfo({ speciesObject: t?.survey?.species }))
+    }
+  }, [t])
+
+  // shuffles the clues every time we change the surveyInfo (new questionnaire or language change) or when the user changes the question number
+  useEffect(() => {
+    setClues(shuffleClues({ cluesArray: surveyInfo?.[questionNb]?.clues }))
   }, [surveyInfo, questionNb])
 
-
+  // affects the total points to zero every time a new survey starts
   useEffect(() => { setTotalPoints(0) }, [])
 
-  //let clues = surveyInfo?.[questionNb]?.clues
-
   const returnToParent = ({ clickedSpecies }) => {
-    if (surveyInfo[questionNb]?.code === clickedSpecies) {
+    if (surveyInfo[questionNb]?.code === clickedSpecies?.speciesName) {
       setTotalPoints(prev => prev + questionPoints)
       setRightAnswerFound(true)
     } else {
@@ -60,21 +68,9 @@ function SurveyQuestions({ returnButtonFunc, goToResults, setTotalPoints }) {
     }
   }
 
-  function shuffleClues() {
-    // Copia el array original para no modificar el array original
-    const shuffledClues = [...surveyInfo?.[questionNb]?.clues];
-
-    // Algoritmo de Fisher-Yates para mezclar el array
-    for (let i = shuffledClues.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1)); // Indice aleatorio entre 0 y i
-      [shuffledClues[i], shuffledClues[j]] = [shuffledClues[j], shuffledClues[i]]; // Intercambiar los elementos
-    }
-
-    return shuffledClues;
-  };
-
   return (
     <>
+      <div className='coverDiv'></div>
       <div className='surveyQuestions-div'>
         <h2>{`${t?.survey?.question} (${questionNb + 1}/${surveyInfo.length})`}</h2>
         <div className='imageToGuess-clues-div'>
@@ -83,14 +79,9 @@ function SurveyQuestions({ returnButtonFunc, goToResults, setTotalPoints }) {
             <div className='clues-div'>
               <h2>{t?.survey?.clueTitle}</h2>
               {questionPoints < 3 && (
-
-
-                // Usamos slice(0, 3 - questionPoints) para mostrar más pistas con menos puntos
                 clues.slice(0, 3 - questionPoints).map((clue, index) => (
                   <p key={`clue${questionNb}${index}`}>{clue}</p>
                 ))
-
-
               )}
             </div> :
             ''
@@ -112,21 +103,15 @@ function SurveyQuestions({ returnButtonFunc, goToResults, setTotalPoints }) {
       </div>
 
       <div className='surveyQuestionsButtons-div'>
-        <div onClick={() => returnButtonFunc()} className='survey-button hoverLeft'>
+        <div onClick={() => returnButtonFunc()} className={`survey-button hoverLeft ${darkmodeBool ? 'surveyQuestionsButtons-light' : ''}`}>
           <img src={darkmodeBool ? quit_icon_black : quit_icon_white} />
           <p>{t?.survey?.quitSurvey}</p>
         </div>
-        <div onClick={() => nextQuestionButtonHandler()} className={`survey-button hoverRight ${rightAnswerFound ? '' : 'disabled'}`}>
+        <div onClick={() => nextQuestionButtonHandler()} className={`survey-button hoverRight ${rightAnswerFound ? '' : 'disabled'} ${darkmodeBool ? 'surveyQuestionsButtons-light' : ''}`}>
           <p>{t?.survey?.nextQuestion}</p>
           <img src={darkmodeBool ? next_icon_black : next_icon_white} />
         </div>
       </div >
-      {/*<button onClick={() => {
-        console.log('surveyInfo')
-        console.log(surveyInfo)
-        console.log('t.survey.species')
-        console.log(t.survey.species)
-      }}>print</button>*/}
     </>
   );
 }

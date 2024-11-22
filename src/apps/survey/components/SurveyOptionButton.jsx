@@ -11,7 +11,7 @@ function SurveyOptionButton({ returnToParent, species, languageCode, rightAnswer
   const classSelector = () => {
     if (clicked) {
       const lightOrDark = darkmodeBool ? '-light' : '-dark'
-      return species === rightAnswer
+      return species?.speciesName === rightAnswer
         ? `button-correct${lightOrDark}`
         : `button-incorrect${lightOrDark}`
     }
@@ -31,14 +31,14 @@ function SurveyOptionButton({ returnToParent, species, languageCode, rightAnswer
         })
       }
       }>
-      {SPECIES_NAME_BY_LANGUAGE[species]?.[languageCode]}
+      {SPECIES_NAME_BY_LANGUAGE[species?.speciesName]?.[languageCode]}
     </div >
   );
 }
 
 SurveyOptionButton.propTypes = {
   returnToParent: PropTypes.func.isRequired,
-  species: PropTypes.string.isRequired,
+  species: PropTypes.object.isRequired,
   languageCode: PropTypes.string.isRequired,
   rightAnswer: PropTypes.string.isRequired,
 }

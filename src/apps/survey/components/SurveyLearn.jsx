@@ -37,13 +37,17 @@ function SurveyLearn({ returnButtonFunc }) {
   return (
     <>
       <div className='surveyLearn-div'>
-        <PhylogeneticTree setCardSpecies={setCardSpecies} />
-        {cardSpecies &&
-          <SurveyInfoCard
-            cardInfo={t?.survey?.species?.[speciesEnglishName[cardSpecies]]}
-            speciesEnglishName={speciesEnglishName[cardSpecies]}
-            setIsSpotDifferencesImgVisible={setIsSpotDifferencesImgVisible}
-          />}
+        <h2>{t?.survey?.phylogeneticTree}</h2>
+        <p>{t?.survey?.phylogeneticTreeMessage}</p>
+        <div className='phylogeneticTree-div'>
+          <PhylogeneticTree setCardSpecies={setCardSpecies} />
+          {cardSpecies &&
+            <SurveyInfoCard
+              cardInfo={t?.survey?.species?.[speciesEnglishName[cardSpecies]]}
+              speciesEnglishName={speciesEnglishName[cardSpecies]}
+              setIsSpotDifferencesImgVisible={setIsSpotDifferencesImgVisible}
+            />}
+        </div>
       </div>
       <button className="surveyLearn-button survey-button" onClick={() => returnButtonFunc()}>{t?.survey?.backToSurveyMain}</button>
 

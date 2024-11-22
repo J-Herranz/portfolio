@@ -2,6 +2,24 @@
   margin-top: 50px;
   flex: 1;
   margin-right: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+h2.surveyInfoCard-h2-black,
+h2.surveyInfoCard-h2-white {
+  padding-bottom: 0.5rem;
+  transition: color 1s;
+}
+
+h2.surveyInfoCard-h2-black {
+  color: black;
+}
+
+h2.surveyInfoCard-h2-white {
+  color: white;
 }
 
 .surveyInfoCard-div>div {

@@ -55,8 +55,8 @@ function LanguageOptionSelectionComponent({ setLanguage, currentLanguageCode }) 
   const organizedOptions = rearrangedOptions();
 
   return (
-    <div className={selectingLanguage ? "languageOptions-container-div expanded-language-options" : "languageOptions-container-div"}
-      onClick={(e) => { e.stopPropagation(); handleChooseLanguage() }}
+    <div className={`languageOptions-container-div" ${selectingLanguage ? 'expanded-language-options' : ''}`}
+      onClick={(e) => { e.stopPropagation(); handleChooseLanguage(currentLanguageCode) }}
       ref={containerRef}
     >
       {selectingLanguage ? (
