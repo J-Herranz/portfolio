@@ -99,12 +99,13 @@
     "clueTitle": "Indices",
     "mainPageTitle": "Apprendre sur les félins",
     "nextQuestion": "Question suivante",
+    "noAnswerMessage": "Trouvez la bonne réponse avant de passer à la question suivante.",
     "phylogeneticTree": "Arbre phylogénétique",
     "phylogeneticTreeMessage": "Cliquez sur l'image de chaque espèce pour en savoir plus à son sujet.",
     "prepareSurvey": "Rencontrez les Félins",
     "question": "Qui suis-je ?",
     "quitSurvey": "Quitter le questionnaire",
-    "results": "Résultats du questionnaire",
+    "results": "Résultats",
     "resultsMessage": {
       "good": "Félicitations ! Vous avez répondu correctement à toutes les questions sur les félins. Le monde des félins n'a aucun secret pour vous !",
       "medium": "Bon travail ! Vous avez répondu correctement à de nombreuses questions, mais il y a encore quelques domaines à améliorer. Continuez à vous entraîner et vous maîtriserez le monde des félins !",
@@ -139,7 +140,7 @@
       "cheetah": {
         "name": "Guépard",
         "binomialNomenclature": "Acinonyx jubatus",
-        "info": "Le guépard (<i>Acinonyx jubatus</i>) est un grand chat et <strong>l'animal terrestre le plus rapide</strong>. Il a un pelage allant du fauve au blanc crème ou beige clair, parsemé de taches noires uniformément espacées <span class='species-spot-pattern'>&#x1F6C8;</span>.<br><br>La tête est petite et arrondie, avec un museau court et des rayures noires en forme de larmes sur le visage. Il atteint de 67 à 94 cm (26 à 37 po) au niveau des épaules, et la longueur tête-corps varie entre 1,1 et 1,5 m (3 pi 7 po à 4 pi 11 po). Les adultes pèsent entre 21 et 72 kg (46 à 159 lb). Le guépard est capable de courir à 93 à 104 km/h (58 à 65 mph) ; il a évolué avec des adaptations spécialisées pour la vitesse, telles qu'une construction légère, de longues jambes fines et une longue queue.<br><br>Actuellement réparti principalement en petites populations fragmentées dans le nord-ouest, l'est et le sud de l'Afrique, ainsi qu'en Iran central.",
+        "info": "Le guépard (<i>Acinonyx jubatus</i>) est un grand chat et <strong>l'animal terrestre le plus rapide</strong>. Il a un pelage allant du fauve au blanc crème ou beige clair, parsemé de taches noires uniformément espacées (<span class='species-spot-pattern'>plus d'informations</span>).<br><br>La tête est petite et arrondie, avec un museau court et des rayures noires en forme de larmes sur le visage. Il atteint de 67 à 94 cm (26 à 37 po) au niveau des épaules, et la longueur tête-corps varie entre 1,1 et 1,5 m (3 pi 7 po à 4 pi 11 po). Les adultes pèsent entre 21 et 72 kg (46 à 159 lb). Le guépard est capable de courir à 93 à 104 km/h (58 à 65 mph) ; il a évolué avec des adaptations spécialisées pour la vitesse, telles qu'une construction légère, de longues jambes fines et une longue queue.<br><br>Actuellement réparti principalement en petites populations fragmentées dans le nord-ouest, l'est et le sud de l'Afrique, ainsi qu'en Iran central.",
         "clues": [
           "The fastest land animal, capable of reaching speeds of 93 to 104 km/h (58 to 65 mph).",
           "Small, rounded head with a short snout and distinctive black tear-like facial streaks.",
@@ -169,7 +170,7 @@
       "jaguar": {
         "name": "Jaguar",
         "binomialNomenclature": "Panthera onca",
-        "info": "Le jaguar (<i>Panthera onca</i>) est une grande espèce de chat et le seul membre vivant du genre Panthera qui soit originaire des Amériques. Avec une longueur de corps pouvant atteindre 1,85 m (6 pi 1 po) et un poids allant jusqu'à 158 kg (348 lb), il est le plus grand chat des Amériques et le <strong>troisième plus grand du monde</strong>.<br><br>Son pelage distinctif est composé de fourrure jaune pâle à couleur fauve recouverte de taches qui se transforment en rosettes <span class='species-spot-pattern'>&#x1F6C8;</span> sur les flancs, bien qu'un <strong>pelage noir mélanistique</strong> apparaisse chez certains individus. Les taches et leur forme varient : sur les flancs, elles deviennent des rosettes pouvant comporter un ou plusieurs points.",
+        "info": "Le jaguar (<i>Panthera onca</i>) est une grande espèce de chat et le seul membre vivant du genre Panthera qui soit originaire des Amériques. Avec une longueur de corps pouvant atteindre 1,85 m (6 pi 1 po) et un poids allant jusqu'à 158 kg (348 lb), il est le plus grand chat des Amériques et le <strong>troisième plus grand du monde</strong>.<br><br>Son pelage distinctif est composé de fourrure jaune pâle à couleur fauve recouverte de taches qui se transforment en rosettes (<span class='species-spot-pattern'>plus d'informations</span>) sur les flancs, bien qu'un <strong>pelage noir mélanistique</strong> apparaisse chez certains individus. Les taches et leur forme varient : sur les flancs, elles deviennent des rosettes pouvant comporter un ou plusieurs points.",
         "clues": [
           "Le plus grand chat des Amériques et le troisième plus grand au monde.",
           "Présente des taches et des rosettes distinctives.",
@@ -179,7 +180,7 @@
       "leopard": {
         "name": "Léopard",
         "binomialNomenclature": "Panthera pardus",
-        "info": "Le léopard (<i>Panthera pardus</i>) ou la Panthère est l'une des cinq espèces actuelles du genre Panthera. Son corps est élancé et musclé, atteignant une longueur de 92 à 183 cm (36 à 72 po) avec une queue de 66 à 102 cm (26 à 40 po). Les mâles pèsent généralement entre 30,9 et 72 kg (68 à 159 lb), et les femelles entre 20,5 et 43 kg (45 à 95 lb).<br><br>Il a un pelage allant du jaune pâle au doré foncé avec des taches sombres regroupées en rosettes. Les rosettes du léopard diffèrent de celles du jaguar <span class='species-spot-pattern'>&#x1F6C8;</span>, qui sont plus foncées et avec des taches plus petites à l'intérieur.<br><br>Les <span class='melanistic'>léopards mélanistiques</span> sont également connus sous le nom de panthères noires. Comparé à d'autres grands félins, le léopard a des pattes relativement courtes et un corps long avec un grand crâne.",
+        "info": "Le léopard (<i>Panthera pardus</i>) ou la Panthère est l'une des cinq espèces actuelles du genre Panthera. Son corps est élancé et musclé, atteignant une longueur de 92 à 183 cm (36 à 72 po) avec une queue de 66 à 102 cm (26 à 40 po). Les mâles pèsent généralement entre 30,9 et 72 kg (68 à 159 lb), et les femelles entre 20,5 et 43 kg (45 à 95 lb).<br><br>Il a un pelage allant du jaune pâle au doré foncé avec des taches sombres regroupées en rosettes. Les rosettes du léopard diffèrent de celles du jaguar (<span class='species-spot-pattern'>plus d'informations</span>), qui sont plus foncées et avec des taches plus petites à l'intérieur.<br><br>Les <span class='melanistic'>léopards mélanistiques</span> sont également connus sous le nom de panthères noires. Comparé à d'autres grands félins, le léopard a des pattes relativement courtes et un corps long avec un grand crâne.",
         "clues": [
           "Corps mince et musclé avec des jambes courtes et un corps long, doté d'un grand crâne.",
           "Pelage distinctif en forme de rosettes.",

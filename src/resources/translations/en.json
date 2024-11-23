@@ -99,12 +99,13 @@
     "clueTitle": "Clues",
     "mainPageTitle": "Learn about felines",
     "nextQuestion": "Next Question",
+    "noAnswerMessage": "Find the correct answer before proceeding to the next question.",
     "phylogeneticTree": "Phylogenetic tree",
     "phylogeneticTreeMessage": "Click on the image of each species to learn more about it.",
     "prepareSurvey": "Meet the Felines",
     "question": "Who am I?",
     "quitSurvey": "Quit survey",
-    "results": "Survey results",
+    "results": "Results",
     "resultsMessage": {
       "good": "Congratulations! You answered all the questions about felines correctly. The feline world holds no mysteries for you!",
       "medium": "Good job! You answered many questions correctly, but there are still some areas to improve. Keep practicing, and you'll master the world of felines!",
@@ -139,7 +140,7 @@
       "cheetah": {
         "name": "Cheetah",
         "binomialNomenclature": "Acinonyx jubatus",
-        "info": "The cheetah (<i>Acinonyx jubatus</i>) is a large cat and the <strong>fastest land animal</strong>. It has a tawny to creamy white or pale buff fur that is marked with evenly spaced, solid black spots <span class='species-spot-pattern'>&#x1F6C8;</span>.<br><br>The head is small and rounded, with a short snout and black tear-like facial streaks. It reaches 67–94 cm (26–37 in) at the shoulder, and the head-and-body length is between 1.1 and 1.5 m (3 ft 7 in and 4 ft 11 in). Adults weigh between 21 and 72 kg (46 and 159 lb). The cheetah is capable of running at 93 to 104 km/h (58 to 65 mph); it has evolved specialized adaptations for speed, including a light build, long thin legs and a long tail.<br><br>Currently found mainly in small, fragmented populations in northwestern, eastern, and southern Africa, as well as central Iran.",
+        "info": "The cheetah (<i>Acinonyx jubatus</i>) is a large cat and the <strong>fastest land animal</strong>. It has a tawny to creamy white or pale buff fur that is marked with evenly spaced, solid black spots (<span class='species-spot-pattern'>further information</span>).<br><br>The head is small and rounded, with a short snout and black tear-like facial streaks. It reaches 67–94 cm (26–37 in) at the shoulder, and the head-and-body length is between 1.1 and 1.5 m (3 ft 7 in and 4 ft 11 in). Adults weigh between 21 and 72 kg (46 and 159 lb). The cheetah is capable of running at 93 to 104 km/h (58 to 65 mph); it has evolved specialized adaptations for speed, including a light build, long thin legs and a long tail.<br><br>Currently found mainly in small, fragmented populations in northwestern, eastern, and southern Africa, as well as central Iran.",
         "clues": [
           "The fastest land animal, capable of reaching speeds of 93 to 104 km/h (58 to 65 mph).",
           "Small, rounded head with a short snout and distinctive black tear-like facial streaks.",
@@ -169,7 +170,7 @@
       "jaguar": {
         "name": "Jaguar",
         "binomialNomenclature": "Panthera onca",
-        "info": "The jaguar (<i>Panthera onca</i>) is a large cat species and the only living member of the genus Panthera that is native to the Americas. With a body length of up to 1.85 m (6 ft 1 in) and a weight of up to 158 kg (348 lb), it is the biggest cat species in the Americas and the <strong>third-largest in the world</strong>.<br><br>Its distinctively marked coat features pale yellow to tan colored fur covered by spots that transition to rosettes <span class='species-spot-pattern'>&#x1F6C8;</span> on the sides, although a <strong>melanistic black coat</strong> appears in some individuals. The spots and their shapes vary: on the sides, they become rosettes which may include one or several dots.",
+        "info": "The jaguar (<i>Panthera onca</i>) is a large cat species and the only living member of the genus Panthera that is native to the Americas. With a body length of up to 1.85 m (6 ft 1 in) and a weight of up to 158 kg (348 lb), it is the biggest cat species in the Americas and the <strong>third-largest in the world</strong>.<br><br>Its distinctively marked coat features pale yellow to tan colored fur covered by spots that transition to rosettes (<span class='species-spot-pattern'>further information</span>) on the sides, although a <strong>melanistic black coat</strong> appears in some individuals. The spots and their shapes vary: on the sides, they become rosettes which may include one or several dots.",
         "clues": [
           "The largest cat in the Americas and the third-largest in the world.",
           "Features distinctive spots and rosettes.",
@@ -179,7 +180,7 @@
       "leopard": {
         "name": "Leopard",
         "binomialNomenclature": "Panthera pardus",
-        "info": "The leopard (<i>Panthera pardus</i>) is one of the five extant species in the genus Panthera. Its body is slender and muscular reaching a length of 92–183 cm (36–72 in) with a 66–102 cm (26–40 in) long tail. Males typically weigh 30.9–72 kg (68–159 lb), and females 20.5–43 kg (45–95 lb).<br><br>It has pale yellowish to dark golden fur with dark spots grouped in rosettes. The leopard's rosettes differ from those of the jaguar <span class='species-spot-pattern'>&#x1F6C8;</span>, which are darker and with smaller spots inside.<br><br><strong>Melanistic leopards</strong> are also known as black panthers. Compared to other wild cats, the leopard has relatively short legs and a long body with a large skull.",
+        "info": "The leopard (<i>Panthera pardus</i>) is one of the five extant species in the genus Panthera. Its body is slender and muscular reaching a length of 92–183 cm (36–72 in) with a 66–102 cm (26–40 in) long tail. Males typically weigh 30.9–72 kg (68–159 lb), and females 20.5–43 kg (45–95 lb).<br><br>It has pale yellowish to dark golden fur with dark spots grouped in rosettes. The leopard's rosettes differ from those of the jaguar (<span class='species-spot-pattern'>further information</span>), which are darker and with smaller spots inside.<br><br><strong>Melanistic leopards</strong> are also known as black panthers. Compared to other wild cats, the leopard has relatively short legs and a long body with a large skull.",
         "clues": [
           "Slender, muscular build with short legs and a long body, featuring a large skull.",
           "Distinctive rosette-patterned coat.",

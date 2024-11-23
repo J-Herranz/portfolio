@@ -10,6 +10,19 @@
   margin-bottom: 2rem;
 }
 
+.surveyQuestions-message-div {
+  position: absolute;
+  z-index: 100;
+  top: 8.5rem;
+  padding: 1rem;
+  text-wrap: balance;
+  border: 1px solid black;
+  background-color: #F9F6EE;
+  color: black;
+  width: 30vw;
+  border-radius: 20px;
+}
+
 .imageToGuess-clues-div {
   width: 100vw;
   display: flex;
@@ -148,7 +161,7 @@ div.disabled {
   font-weight: bolder;
   border: 1px solid #a1a1a1;
   cursor: not-allowed;
-  pointer-events: none;
+  /*pointer-events: none;*/
   opacity: 0.6;
   user-select: none;
 }
@@ -157,9 +170,73 @@ div.disabled {
   pointer-events: none;
 }
 
+.disabled:hover {
+  transform: translateX(0);
+  font-size: 1rem;
+  background-color: #d6d6d6;
+}
+
+
+.disabled.tremble {
+  animation: tremble 0.2s ease-in-out;
+}
+
+@keyframes tremble {
+  0% {
+    transform: translateX(0);
+  }
+
+  10% {
+    transform: translateX(-10px);
+  }
+
+  20% {
+    transform: translateX(10px);
+  }
+
+  30% {
+    transform: translateX(-10px);
+  }
+
+  40% {
+    transform: translateX(10px);
+  }
+
+  50% {
+    transform: translateX(-10px);
+  }
+
+  60% {
+    transform: translateX(10px);
+  }
+
+  70% {
+    transform: translateX(-10px);
+  }
+
+  80% {
+    transform: translateX(10px);
+  }
+
+  90% {
+    transform: translateX(-10px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+
+
 @media (orientation: portrait) {
   .surveyQuestions-div {
     margin-top: 0.5rem;
+  }
+
+  .surveyQuestions-message-div {
+    width: 80vw;
+    top: 8rem;
   }
 
   .imageToGuess-clues-div {

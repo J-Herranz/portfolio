@@ -99,12 +99,13 @@
     "clueTitle": "Pistas",
     "mainPageTitle": "Aprende sobre los felinos",
     "nextQuestion": "Siguiente pregunta",
+    "noAnswerMessage": "Encuentra la respuesta correcta antes de pasar a la siguiente pregunta.",
     "phylogeneticTree": "Árbol filogenético",
     "phylogeneticTreeMessage": "Haz clic sobre la imagen de cada especie para obtener más información sobre ella.",
     "prepareSurvey": "Conoce a los felinos",
     "question": "¿Quién soy?",
     "quitSurvey": "Salir del cuestionario",
-    "results": "Resultados del cuestionario",
+    "results": "Resultados",
     "resultsMessage": {
       "good": "¡Felicidades! Has acertado todas las preguntas sobre felinos correctamente. ¡El mundo felino no tiene misterios para ti!",
       "medium": "¡Buen trabajo! Has respondido correctamente a muchas preguntas, pero aún hay algunas áreas en las que puedes mejorar. ¡Sigue practicando y dominarás el mundo de los felinos!",
@@ -139,7 +140,7 @@
       "cheetah": {
         "name": "Guepardo",
         "binomialNomenclature": "Acinonyx jubatus",
-        "info": "El guepardo (<i>Acinonyx jubatus</i>) es un gran felino y el <strong>animal terrestre más rápido</strong>. Tiene un pelaje que varía de color leonado a blanco cremoso o buff pálido, marcado con manchas negras distribuidas uniformemente <span class='species-spot-pattern'>&#x1F6C8;</span>.<br><br>La cabeza es pequeña y redondeada, con un hocico corto y marcas faciales negras en forma de lágrima. Alcanza de 67 a 94 cm (26–37 in) de altura en los hombros, y su longitud total de cuerpo es entre 1.1 y 1.5 m (3 pies 7 in y 4 pies 11 in). Los adultos pesan entre 21 y 72 kg (46–159 lb). El guepardo es capaz de correr a 93 a 104 km/h (58–65 mph); ha evolucionado con adaptaciones especializadas para la velocidad, como una estructura ligera, piernas largas y finas, y una cola larga.<br><br>Actualmente distribuido principalmente en pequeñas poblaciones fragmentadas en el noroeste, este y sur de África, así como en el centro de Irán.",
+        "info": "El guepardo (<i>Acinonyx jubatus</i>) es un gran felino y el <strong>animal terrestre más rápido</strong>. Tiene un pelaje que varía de color leonado a blanco cremoso o buff pálido, marcado con manchas negras distribuidas uniformemente (<span class='species-spot-pattern'>más información</span>).<br><br>La cabeza es pequeña y redondeada, con un hocico corto y marcas faciales negras en forma de lágrima. Alcanza de 67 a 94 cm (26–37 in) de altura en los hombros, y su longitud total de cuerpo es entre 1.1 y 1.5 m (3 pies 7 in y 4 pies 11 in). Los adultos pesan entre 21 y 72 kg (46–159 lb). El guepardo es capaz de correr a 93 a 104 km/h (58–65 mph); ha evolucionado con adaptaciones especializadas para la velocidad, como una estructura ligera, piernas largas y finas, y una cola larga.<br><br>Actualmente distribuido principalmente en pequeñas poblaciones fragmentadas en el noroeste, este y sur de África, así como en el centro de Irán.",
         "clues": [
           "El animal terrestre más rápido, capaz de alcanzar velocidades de 93 a 104 km/h (58 a 65 mph).",
           "Cabeza pequeña y redondeada, con un hocico corto y marcas faciales negras similares a lágrimas.",
@@ -169,7 +170,7 @@
       "jaguar": {
         "name": "Jaguar",
         "binomialNomenclature": "Panthera onca",
-        "info": "El jaguar (<i>Panthera onca</i>) es una especie de felino grande y el único miembro vivo del género Panthera que es originario de las Américas. Con una longitud corporal de hasta 1,85 m (6 pies 1 in) y un peso de hasta 158 kg (348 lb), es el felino más grande de las Américas y el <strong>tercero más grande del mundo</strong>.<br><br>Su pelaje distintivo tiene un color de fondo amarillo pálido a fawn, cubierto de manchas que se transforman en rosetas <span class='species-spot-pattern'>&#x1F6C8;</span> a los lados, aunque algunos individuos presentan un <span class='melanistic'>pelaje negro melanístico</span>. Las manchas y sus formas varían: en los costados, se convierten en rosetas que pueden incluir uno o varios puntos.",
+        "info": "El jaguar (<i>Panthera onca</i>) es una especie de felino grande y el único miembro vivo del género Panthera que es originario de las Américas. Con una longitud corporal de hasta 1,85 m (6 pies 1 in) y un peso de hasta 158 kg (348 lb), es el felino más grande de las Américas y el <strong>tercero más grande del mundo</strong>.<br><br>Su pelaje distintivo tiene un color de fondo amarillo pálido a fawn, cubierto de manchas que se transforman en rosetas (<span class='species-spot-pattern'>más información</span>) a los lados, aunque algunos individuos presentan un <span class='melanistic'>pelaje negro melanístico</span>. Las manchas y sus formas varían: en los costados, se convierten en rosetas que pueden incluir uno o varios puntos.",
         "clues": [
           "El felino más grande de las Américas y el tercero más grande del mundo.",
           "Presenta manchas y rosetas distintivas.",
@@ -179,7 +180,7 @@
       "leopard": {
         "name": "Leopardo",
         "binomialNomenclature": "Panthera pardus",
-        "info": "El leopardo (<i>Panthera pardus</i>) es una de las cinco especies vivas en el género Panthera. Su cuerpo es esbelto y muscular, alcanzando una longitud de 92–183 cm (36–72 in) con una cola de 66–102 cm (26–40 in) de largo. Los machos pesan típicamente entre 30,9–72 kg (68–159 lb), y las hembras entre 20,5–43 kg (45–95 lb).<br><br>Tiene un pelaje de color amarillo pálido a dorado oscuro con manchas oscuras agrupadas en rosetas. Las rosetas del leopardo se diferencian de las del jaguar <span class='species-spot-pattern'>&#x1F6C8;</span>, que son más oscuras y con manchas más pequeñas dentro.<br><br>Los <strong>leopardos melanísticos</strong> también son conocidos como panteras negras. Comparado con otros felinos salvajes, el leopardo tiene patas relativamente cortas y un cuerpo largo con un cráneo grande.",
+        "info": "El leopardo (<i>Panthera pardus</i>) es una de las cinco especies vivas en el género Panthera. Su cuerpo es esbelto y muscular, alcanzando una longitud de 92–183 cm (36–72 in) con una cola de 66–102 cm (26–40 in) de largo. Los machos pesan típicamente entre 30,9–72 kg (68–159 lb), y las hembras entre 20,5–43 kg (45–95 lb).<br><br>Tiene un pelaje de color amarillo pálido a dorado oscuro con manchas oscuras agrupadas en rosetas. Las rosetas del leopardo se diferencian de las del jaguar (<span class='species-spot-pattern'>más información</span>), que son más oscuras y con manchas más pequeñas dentro.<br><br>Los <strong>leopardos melanísticos</strong> también son conocidos como panteras negras. Comparado con otros felinos salvajes, el leopardo tiene patas relativamente cortas y un cuerpo largo con un cráneo grande.",
         "clues": [
           "Cuerpo esbelto y musculoso con patas cortas y cuerpo largo, con un cráneo grande.",
           "Pelaje característico con patrón de rosetas.",

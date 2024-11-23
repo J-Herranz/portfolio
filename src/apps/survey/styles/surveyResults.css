@@ -96,6 +96,7 @@
 
   .surveyResults-toolTip-div {
     gap: 1rem;
+    padding: 2rem 0;
   }
 
   .surveyResults-toolTip-div>img {
@@ -109,5 +110,9 @@
 
   .surveyResults-toolTip-div p {
     transform: translateY(60%) translateX(10%);
+  }
+
+  .surveyResults-button {
+    margin-top: 2rem;
   }
 }

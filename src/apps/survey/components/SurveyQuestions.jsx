@@ -20,6 +20,8 @@ function SurveyQuestions({ returnButtonFunc, goToResults, setTotalPoints }) {
   const [rightAnswerFound, setRightAnswerFound] = useState(false)
   const [questionPoints, setQuestionPoints] = useState(3)
   const [clues, setClues] = useState()
+  const [showMessage, setShowMessage] = useState(false)
+  const [buttonTremble, setButtonTremble] = useState(false)
 
   // initializes or affects the survey info state if the user changed the language
   useEffect(() => {
@@ -58,6 +60,20 @@ function SurveyQuestions({ returnButtonFunc, goToResults, setTotalPoints }) {
   }
 
   const nextQuestionButtonHandler = () => {
+    if (!rightAnswerFound) {
+      setShowMessage(true);
+      setButtonTremble(true)
+
+      setTimeout(() => {
+        setButtonTremble(false)
+      }, 200);
+
+      setTimeout(() => {
+        setShowMessage(false);
+      }, 3000);
+      return
+    }
+
     if (questionNb < 9) {
       setQuestionNb(prev => prev + 1)
       setSurveyResponseOptions(() => getRandomSpecies({ speciesCode: surveyInfo?.[questionNb + 1].code }))
@@ -70,7 +86,9 @@ function SurveyQuestions({ returnButtonFunc, goToResults, setTotalPoints }) {
 
   return (
     <>
-      <div className='coverDiv'></div>
+      <div className='surveyQuestions-message-div' style={{ display: showMessage ? 'block' : 'none' }}>
+        <p>{t?.survey?.noAnswerMessage}</p>
+      </div>
       <div className='surveyQuestions-div'>
         <h2>{`${t?.survey?.question} (${questionNb + 1}/${surveyInfo.length})`}</h2>
         <div className='imageToGuess-clues-div'>
@@ -107,7 +125,9 @@ function SurveyQuestions({ returnButtonFunc, goToResults, setTotalPoints }) {
           <img src={darkmodeBool ? quit_icon_black : quit_icon_white} />
           <p>{t?.survey?.quitSurvey}</p>
         </div>
-        <div onClick={() => nextQuestionButtonHandler()} className={`survey-button hoverRight ${rightAnswerFound ? '' : 'disabled'} ${darkmodeBool ? 'surveyQuestionsButtons-light' : ''}`}>
+        <div onClick={() => nextQuestionButtonHandler()}
+          className={`survey-button hoverRight ${rightAnswerFound ? '' : 'disabled'} ${darkmodeBool ? 'surveyQuestionsButtons-light' : ''} ${buttonTremble ? 'tremble' : ''}`
+          }>
           <p>{t?.survey?.nextQuestion}</p>
           <img src={darkmodeBool ? next_icon_black : next_icon_white} />
         </div>

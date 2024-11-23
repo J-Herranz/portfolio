@@ -8,8 +8,8 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
-#dist
-#dist-ssr
+dist
+dist-ssr
 *.local
 
 # Editor directories and files
@@ -22,3 +22,26 @@ node_modules
 *.njsproj
 *.sln
 *.sw?
+
+# not used icons
+public/assets/app-icons/bomb*
+public/assets/app-icons/countries1*
+public/assets/app-icons/dice*
+public/assets/app-icons/eshop*
+public/assets/app-icons/food*
+public/assets/app-icons/hangman*
+public/assets/app-icons/info*
+public/assets/app-icons/magnifing*
+public/assets/app-icons/survey*
+public/assets/app-icons/tetris*
+public/assets/app-icons/tictactoe*
+
+# used icons exceptions
+!public/assets/app-icons/info1_*
+!public/assets/app-icons/info5_*
+!public/assets/app-icons/survey2*
+!public/assets/app-icons/tictactoe2*
+
+# outdated files
+src/resources/translations/*old*
+public/assets/app-icons/APP*

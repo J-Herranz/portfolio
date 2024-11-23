@@ -16,7 +16,7 @@ function SurveyResults({ returnButtonFunc, totalPoints }) {
 
   const sanitizedHTML = DOMPurify.sanitize(t?.survey.scoreExplanation)
 
-  let srcLocation = darkmodeBool ? "/assets/app-icons/info1_black.png" : "/assets/app-icons/info1_white.png"
+  let srcLocation = darkmodeBool ? "/assets/app-icons/info23_black.png" : "/assets/app-icons/info23_white.png"
 
 
   console.log(t)
