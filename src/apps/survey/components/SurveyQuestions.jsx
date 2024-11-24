@@ -100,7 +100,7 @@ function SurveyQuestions({ returnButtonFunc, goToResults, setTotalPoints }) {
         <p>{t?.survey?.noAnswerMessage}</p>
       </div>
       <h2>{`${t?.survey?.question} (${questionNb + 1}/${surveyInfo.length})`}</h2>
-      <div className={`surveyQuestions-div ${fadeout ? 'opacityZero' : ''}`}>
+      <div className={`surveyQuestions-div ${fadeout ? 'opacityZero' : 'opacityOne'}`}>
         <div className='imageToGuess-clues-div'>
           <img src={surveyInfo?.[questionNb].imagePath} alt={`${surveyInfo?.[questionNb].name} image`} />
           {questionPoints < 3 ?

@@ -1,13 +1,11 @@
-.optionDiv {
+.optionDiv.darkmode-ignore {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #2b4e95;
   padding: 10px;
   height: 3rem;
   user-select: none;
   cursor: pointer;
-  transition: background-color 0.25s;
   transition: font-size 0.3s, background-color 0.7s;
 }
 
@@ -34,4 +32,10 @@
 .optionDiv.button-correct {
   background-color: #28A745;
   pointer-events: none;
+}
+
+@media (orientation: portrait) {
+  .optionDiv.darkmode-ignore {
+    font-size: 0.9rem;
+  }
 }

@@ -101,6 +101,10 @@
   opacity: 0;
 }
 
+.opacityOne {
+  opacity: 1;
+}
+
 .surveyQuestionsButtons-div {
   display: flex;
   justify-content: center;
