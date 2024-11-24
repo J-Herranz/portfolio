@@ -86,8 +86,7 @@ function SurveyQuestions({ returnButtonFunc, goToResults, setTotalPoints }) {
         setRightAnswerFound(false)
         setQuestionPoints(3)
 
-        // ending fadeout (starting fade-in)
-        setFadeout(false);
+        // Fade-in handled by image onload
       }, 1000)
     } else {
       goToResults()
@@ -102,7 +101,7 @@ function SurveyQuestions({ returnButtonFunc, goToResults, setTotalPoints }) {
       <h2>{`${t?.survey?.question} (${questionNb + 1}/${surveyInfo.length})`}</h2>
       <div className={`surveyQuestions-div ${fadeout ? 'opacityZero' : 'opacityOne'}`}>
         <div className='imageToGuess-clues-div'>
-          <img src={surveyInfo?.[questionNb].imagePath} alt={`${surveyInfo?.[questionNb].name} image`} />
+          <img src={surveyInfo?.[questionNb].imagePath} alt={`${surveyInfo?.[questionNb].name} image`} onLoad={() => setFadeout(false)} />
           {questionPoints < 3 ?
             <div className={`clues-div darkmode-ignore ${darkmodeBool ? 'clues-div-light' : 'clues-div-dark'}`}>
               <h2>{t?.survey?.clueTitle}</h2>
