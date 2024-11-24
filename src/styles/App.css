@@ -22,6 +22,18 @@ body {
   justify-content: space-between;
 }
 
+.mainLoadingDiv {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainLoadingImage {
+  width: 25vh;
+}
+
 .subApp-div {
   min-height: calc(100vh - 8.5rem);
   /*4.5rem from header + 4rem from footer*/
@@ -72,4 +84,12 @@ body {
     right: 20px !important;
     bottom: 20px !important;
   }*/
+}
+
+@media (orientation: portrait) {
+
+  .mainLoadingImage {
+    width: 25vw;
+    margin-bottom: 30vh;
+  }
 }

@@ -19,8 +19,14 @@ function App() {
 
     //const darkmodeBool = useRef(true);
 
+    let loadingDivMode = darkmodeBool ? 'black' : 'white'
+
     if (!translations) {
-        return <p>Loading translations...</p>;
+        return (
+            <div className='mainLoadingDiv'>
+                <img className='mainLoadingImage' src={`/assets/loaders/growingDots_${loadingDivMode}.svg`} alt='img not found' />
+            </div>
+        )
     }
 
     const sortedSubAppInfo = (translations && translations.subAppInfo) ? translations.subAppInfo.sort((a, b) => {
@@ -50,7 +56,6 @@ function App() {
 
         return 'subApp-div'
     }
-
 
     return (
         <>
