@@ -37,15 +37,15 @@ public/assets/app-icons/tetris*
 public/assets/app-icons/tictactoe*
 
 #not used loaders
-public/loaders/*
+public/assets/loaders/*
 
 # used icons exceptions
 !public/assets/app-icons/info1_*
 !public/assets/app-icons/info23_*
 !public/assets/app-icons/survey2*
 !public/assets/app-icons/tictactoe2*
-!public/loaders/growingDots*
-!public/loaders/spinningCircularFragment*
+!public/assets/loaders/growingDots*
+!public/assets/loaders/spinningCircularFragment*
 
 # outdated files
 src/resources/translations/*old*
