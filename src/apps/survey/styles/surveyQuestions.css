@@ -4,6 +4,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .surveyQuestions-div>h2 {
@@ -34,7 +35,6 @@
   width: auto;
   border-radius: 10px;
   margin: 0 2rem;
-  transition: transform 0.5s ease-in-out;
 }
 
 .clues-div {
@@ -73,18 +73,6 @@
   align-items: center;
 }
 
-/*
-.optionsDiv-container>div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: lightblue;
-  padding: 10px;
-  height: 3rem;
-  user-select: none;
-}
-*/
-
 .optionsDiv-container>:nth-child(1) {
   border-radius: 20px 0 0 0;
 }
@@ -99,6 +87,10 @@
 
 .optionsDiv-container>:nth-child(4) {
   border-radius: 0 0 20px 0;
+}
+
+.opacityZero {
+  opacity: 0;
 }
 
 .surveyQuestionsButtons-div {
@@ -120,24 +112,30 @@
   border-radius: 10px;
   user-select: none;
   width: 300px;
-  transition: transform 0.3s ease;
+  transition: transform 0.7s ease, font-size 0.15s;
 }
 
 .hoverLeft:hover {
   transform: translateX(-30px);
-  /*background-color: #785c24;*/
 }
 
 .hoverRight:hover {
   transform: translateX(+30px);
 }
 
+.surveyQuestionsButtons-light {
+  background-color: #785c24;
+  color: black;
+}
+
+
 .surveyQuestionsButtons-light:hover {
   background-color: #785c24;
 }
 
+
 .surveyQuestionsButtons-light:not(:hover) {
-  background-color: #82a2e2;
+  background-color: #785c24;
 }
 
 .surveyQuestionsButtons-div>div>img {

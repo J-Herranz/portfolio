@@ -22,6 +22,7 @@ function SurveyQuestions({ returnButtonFunc, goToResults, setTotalPoints }) {
   const [clues, setClues] = useState()
   const [showMessage, setShowMessage] = useState(false)
   const [buttonTremble, setButtonTremble] = useState(false)
+  const [fadeout, setFadeout] = useState(false)
 
   // initializes or affects the survey info state if the user changed the language
   useEffect(() => {
@@ -75,10 +76,19 @@ function SurveyQuestions({ returnButtonFunc, goToResults, setTotalPoints }) {
     }
 
     if (questionNb < 9) {
-      setQuestionNb(prev => prev + 1)
-      setSurveyResponseOptions(() => getRandomSpecies({ speciesCode: surveyInfo?.[questionNb + 1].code }))
-      setRightAnswerFound(false)
-      setQuestionPoints(3)
+      // start of the fade-out animation
+      setFadeout(true);
+
+      // waiting the fade-out to end to pass to the next question
+      setTimeout(() => {
+        setQuestionNb((prev) => prev + 1)
+        setSurveyResponseOptions(() => getRandomSpecies({ speciesCode: surveyInfo?.[questionNb + 1].code }))
+        setRightAnswerFound(false)
+        setQuestionPoints(3)
+
+        // ending fadeout (starting fade-in)
+        setFadeout(false);
+      }, 500)
     } else {
       goToResults()
     }
@@ -89,8 +99,8 @@ function SurveyQuestions({ returnButtonFunc, goToResults, setTotalPoints }) {
       <div className='surveyQuestions-message-div' style={{ display: showMessage ? 'block' : 'none' }}>
         <p>{t?.survey?.noAnswerMessage}</p>
       </div>
-      <div className='surveyQuestions-div'>
-        <h2>{`${t?.survey?.question} (${questionNb + 1}/${surveyInfo.length})`}</h2>
+      <h2>{`${t?.survey?.question} (${questionNb + 1}/${surveyInfo.length})`}</h2>
+      <div className={`surveyQuestions-div ${fadeout ? 'opacityZero' : ''}`}>
         <div className='imageToGuess-clues-div'>
           <img src={surveyInfo?.[questionNb].imagePath} alt={`${surveyInfo?.[questionNb].name} image`} />
           {questionPoints < 3 ?
@@ -121,12 +131,12 @@ function SurveyQuestions({ returnButtonFunc, goToResults, setTotalPoints }) {
       </div>
 
       <div className='surveyQuestionsButtons-div'>
-        <div onClick={() => returnButtonFunc()} className={`survey-button hoverLeft ${darkmodeBool ? 'surveyQuestionsButtons-light' : ''}`}>
+        <div onClick={() => returnButtonFunc()} className={`survey-button darkmode-ignore hoverLeft ${darkmodeBool ? 'surveyQuestionsButtons-light' : ''}`}>
           <img src={darkmodeBool ? quit_icon_black : quit_icon_white} />
           <p>{t?.survey?.quitSurvey}</p>
         </div>
         <div onClick={() => nextQuestionButtonHandler()}
-          className={`survey-button hoverRight ${rightAnswerFound ? '' : 'disabled'} ${darkmodeBool ? 'surveyQuestionsButtons-light' : ''} ${buttonTremble ? 'tremble' : ''}`
+          className={`survey-button darkmode-ignore hoverRight ${rightAnswerFound ? '' : 'disabled'} ${darkmodeBool ? 'surveyQuestionsButtons-light' : ''} ${buttonTremble ? 'tremble' : ''}`
           }>
           <p>{t?.survey?.nextQuestion}</p>
           <img src={darkmodeBool ? next_icon_black : next_icon_white} />

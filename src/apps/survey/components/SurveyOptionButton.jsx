@@ -10,10 +10,9 @@ function SurveyOptionButton({ returnToParent, species, languageCode, rightAnswer
 
   const classSelector = () => {
     if (clicked) {
-      const lightOrDark = darkmodeBool ? '-light' : '-dark'
       return species?.speciesName === rightAnswer
-        ? `button-correct${lightOrDark}`
-        : `button-incorrect${lightOrDark}`
+        ? `button-correct`
+        : `button-incorrect`
     }
     return ''
   }
@@ -23,7 +22,7 @@ function SurveyOptionButton({ returnToParent, species, languageCode, rightAnswer
   }, [species])
 
   return (
-    <div className={`optionDiv ${classSelector()}`}
+    <div className={`optionDiv darkmode-ignore ${darkmodeBool ? 'optionDiv-light' : 'optionDiv-dark'} ${classSelector()}`}
       onClick={() => {
         setClicked(true)
         returnToParent({
