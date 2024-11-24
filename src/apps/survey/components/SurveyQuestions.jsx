@@ -104,7 +104,7 @@ function SurveyQuestions({ returnButtonFunc, goToResults, setTotalPoints }) {
         <div className='imageToGuess-clues-div'>
           <img src={surveyInfo?.[questionNb].imagePath} alt={`${surveyInfo?.[questionNb].name} image`} />
           {questionPoints < 3 ?
-            <div className='clues-div'>
+            <div className={`clues-div darkmode-ignore ${darkmodeBool ? 'clues-div-light' : 'clues-div-dark'}`}>
               <h2>{t?.survey?.clueTitle}</h2>
               {questionPoints < 3 && (
                 clues.slice(0, 3 - questionPoints).map((clue, index) => (

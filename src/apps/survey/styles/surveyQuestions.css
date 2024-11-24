@@ -45,6 +45,14 @@
   padding-right: 2rem;
 }
 
+.clues-div-dark {
+  color: white;
+}
+
+.clues-div-light {
+  color: black;
+}
+
 .clues-div>h2 {
   width: fit-content;
   height: fit-content;
@@ -101,7 +109,6 @@
   margin-bottom: 1rem;
   width: 100%;
 }
-
 
 .surveyQuestionsButtons-div>div {
   display: flex;
