@@ -88,7 +88,7 @@ function SurveyQuestions({ returnButtonFunc, goToResults, setTotalPoints }) {
 
         // ending fadeout (starting fade-in)
         setFadeout(false);
-      }, 500)
+      }, 1000)
     } else {
       goToResults()
     }
