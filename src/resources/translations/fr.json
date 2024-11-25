@@ -122,7 +122,7 @@
     },
     "resultsScore1": "Vous avez obtenu",
     "resultsScore2": "points sur un total de 30.",
-    "scoreExplanation": "La notation du test est la suivante :<br><br><ul><li>3 points pour chaque réponse correcte sans erreurs.</li><li>2 points pour chaque réponse correcte avec 1 erreur.</li><li>1 point pour chaque réponse correcte avec 2 erreurs.</li><li>0 point si la réponse comporte 3 erreurs ou plus.</ul>",
+    "scoreExplanation": "La notation du test est la suivante :<br><br><ul><li>3 points pour chaque réponse correcte sans erreurs.</li><li>2 points pour chaque réponse correcte avec 1 erreur.</li><li>1 point pour chaque réponse correcte avec 2 erreurs.</li><li>0 point si la réponse comporte 3 erreurs.</ul>",
     "scoreExplanationTitle": "Guide de Notation",
     "startSurvey": "Commencer le questionnaire",
     "species": {

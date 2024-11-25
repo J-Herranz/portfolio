@@ -122,7 +122,7 @@
     },
     "resultsScore1": "Has obtenido",
     "resultsScore2": "puntos sobre un total de 30.",
-    "scoreExplanation": "La puntuación del test se otorga de la siguiente manera:<br><br><ul><li>3 puntos por cada respuesta correcta sin errores.</li><li>2 puntos por cada respuesta correcta con 1 error.</li><li>1 punto por cada respuesta correcta con 2 errores.</li><li>0 puntos si la respuesta tiene 3 o más errores.</ul>",
+    "scoreExplanation": "La puntuación del test se otorga de la siguiente manera:<br><br><ul><li>3 puntos por cada respuesta correcta sin errores.</li><li>2 puntos por cada respuesta correcta con 1 error.</li><li>1 punto por cada respuesta correcta con 2 errores.</li><li>0 puntos si la respuesta tiene 3 errores.</ul>",
     "scoreExplanationTitle": "Guía de Puntuación",
     "startSurvey": "Comenzar el cuestionario",
     "species": {
