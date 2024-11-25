@@ -1,66 +1,60 @@
+import { useReducer } from "react"
 import { SubAppTitle } from "../../../components/SubAppTitle"
-import '../styles/calculator.css'
-
+import { DigitButton } from "./DigitButton"
+import { OperationButton } from "./OperationButton"
+import { ACTIONS } from '../constants/constants.js'
+import { reducer, formatOperand } from "../services/calculatorLogic.js"
+import "../styles/calculator.css"
 
 function Calculator() {
-  /*
-    const calculatorButtons = [
-      ['AC', 'DEL', '÷'],
-      ['1', '2', '3', '*'],
-      ['4', '5', '6', '+'],
-      ['7', '8', '9', '-'],
-      ['.', '0', '='],
-    ]*/
-  const calculatorButtons = [
-    'AC', 'DEL', '÷',
-    '1', '2', '3', '*',
-    '4', '5', '6', '+',
-    '7', '8', '9', '-',
-    '.', '0', '='
-  ]
-
-  const getButtonClass = ({ button }) => {
-    if (button === 'AC' || button === '=') {
-      return 'calculator-button span-two'; // Botones AC y = tienen un estilo especial
-    }
-    return 'calculator-button'; // Los demás botones
-  };
+  const [{ currentOperand, previousOperand, operation }, dispatch] = useReducer(
+    reducer,
+    {}
+  )
 
   return (
     <>
       <SubAppTitle />
-
       <div className="calculator-grid">
         <div className="output">
-          <div className="previous-operand">123,456 * </div>
-          <div className="current-operand">456,123</div>
+          <div className="previous-operand">
+            {formatOperand({ operand: previousOperand })} {operation}
+          </div>
+          <div className="current-operand">{formatOperand({ operand: currentOperand })}</div>
         </div>
-        {
-
-          calculatorButtons.map((button, buttonIndex) => (
-            <button key={`${buttonIndex}`} className={getButtonClass({ button })}>
-              {button}
-            </button>
-          ))
-        }
-
-
-        {
-          /*
-                    calculatorButtons.map((row, rowIndex) => (
-                <div key={rowIndex} className="button-row">
-                  {row.map((button, buttonIndex) => (
-                    <button key={`${rowIndex}${buttonIndex}`} className={getButtonClass({ button })}>
-                      {button}
-                    </button>
-                  ))
-                  }
-                </div>
-                ))*/
-        }
-      </div >
+        <button
+          className="calculator-button span-two"
+          onClick={() => dispatch({ type: ACTIONS.CLEAR })}
+        >
+          AC
+        </button>
+        <button onClick={() => dispatch({ type: ACTIONS.DELETE_DIGIT })} className="calculator-button">
+          DEL
+        </button>
+        <OperationButton operation="÷" dispatch={dispatch} />
+        <DigitButton digit="1" dispatch={dispatch} />
+        <DigitButton digit="2" dispatch={dispatch} />
+        <DigitButton digit="3" dispatch={dispatch} />
+        <OperationButton operation="*" dispatch={dispatch} />
+        <DigitButton digit="4" dispatch={dispatch} />
+        <DigitButton digit="5" dispatch={dispatch} />
+        <DigitButton digit="6" dispatch={dispatch} />
+        <OperationButton operation="+" dispatch={dispatch} />
+        <DigitButton digit="7" dispatch={dispatch} />
+        <DigitButton digit="8" dispatch={dispatch} />
+        <DigitButton digit="9" dispatch={dispatch} />
+        <OperationButton operation="-" dispatch={dispatch} />
+        <DigitButton digit="." dispatch={dispatch} />
+        <DigitButton digit="0" dispatch={dispatch} />
+        <button
+          className="calculator-button span-two"
+          onClick={() => dispatch({ type: ACTIONS.EVALUATE })}
+        >
+          =
+        </button>
+      </div>
     </>
-  );
+  )
 }
 
 export { Calculator }

@@ -11,7 +11,6 @@
   overflow: hidden;
 }
 
-/*0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000*/
 .span-two {
   grid-column: span 2;
 }
@@ -45,10 +44,11 @@
 
 .calculator-button {
   border-radius: 0;
-  border: 1px solid black;
+  border: 1px solid rgb(70, 70, 70);
   height: 100%;
   font-size: 2rem;
   outline: none;
   padding: 0;
   background-color: rgba(0, 0, 0, 0.75);
+  color: white
 }

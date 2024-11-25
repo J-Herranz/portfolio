@@ -1,6 +1,15 @@
 {
   "subAppInfo": [
     {
+      "appCode": "calculator",
+      "appName": "Calculatrice",
+      "appIconFile": "calculator1_white.png",
+      "subAppThumbnailFileName": "calculator.jpg",
+      "subAppDescription": "Une calculatrice simple et facile à utiliser, construite avec React, qui permet de réaliser des opérations mathématiques de base telles que l'addition, la soustraction, la multiplication et la division. Avec une interface intuitive, elle vous permet d'entrer des chiffres, de supprimer des chiffres et de gérer les opérations de manière efficace.",
+      "toolTipInfo": "Construite avec React en utilisant le hook useReducer pour la gestion de l'état, cette calculatrice prend en charge les opérations arithmétiques de base<br>(+, -, *, ÷).<br><br>Elle gère des cas particuliers comme l'écrasement des opérandes, la prévention des points décimaux multiples et la gestion de l'historique des entrées.<br><br>L'application utilise <i>Intl.NumberFormat</i> pour afficher les grands nombres de manière formatée et assure une interaction fluide avec une interface utilisateur réactive.",
+      "appUrl": ""
+    },
+    {
       "appCode": "countryInfo",
       "appName": "Infos sur un pays au hasard",
       "appIconFile": "countries2_white.png",

@@ -1,6 +1,15 @@
 {
   "subAppInfo": [
     {
+      "appCode": "calculator",
+      "appName": "Calculator",
+      "appIconFile": "calculator1_white.png",
+      "subAppThumbnailFileName": "calculator.jpg",
+      "subAppDescription": "A simple and easy-to-use calculator built with React, allowing you to perform basic mathematical operations like addition, subtraction, multiplication, and division. With an intuitive interface, it enables you to enter numbers, delete digits, and manage operations efficiently.",
+      "toolTipInfo": "Built with React using the useReducer hook for state management, this calculator supports basic arithmetic operations (+, -, *, ÷).<br><br>It handles edge cases like overwriting operands, preventing multiple decimal points, and managing input history.<br><br>The app utilizes <i>Intl.NumberFormat</i> for formatted display of large numbers and ensures smooth interaction with a responsive UI.",
+      "appUrl": ""
+    },
+    {
       "appCode": "countryInfo",
       "appName": "Random Country Info",
       "appIconFile": "countries2_white.png",

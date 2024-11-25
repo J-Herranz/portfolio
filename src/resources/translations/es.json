@@ -1,6 +1,15 @@
 {
   "subAppInfo": [
     {
+      "appCode": "calculator",
+      "appName": "Calculadora",
+      "appIconFile": "calculator1_white.png",
+      "subAppThumbnailFileName": "calculator.jpg",
+      "subAppDescription": "Una calculadora sencilla y fácil de usar, construida con React, que permite realizar operaciones matemáticas básicas como suma, resta, multiplicación y división. Con una interfaz intuitiva, permite ingresar números, eliminar dígitos, y manejar operaciones de manera eficiente.",
+      "toolTipInfo": "Construida con React utilizando el hook useReducer para la gestión del estado, esta calculadora admite operaciones aritméticas básicas (+, -, *, ÷).<br><br>Maneja casos especiales como la sobreescritura de operandos, la prevención de puntos decimales múltiples y la gestión del historial de entradas.<br><br>La aplicación utiliza <i>Intl.NumberFormat</i> para mostrar números grandes de forma formateada y garantiza una interacción fluida con una interfaz de usuario receptiva.",
+      "appUrl": ""
+    },
+    {
       "appCode": "countryInfo",
       "appName": "Información de país al azar",
       "appIconFile": "countries2_white.png",
