@@ -10,7 +10,6 @@ function useDictionnary({ gameRestart }) {
       if (!languageCode) return;
 
       try {
-        //const response = await import(`../../../../public/dictionaries/${languageCode}.json`);
         const response = await import(`../../../../public/dictionaries/${languageCode}.json`);
         setDictionnary(response.default);
       } catch (error) {
