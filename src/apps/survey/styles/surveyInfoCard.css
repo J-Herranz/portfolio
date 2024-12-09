@@ -34,13 +34,15 @@ h2.surveyInfoCard-h2-white {
 }
 
 .surveyInfoCard-div p {
-  margin-top: 1rem;
+  margin: 1rem 0;
   width: 100%;
   border-radius: 10px;
   background-color: #c9c6c6;
   color: #0b0b0b;
   padding: 1rem;
   font-size: 0.9rem;
+  max-height: 45vh;
+  overflow-y: auto;
 }
 
 @media (orientation:portrait) {
@@ -50,5 +52,9 @@ h2.surveyInfoCard-h2-white {
     display: flex;
     justify-content: center;
     padding: 1rem;
+  }
+
+  .surveyInfoCard-div p {
+    max-height: unset;
   }
 }
