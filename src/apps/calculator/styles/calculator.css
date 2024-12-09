@@ -2,8 +2,12 @@
   background: linear-gradient(to right, #8e8e8e, #2f2f2f)
 }
 
-.calculator-grid {
+.calculator-grid-container {
+  padding-top: 1rem;
   margin: auto;
+}
+
+.calculator-grid {
   display: grid;
   grid-template-columns: repeat(4, 4.5rem);
   grid-template-rows: minmax(5.5rem, auto) repeat(5, 4rem);
