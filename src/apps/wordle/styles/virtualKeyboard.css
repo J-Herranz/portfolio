@@ -27,8 +27,13 @@
 
 .virtual-keyboard-container {
   position: relative;
-  width: 550px;
+  max-width: 550px;
+  max-height: 160px;
   height: 160px;
+  min-height: 140px;
+  min-width: 520px;
+  height: calc(18vh);
+  width: calc(70vh);
   overflow: hidden;
 }
 
@@ -48,12 +53,13 @@
 
 .keyboard-line {
   display: flex;
-  gap: 10px;
+  gap: min(10px, calc(2px + 0.75vh));
   justify-content: space-between;
   align-items: center;
 }
 
 @media (orientation: portrait) {
+
   .openCloseKeyboard {
     width: 95%;
     max-width: 500px;
@@ -63,6 +69,7 @@
   .virtual-keyboard-container {
     width: 98%;
     max-width: 500px;
+    min-width: unset;
   }
 
   .virtual-keyboard {

@@ -1,7 +1,7 @@
 import { useState, useEffect, useContext } from 'react';
 import { LanguageContext } from '../../../context/LanguageContext';
 
-function useDictionnary({ gameRestart }) {
+function useDictionnary ({ gameRestart }) {
   const { languageCode } = useContext(LanguageContext);
   const [dictionnary, setDictionnary] = useState([]);
 

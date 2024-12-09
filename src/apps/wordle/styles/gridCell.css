@@ -1,6 +1,8 @@
 .gridCell-div {
-  min-width: 60px;
-  height: 60px;
+  max-height: 60px;
+  min-height: 45px;
+  height: calc(50vh/8);
+  aspect-ratio: 1;
   border: 2px solid #ccc;
   display: flex;
   align-items: center;
@@ -32,7 +34,7 @@
 @media (orientation: portrait) {
 
   .gridCell-div {
-    min-width: unset;
+    min-height: unset;
     height: 100%;
     aspect-ratio: 1/1;
   }

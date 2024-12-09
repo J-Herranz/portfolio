@@ -8,7 +8,7 @@
  * @returns {string} - string with its first letter capitalized
  */
 
-function capitalizeFirstLetter({ string }) {
+function capitalizeFirstLetter({ string }){
   if (!string) return '';
   return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
 }
