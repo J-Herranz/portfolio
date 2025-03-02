@@ -25,25 +25,39 @@ dist-ssr
 
 # not used icons
 public/assets/app-icons/bomb*
-public/assets/app-icons/countries1*
+public/assets/app-icons/calculator*
+public/assets/app-icons/countries*
 public/assets/app-icons/dice*
 public/assets/app-icons/eshop*
 public/assets/app-icons/food*
 public/assets/app-icons/hangman*
 public/assets/app-icons/info*
+public/assets/app-icons/login*
 public/assets/app-icons/magnifing*
+public/assets/app-icons/next*
+public/assets/app-icons/quit*
 public/assets/app-icons/survey*
+public/assets/app-icons/switch*
 public/assets/app-icons/tetris*
 public/assets/app-icons/tictactoe*
+public/assets/app-icons/wordle*
 
 #not used loaders
 public/assets/loaders/*
 
 # used icons exceptions
+!public/assets/app-icons/calculator1_*
+!public/assets/app-icons/countries2_*
+!public/assets/app-icons/foodMenu1_*
 !public/assets/app-icons/info1_*
 !public/assets/app-icons/info23_*
-!public/assets/app-icons/survey2*
-!public/assets/app-icons/tictactoe2*
+!public/assets/app-icons/login1_*
+!public/assets/app-icons/next_*
+!public/assets/app-icons/quit_*
+!public/assets/app-icons/survey2_*
+!public/assets/app-icons/switch1_*
+!public/assets/app-icons/tictactoe2_*
+!public/assets/app-icons/wordle1_*
 !public/assets/loaders/growingDots*
 !public/assets/loaders/spinningCircularFragment*
 
