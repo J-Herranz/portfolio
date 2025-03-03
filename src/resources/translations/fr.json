@@ -20,11 +20,11 @@
     },
     {
       "appCode": "foodMenuPage",
-      "appName": "Food Menu Page",
+      "appName": "App Choix de Menu",
       "appIconFile": "foodMenu1_white.png",
       "subAppThumbnailFileName": "foodMenuPage.jpg",
-      "subAppDescription": "L'application web permet aux employés d'une entreprise de passer leurs commandes de repas pour la semaine, une fonctionnalité qui était auparavant gérée via une application interne de l'entreprise. Désormais, les employés peuvent passer leurs commandes facilement depuis l'extérieur de l'entreprise, simplifiant ainsi le processus et offrant plus de flexibilité.",
-      "toolTipInfo": "L'application a été développée entièrement en utilisant HTML, CSS et JavaScript pour le frontend, et PHP pour le backend, sans recourir aux frameworks. Elle est responsive, s'adaptant à différents appareils. L'application se connecte à la base de données de l'application interne de l'entreprise via un connecteur ODBC. Lors de la validation de la sélection des menus de la semaine, un email est automatiquement envoyé à l'employé avec un résumé de sa sélection.",
+      "subAppDescription": "L'application web permet aux employés d'une entreprise de passer leurs commandes de repas pour la semaine. Désormais, les employés peuvent passer leurs commandes facilement depuis l'extérieur de l'entreprise, simplifiant ainsi le processus et offrant plus de flexibilité.",
+      "toolTipInfo": "L'application a été développée entièrement en utilisant HTML, CSS et JavaScript pour le frontend, et PHP pour le backend, sans recourir aux frameworks. Elle est responsive, s'adaptant à différents appareils. L'application se connecte à une base de données d'une application interne de l'entreprise via un connecteur ODBC. Lors de la validation de la sélection des menus de la semaine, un email est automatiquement envoyé à l'employé avec un résumé de sa sélection.",
       "appUrl": ""
     },
     {
@@ -37,20 +37,20 @@
       "appUrl": ""
     },
     {
-      "appCode": "hupPage",
-      "appName": "Hub Page",
-      "appIconFile": "login1_white.png",
+      "appCode": "hubPage",
+      "appName": "Page Centralisée",
+      "appIconFile": "login2_white.png",
       "subAppThumbnailFileName": "hubPage.jpg",
-      "subAppDescription": "L'application web est une page centralisé (hub) qui permet l'accès à diverses applications et plannings, y compris les horaires des travailleurs et les plannings internes de production. Elle dispose d'un système de gestion des droits d'accès basé sur des utilisateurs, géré par login et mot de passe. De plus, elle offre des fonctions d'administration pour la gestion CRUD des utilisateurs et des autorisations d'accès aux différentes fonctionnalités du système.",
+      "subAppDescription": "L'application web est une page centralisée (hub) qui permet l'accès à diverses applications et plannings, y compris les horaires des travailleurs et les plannings internes de production. Elle dispose d'un système de gestion des droits d'accès basé sur le statut des utilisateurs, géré par login et mot de passe. De plus, elle offre des fonctions d'administration pour la gestion CRUD des utilisateurs.",
       "toolTipInfo": "L'application a été développée en utilisant HTML, CSS et JavaScript pour le frontend, et PHP pour le backend, sans recourir aux frameworks. Elle est responsive, garantissant une expérience optimale, quelle que soit le type d'appareil accédant à l'application, et dispose de mécanismes de rollback pour s'assurer que les opérations interconnectées sont correctement exécutées ou, en cas d'erreur, sont annulées et l'utilisateur est informé.",
       "appUrl": ""
     },
     {
       "appCode": "itInfrastructureInventory",
-      "appName": "Page d'Inventaire de l'Infrastructure Informatique",
+      "appName": "App Inventaire IT",
       "appIconFile": "switch1_white.png",
       "subAppThumbnailFileName": "itInfrastructureInventory.jpg",
-      "subAppDescription": "L'application, créée avec Windev, permet d'enregistrer et de gérer tous les détails de l'infrastructure informatique de l'entreprise. Elle comprend des informations sur les switches, les pare-feu, les ordinateurs, les imprimantes et les utilisateurs, ainsi que la cartographie des connexions entre les ordinateurs et les switches via des câbles RJ45. Elle fournit également des détails sur le matériel de l'entreprise, tels que les dates de garantie et d'autres données pertinentes, permettant ainsi une gestion centralisée et efficace de toute l'infrastructure technologique.",
+      "subAppDescription": "L'application, développée avec WinDev, permet d'enregistrer et de gérer tous les détails de l'infrastructure informatique de l'entreprise, y compris une cartographie du matériel, facilitant ainsi une gestion centralisée et efficace de l'ensemble de l'infrastructure technologique. Elle inclut des informations sur le matériel, les utilisateurs, les fournisseurs, entre autres.",
       "toolTipInfo": "L'application a été développée dès sa conception en utilisant WLanguage, couvrant tout, de la conception du Modèle Conceptuel de Données (MCD) à l'implémentation de la base de données HyperFileSQL. Au cours du développement, des fonctions globales personnalisées ont été utilisées pour gérer différents types de données, offrant ainsi au projet une grande maintenabilité, scalabilité et modularité. Ces pratiques ont permis de créer une conception flexible, facilement adaptable aux futures extensions et modifications, garantissant une structure robuste et facile à maintenir à long terme.",
       "appUrl": ""
     },
@@ -114,11 +114,20 @@
     }
   },
   "eshop": {},
+  "foodMenuPage": {
+
+  },
   "hangman": {},
   "home": {
     "jobTitle": "Développeur Full Stack",
     "userDescription": "Fort de deux années d'expérience, j'ai conduit trois solutions de leur conception à leur déploiement et réalisé plusieurs projets personnels en React et Node.js. Je possède de solides compétences en JavaScript, HTML5, CSS, PHP, Git/GitHub, SQL et PL/SQL, ainsi qu'une capacité avérée à transformer les besoins des utilisateurs en solutions web efficaces. Toujours avide d'apprendre, je m'adapte rapidement aux nouvelles technologies et aux défis. Sur ce site, vous pourrez découvrir certains de mes projets personnels.",
     "projects": "Projets"
+  },
+  "hubPage": {
+
+  },
+  "itInfrastructureInventory": {
+
   },
   "mineSweeper": {},
   "survey": {

@@ -32,9 +32,9 @@ const useRenderSubApp = ({ currentApp, setCurrentApp, darkmodeBool, languageCode
         AppComponent = CountryInfo
         translations = { subAppInfo: { ...t?.subAppInfo.find(app => app.appCode === 'countryInfo') }, countryInfo: { ...t?.countryInfo } }
         break;
-      case 'foodMenu':
+      case 'foodMenuPage':
         AppComponent = FoodMenuPage
-        translations = { subAppInfo: { ...t?.subAppInfo.find(app => app.appCode === 'foodMenu') }, foodMenu: { ...t?.foodMenu } }
+        translations = { subAppInfo: { ...t?.subAppInfo.find(app => app.appCode === 'foodMenuPage') }, foodMenu: { ...t?.foodMenu } }
         break;
       case 'hubPage':
         AppComponent = HubPage

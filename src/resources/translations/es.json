@@ -20,11 +20,11 @@
     },
     {
       "appCode": "foodMenuPage",
-      "appName": "Food Menu Page",
+      "appName": "App de Selección de Menú",
       "appIconFile": "foodMenu1_white.png",
       "subAppThumbnailFileName": "foodMenuPage.jpg",
-      "subAppDescription": "La aplicación web permite a los empleados de una empresa realizar sus pedidos de comida para la semana, una función que previamente se gestionaba a través de una aplicación interna. Ahora, los empleados pueden hacer sus pedidos cómodamente desde fuera de la empresa, facilitando el proceso y brindando mayor flexibilidad.",
-      "toolTipInfo": "La aplicación fue desarrollada íntegramente utilizando HTML, CSS y JavaScript para el frontend, y PHP para el backend, sin el uso de frameworks. Es responsive, adaptándose a diferentes dispositivos. La aplicación se conecta a la base de datos de la aplicación interna de la empresa a través de un conector ODBC. Al validar la selección de los menús de la semana, se envía automáticamente un email al empleado con un resumen de su selección.",
+      "subAppDescription": "La aplicación web permite a los empleados de una empresa realizar sus pedidos de comida para la semana. Ahora, los empleados pueden hacer sus pedidos cómodamente desde fuera de la empresa, facilitando el proceso y brindando mayor flexibilidad.",
+      "toolTipInfo": "La aplicación fue desarrollada íntegramente utilizando HTML, CSS y JavaScript para el frontend, y PHP para el backend, sin el uso de frameworks. Es responsive, adaptándose a diferentes dispositivos. La aplicación se conecta a una base de datos de una aplicación interna de la empresa a través de un conector ODBC. Al validar la selección de los menús de la semana, se envía automáticamente un email al empleado con un resumen de su selección.",
       "appUrl": ""
     },
     {
@@ -37,20 +37,20 @@
       "appUrl": ""
     },
     {
-      "appCode": "hupPage",
-      "appName": "Hub Page",
-      "appIconFile": "login1_white.png",
+      "appCode": "hubPage",
+      "appName": "Página Centralizada",
+      "appIconFile": "login2_white.png",
       "subAppThumbnailFileName": "hubPage.jpg",
-      "subAppDescription": "La aplicación web es una página centralizada (hub) que permite el acceso a diversas aplicaciones y plannings, incluyendo horarios de trabajadores y planificaciones internas de producción. Cuenta con un sistema de control de acceso basado en derechos de usuarios, gestionado mediante login y contraseña. Además, ofrece funciones de administración para la gestión CRUD de usuarios y permisos de acceso a las diferentes funcionalidades del sistema.",
+      "subAppDescription": "La aplicación web es una página centralizada (hub) que permite el acceso a diversas aplicaciones y horarios, incluidos los horarios de los trabajadores y los plannings internos de producción. Dispone de un sistema de gestión de derechos de acceso basado en el estatus de los usuarios, gestionado por login y contraseña. Además, ofrece funciones de administración para la gestión CRUD de los usuarios.",
       "toolTipInfo": "La aplicación fue desarrollada utilizando HTML, CSS y JavaScript para el frontend, y PHP para el backend, sin recurrir a frameworks. Es responsive, garantizando una experiencia óptima con independencia del tipo de dispositivo que acceda a la aplicación, y cuenta con mecanismos de rollback para asegurar que las operaciones interrelacionadas se completen correctamente o, en caso de error, se deshagan y se notifique al usuario.",
       "appUrl": ""
     },
     {
       "appCode": "itInfrastructureInventory",
-      "appName": "Página de Inventario de Infraestructura Informática",
+      "appName": "App de Inventario IT",
       "appIconFile": "switch1_white.png",
       "subAppThumbnailFileName": "itInfrastructureInventory.jpg",
-      "subAppDescription": "La aplicación, creada con Windev, permite registrar y gestionar todos los detalles de la infraestructura IT de la empresa. Incluye información sobre switches, firewalls, ordenadores, impresoras y usuarios, además de mapear las conexiones entre ordenadores y switches a través de cables RJ45. También proporciona detalles del hardware de la empresa, como las fechas de garantía y otros datos relevantes, permitiendo una gestión centralizada y eficiente de toda la infraestructura tecnológica.",
+      "subAppDescription": "La aplicación, desarrollada con WinDev, permite registrar y gestionar todos los detalles de la infraestructura informática de la empresa, incluyendo un mapeo del hardware, facilitando así una gestión centralizada y eficaz de toda la infraestructura tecnológica. Incluye información sobre el hardware, los usuarios, los proveedores, entre otros.",
       "toolTipInfo": "La aplicación fue desarrollada desde su concepción utilizando WLanguage, abarcando desde el diseño del Modelo Conceptual de Datos (MCD) hasta la implementación de la base de datos HyperFileSQL. Durante el desarrollo, se emplearon funciones globales personalizadas para la gestión de diversos tipos de datos, lo que proporcionó al proyecto una gran mantenibilidad, escalabilidad y modularidad. Estas prácticas permitieron un diseño flexible y adaptable a futuras ampliaciones y modificaciones, asegurando una estructura robusta y fácil de mantener a largo plazo.",
       "appUrl": ""
     },
@@ -115,11 +115,20 @@
     }
   },
   "eshop": {},
+  "foodMenuPage": {
+
+  },
   "hangman": {},
   "home": {
     "jobTitle": "Desarrollador Full Stack",
     "userDescription": "Con dos años de experiencia, he llevado a cabo tres soluciones desde su concepción hasta su implementación y he realizado varios proyectos personales con React y Node.js. Poseo sólidas habilidades en JavaScript, HTML5, CSS, PHP, Git/GitHub, SQL y PL/SQL, así como una capacidad demostrada para transformar las necesidades de los usuarios en soluciones web efectivas. Siempre con ganas de aprender, me adapto rápidamente a nuevas tecnologías y desafíos. En este sitio, podrás explorar algunos de mis proyectos personales.",
     "projects": "Proyectos"
+  },
+  "hubPage": {
+
+  },
+  "itInfrastructureInventory": {
+
   },
   "mineSweeper": {},
   "survey": {

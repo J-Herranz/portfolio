@@ -20,11 +20,11 @@
     },
     {
       "appCode": "foodMenuPage",
-      "appName": "Food Menu Page",
+      "appName": "Menu Picker App",
       "appIconFile": "foodMenu1_white.png",
       "subAppThumbnailFileName": "foodMenuPage.jpg",
-      "subAppDescription": "The web application allows employees of a company to place their meal orders for the week, a feature that was previously managed through an internal company application. Now, employees can place their orders conveniently from outside the company, streamlining the process and offering greater flexibility.",
-      "toolTipInfo": "The application was developed entirely using HTML, CSS, and JavaScript for the frontend, and PHP for the backend, without relying on frameworks. It is responsive, adapting to different devices. The application connects to the internal company database via an ODBC connector. Upon validating the weekly menu selection, an email is automatically sent to the employee with a summary of their selection.",
+      "subAppDescription": "The web application allows employees of a company to place their meal orders for the week. Now, employees can place their orders conveniently from outside the company, streamlining the process and offering greater flexibility.",
+      "toolTipInfo": "The application was developed entirely using HTML, CSS, and JavaScript for the frontend, and PHP for the backend, without relying on frameworks. It is responsive, adapting to different devices. The application connects to an internal company database via an ODBC connector. Upon validating the weekly menu selection, an email is automatically sent to the employee with a summary of their selection.",
       "appUrl": ""
     },
     {
@@ -37,20 +37,20 @@
       "appUrl": ""
     },
     {
-      "appCode": "hupPage",
+      "appCode": "hubPage",
       "appName": "Hub Page",
-      "appIconFile": "login1_white.png",
+      "appIconFile": "login2_white.png",
       "subAppThumbnailFileName": "hubPage.jpg",
-      "subAppDescription": "The web application is a centralized hub that provides access to various applications and schedules, including worker timetables and internal production plans. It features a user access control system, managed via login and password. Additionally, it offers administrative functions for CRUD management of users and access permissions to different system features.",
+      "subAppDescription": "The web application is a centralized page (hub) that provides access to various applications and schedules, including worker schedules and internal production schedules. It has an access rights management system based on user status, managed by login and password. Additionally, it offers administration functions for CRUD management of users.",
       "toolTipInfo": "The application was developed using HTML, CSS, and JavaScript for the frontend, and PHP for the backend, without relying on frameworks. It is responsive, ensuring an optimal experience regardless of the type of device accessing the application, and features rollback mechanisms to ensure that interrelated operations are completed correctly or, in case of an error, are undone and the user is notified.",
       "appUrl": ""
     },
     {
       "appCode": "itInfrastructureInventory",
-      "appName": "IT Infrastructure Inventory Page",
+      "appName": "IT Inventory App",
       "appIconFile": "switch1_white.png",
       "subAppThumbnailFileName": "itInfrastructureInventory.jpg",
-      "subAppDescription": "The application, created with Windev, allows for the registration and management of all details related to the company's IT infrastructure. It includes information on switches, firewalls, computers, printers, and users, as well as mapping the connections between computers and switches via RJ45 cables. It also provides details about the company’s hardware, such as warranty dates and other relevant data, enabling centralized and efficient management of the entire technology infrastructure.",
+      "subAppDescription": "The application, developed with WinDev, allows the recording and management of all the details of the company's IT infrastructure, including a mapping of the hardware, thus enabling centralized and efficient management of the entire technological infrastructure. It includes information about hardware, users, suppliers, among others.",
       "toolTipInfo": "The application was developed from its inception using WLanguage, covering everything from the design of the Conceptual Data Model (CDM) to the implementation of the HyperFileSQL database. During development, custom global functions were used to manage different types of data, providing the project with excellent maintainability, scalability, and modularity. These practices enabled a flexible design that can easily adapt to future expansions and modifications, ensuring a robust structure that is easy to maintain in the long term.",
       "appUrl": ""
     },
@@ -115,11 +115,20 @@
     }
   },
   "eshop": {},
+  "foodMenuPage": {
+
+  },
   "hangman": {},
   "home": {
     "jobTitle": "Full Stack Developer",
     "userDescription": "With two years of experience, I have led three solutions from their design to their deployment and have completed several personal projects using React and Node.js. I have strong skills in JavaScript, HTML5, CSS, PHP, Git/GitHub, SQL, and PL/SQL, as well as a proven ability to transform user needs into effective web solutions. Always eager to learn, I quickly adapt to new technologies and challenges. On this site, you can explore some of my personal projects.",
     "projects": "Projects"
+  },
+  "hubPage": {
+
+  },
+  "itInfrastructureInventory": {
+
   },
   "mineSweeper": {},
   "survey": {
