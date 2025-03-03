@@ -13,7 +13,7 @@ function WikiInfo({ countryName }) {
     <div className="wikiInfo-div">
       {wikiInfo?.extract
         ? <p className="wikiInfo-p">{wikiInfo?.extract}</p>
-        : <p className="wikiInfo-p errorMessage">{t?.subAppInfo.wikiInfoNotFound}</p>
+        : <p className="wikiInfo-p errorMessage">{t?.countryInfo.wikiInfoNotFound}</p>
       }
     </div>
   );

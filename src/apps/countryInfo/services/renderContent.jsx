@@ -10,11 +10,11 @@ function renderContent({ apiResponse, t, isLoading, error, content, renderAppTit
   }
 
   if (!countryCode) {
-    return buildReturn(t?.subAppInfo?.emptyCode);
+    return buildReturn(t?.countryInfo?.emptyCode);
   }
 
   if (isLoading) {
-    return buildReturn(t?.subAppInfo?.loading);
+    return buildReturn(t?.countryInfo?.loading);
   }
 
   if (error) {

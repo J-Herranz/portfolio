@@ -138,14 +138,14 @@ function handlePlayerInput_enter({ setGridContent, dictionnary, targetWord, atte
     // forbidden word size (too short)
     if (playerWordAttemp.length < 5) {
       wordErrorAnimation({ attempNb })
-      showInfoMessage({ message: t?.subAppInfo?.incorrectLengthMessage })
+      showInfoMessage({ message: t?.wordle?.incorrectLengthMessage })
       return prevGridContent // Returns state with no changes
     }
 
     // word not present on word list
     if (!dictionnary.includes(playerWordAttemp.trim().toUpperCase())) {
       wordErrorAnimation({ attempNb })
-      showInfoMessage({ message: t?.subAppInfo?.wordNotFoundMessage })
+      showInfoMessage({ message: t?.wordle?.wordNotFoundMessage })
       return prevGridContent  // Returns state with no changes
     }
 
@@ -158,14 +158,14 @@ function handlePlayerInput_enter({ setGridContent, dictionnary, targetWord, atte
     // player entered target word: victory
     if (playerWordAttemp === targetWord) {
       confetti()
-      showInfoMessage({ message: `${t?.subAppInfo?.victoryMessage} ${targetWord}` })
+      showInfoMessage({ message: `${t?.wordle?.victoryMessage} ${targetWord}` })
       setGameStart(() => false)
       return evaluatedGrid  // Returns state with no changes
     }
 
     // all attemps were used: defeat
     if (attempNb >= 5) {
-      showInfoMessage({ message: `${t?.subAppInfo?.defeatMessage} ${targetWord}` })
+      showInfoMessage({ message: `${t?.wordle?.defeatMessage} ${targetWord}` })
       setGameStart(() => false)
       return evaluatedGrid
     }

@@ -16,7 +16,6 @@ function Wordle() {
   const { alphabetArray, handlePlayerInput, handleNewGameClick, gridContent, t } = useWordle();
 
   useKeyboardInput(handlePlayerInput)
-
   return (
     <>
       <SubAppTitle />
@@ -26,7 +25,7 @@ function Wordle() {
           <GridRow key={index} rowNumber={index} rowContent={value} />
         ))}
       </div>
-      <button className='newGame-button' onClick={handleNewGameClick}>{t?.subAppInfo?.newGame}</button>
+      <button className='newGame-button' onClick={handleNewGameClick}>{t?.wordle?.newGame}</button>
 
       <VirtualKeyboard alphabetArray={alphabetArray} />
     </>

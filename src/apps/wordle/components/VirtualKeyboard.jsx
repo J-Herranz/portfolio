@@ -24,8 +24,8 @@ function VirtualKeyboard({ alphabetArray }) {
       <div className='virtualKeyboardContainer-div'>
         {keyboardLayout &&
           <div className="openCloseKeyboard"
-            onClick={() => openCloseVirtualKeyboard({ setShowVirtualKeyboard, showVirtualKeyboard, openCloseMessageObj: { close: t?.subAppInfo?.closeVirtualKeyboard, open: t?.subAppInfo?.openVirtualKeyboard } })}>
-            {t?.subAppInfo?.openVirtualKeyboard}</div>}
+            onClick={() => openCloseVirtualKeyboard({ setShowVirtualKeyboard, showVirtualKeyboard, openCloseMessageObj: { close: t?.wordle?.closeVirtualKeyboard, open: t?.wordle?.openVirtualKeyboard } })}>
+            {t?.wordle?.openVirtualKeyboard}</div>}
         <div className="virtual-keyboard-container">
           <div className="virtual-keyboard" style={darkmodeBool ? { backgroundColor: "#ccc" } : { backgroundColor: "#999" }}>
             {keyboardLayout && showVirtualKeyboard && keyboardLayout.map((keyboardLine, i) => (
