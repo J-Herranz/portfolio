@@ -116,7 +116,18 @@
   },
   "eshop": {},
   "foodMenuPage": {
-
+    "imageFolder": "foodMenuPage_images",
+    "imageSetInfo": [
+      { 
+        "imageName": "interrepas", 
+        "imageAlt": "View of the weekly menu selection page", 
+        "imageText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat, duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."}
+    ],
+    "multipleViewsForImage": true,
+    "toggleButtonMessage":{
+      "pc": "Switch to PC View",
+      "mobile": "Switch to Mobile View"
+    }
   },
   "hangman": {},
   "home": {
@@ -125,10 +136,60 @@
     "projects": "Projects"
   },
   "hubPage": {
-
+    "imageFolder": "hubPage_images",
+    "imageSetInfo": [
+      { 
+        "imageName": "kiosque_accueil", 
+        "imageAlt": "View of the homepage of the hub page", 
+        "imageText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat, duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+      },
+      { 
+        "imageName": "kiosque_plannings", 
+        "imageAlt": "View of the schedules on the hub page", 
+        "imageText": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nulla facilisi. Mauris sagittis pretium velit, id facilisis orci laoreet sed. Integer pretium, risus vitae auctor bibendum, turpis metus elementum augue, non interdum felis velit sit amet felis."
+      },
+      { 
+        "imageName": "kiosque_rapports", 
+        "imageAlt": "View of the reports displayed on the hub page", 
+        "imageText": "Etiam at consectetur urna, ut facilisis eros. Nunc sed ipsum orci. Integer vehicula leo vel nisi pretium, a suscipit mauris interdum. Ut sodales orci vel neque dictum, at convallis velit tincidunt. Nulla fringilla, sapien non mollis fermentum, felis lectus luctus justo, ac varius purus nulla et felis."
+      },
+      { 
+        "imageName": "kiosque_paramConnect", 
+        "imageAlt": "View that allows modifying the connection settings on the hub page", 
+        "imageText": "Curabitur tincidunt nulla vel nunc iaculis, a gravida turpis maximus. Quisque at erat bibendum, gravida purus in, fringilla augue. Vestibulum viverra tristique suscipit. Sed faucibus nisl eu efficitur tempor. Nulla tristique ut erat et tristique. Integer sed vehicula ante. Fusce varius maximus purus."
+      },
+      { 
+        "imageName": "kiosque_admin", 
+        "imageAlt": "View of user management on the hub page", 
+        "imageText": "Nam at ligula vitae libero interdum tincidunt a nec tortor. Suspendisse potenti. Ut ut sem nec purus varius scelerisque ut a arcu. Vivamus vulputate elit et sollicitudin condimentum. Morbi hendrerit eros vel arcu malesuada, a congue felis pharetra. In eget suscipit lorem. Aenean et nisi auctor, tincidunt neque nec, varius erat."
+      }
+    ],
+    "multipleViewsForImage": true,
+    "toggleButtonMessage":{
+        "pc": "Switch to PC View",
+        "mobile": "Switch to Mobile View"
+      }
   },
   "itInfrastructureInventory": {
-
+    "imageFolder": "itInfrastructureInventory_images",
+    "imageSetInfo": [
+      { 
+        "imageName": "netidn_materiels", 
+        "imageAlt": "View of the interface for selecting equipment in the 'PC' tab", 
+        "imageText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat, duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+      },
+      { 
+        "imageName": "netidn_fichePc", 
+        "imageAlt": "View of the detailed PC information page with all its specifications", 
+        "imageText": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nulla facilisi. Mauris sagittis pretium velit, id facilisis orci laoreet sed. Integer pretium, risus vitae auctor bibendum, turpis metus elementum augue, non interdum felis velit sit amet felis."
+      },
+      { 
+        "imageName": "netidn_switchs", 
+        "imageAlt": "View of the interface for managing switches and other network equipment", 
+        "imageText": "Etiam at consectetur urna, ut facilisis eros. Nunc sed ipsum orci. Integer vehicula leo vel nisi pretium, a suscipit mauris interdum. Ut sodales orci vel neque dictum, at convallis velit tincidunt. Nulla fringilla, sapien non mollis fermentum, felis lectus luctus justo, ac varius purus nulla et felis."
+      }
+    ],
+    "multipleViewsForImage": false
   },
   "mineSweeper": {},
   "survey": {
