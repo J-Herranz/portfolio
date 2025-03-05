@@ -5,21 +5,21 @@ import { ThemeContext } from '../../../context/ThemeContext.js'
 import '../styles/sliderWithText.css'
 import PropTypes from 'prop-types'
 
-function SliderWithText ({ appCode, content, imgFolder, multipleViewsForImage }) {
+function SliderWithText ({ content }) {
   const [mobileView, setMobileView] = useState('pc')
   const [hasMobileView, setHasMobileView] = useState(true)
 
   const { t, languageCode } = useContext(LanguageContext);
   const { darkmodeBool } = useContext(ThemeContext);
 
-  const toggleButtonMessage = t[appCode]?.toggleButtonMessage
+  const toggleButtonMessage = content?.toggleButtonMessage
 
   const toggleButtonText = mobileView ? toggleButtonMessage?.pc : toggleButtonMessage?.mobile
 
   return (
     <>
       {
-        multipleViewsForImage && (
+        content?.multipleViewsForImage && (
         <div className={`sliderMobileViewToggle ${hasMobileView ? 'sliderDisabledButton' : ''}`}>
           <button onClick={ () => setMobileView(() => mobileView === 'pc' ? 'mobile' : 'pc')}>{ toggleButtonText }</button>
         </div>
@@ -27,8 +27,15 @@ function SliderWithText ({ appCode, content, imgFolder, multipleViewsForImage })
       }
       {
         !content || !Array.isArray(content) || content.length < 1 ? <h1>"App content not found"</h1> : 
-        content.map((value, index) => {
-            <SlideWithText mobileView={ mobileView } imgFolder={imgFolder} imageName={content.imageName} id={index} setHasMobileView={ setHasMobileView }/>
+        content.imageSetInfo.map((value, index) => {
+            <SlideWithText 
+              mobileView={ mobileView } 
+              imgFolder={content.imgFolder} 
+              imageName={value?.imageName} 
+              imageAlt={value?.imageAlt} 
+              setHasMobileView={ setHasMobileView } 
+              id={index} 
+            />
         }) 
       }
     </>
@@ -36,10 +43,7 @@ function SliderWithText ({ appCode, content, imgFolder, multipleViewsForImage })
 }
 
 SliderWithText.propTypes = {
-  appCode: PropTypes.string.isRequired,
-  content: PropTypes.object.isRequired,
-  imgFolder: PropTypes.string.isRequired,
-  multipleViewsForImage: PropTypes.bool.isRequired
+  content: PropTypes.object.isRequired
 }
 
 export { SliderWithText }

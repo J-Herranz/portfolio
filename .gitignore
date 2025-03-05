@@ -32,10 +32,11 @@ public/assets/app-icons/eshop*
 public/assets/app-icons/food*
 public/assets/app-icons/hangman*
 public/assets/app-icons/info*
+public/assets/app-icons/left*
 public/assets/app-icons/login*
 public/assets/app-icons/magnifing*
-public/assets/app-icons/next*
 public/assets/app-icons/quit*
+public/assets/app-icons/right*
 public/assets/app-icons/survey*
 public/assets/app-icons/switch*
 public/assets/app-icons/tetris*
@@ -51,9 +52,10 @@ public/assets/loaders/*
 !public/assets/app-icons/foodMenu1_*
 !public/assets/app-icons/info1_*
 !public/assets/app-icons/info23_*
+public/assets/app-icons/leftArrow*
 !public/assets/app-icons/login2_*
-!public/assets/app-icons/next_*
 !public/assets/app-icons/quit_*
+!public/assets/app-icons/rightArrow*
 !public/assets/app-icons/survey2_*
 !public/assets/app-icons/switch1_*
 !public/assets/app-icons/tictactoe2_*

@@ -6,8 +6,8 @@ import { getSurveyInfo, getRandomSpecies, shuffleClues } from '../resources/surv
 import PropTypes from 'prop-types'
 import quit_icon_black from '/assets/app-icons/quit_black.png'
 import quit_icon_white from '/assets/app-icons/quit_white.png'
-import next_icon_black from '/assets/app-icons/next_black.png'
-import next_icon_white from '/assets/app-icons/next_white.png'
+import next_icon_black from '/assets/app-icons/arrowRight_black.png'
+import next_icon_white from '/assets/app-icons/arrowRight_white.png'
 import '../styles/surveyQuestions.css'
 
 function SurveyQuestions({ returnButtonFunc, goToResults, setTotalPoints }) {
@@ -131,14 +131,14 @@ function SurveyQuestions({ returnButtonFunc, goToResults, setTotalPoints }) {
 
       <div className='surveyQuestionsButtons-div'>
         <div onClick={() => returnButtonFunc()} className={`survey-button darkmode-ignore hoverLeft ${darkmodeBool ? 'surveyQuestionsButtons-light' : ''}`}>
-          <img src={darkmodeBool ? quit_icon_black : quit_icon_white} />
+          <img src={darkmodeBool ? quit_icon_black : quit_icon_white} alt="Quit survey icon" />
           <p>{t?.survey?.quitSurvey}</p>
         </div>
         <div onClick={() => nextQuestionButtonHandler()}
           className={`survey-button darkmode-ignore hoverRight ${rightAnswerFound ? '' : 'disabled'} ${darkmodeBool ? 'surveyQuestionsButtons-light' : ''} ${buttonTremble ? 'tremble' : ''}`
           }>
           <p>{t?.survey?.nextQuestion}</p>
-          <img src={darkmodeBool ? next_icon_black : next_icon_white} />
+          <img src={darkmodeBool ? next_icon_black : next_icon_white} alt="Next question icon"/>
         </div>
       </div >
     </>

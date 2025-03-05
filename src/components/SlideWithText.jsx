@@ -6,14 +6,11 @@ import PropTypes from 'prop-types'
 
 
 function SlideWithText ({ mobileView, imgFolder, imageName, imageAlt, setHasMobileView }) {
-const src = `/assets/${imgFolder}/${content.imageName}_${mobileView}.jpg`
   return (
-    <>
-          <>
-            <img src={`${content?.src}`}></img>
-            <p>{`${content?.text}`}</p>
-          </>
-    </>
+    <div className='slideContainerDiv'>
+      <img src={`/assets/${imgFolder}/${imageName}_${mobileView}.jpg`} alt={imageAlt}/>
+      <p>{`${content?.text}`}</p>
+    </div>
   );
 }
 
