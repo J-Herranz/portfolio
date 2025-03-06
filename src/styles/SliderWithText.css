@@ -1,0 +1,74 @@
+
+
+.sliderMobileViewToggle {
+  margin-bottom: 2rem;
+}
+
+.sliderContainer{
+/*  display: flex;
+  overflow: hidden;
+  margin-bottom: 1rem;*/
+
+
+/*
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  width: 100%;
+  scroll-behavior: smooth;
+*/
+
+width: 100%;
+overflow: hidden; /* Oculta las diapositivas que no están en vista */
+
+
+}
+
+.sliderContainer.pc{
+  width: 700px;
+  height: auto;
+}
+
+.sliderContainer.mobile{
+  height: 500px;
+  width: auto;
+}
+
+
+.slider{
+  display: flex;
+  transition: transform 0.8s ease-out;
+}
+
+
+
+
+
+
+
+
+.sliderNavButtons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.sliderNavButtons > button {
+  display: flex;
+  align-items: center;
+
+
+
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 24px;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.sliderNavButtons > button > img{
+  height: 25px;
+}

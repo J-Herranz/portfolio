@@ -1,19 +1,16 @@
 import { useContext } from 'react'
 
 import { LanguageContext } from '../../../context/LanguageContext.js'
-import { ThemeContext } from '../../../context/ThemeContext.js'
 import { SubAppTitle } from "../../../components/SubAppTitle"
+import { SliderWithText } from '../../../components/SliderWithText.jsx' 
 
-function ITInfrastructureInventory({ pepito }){
-  const { t, languageCode } = useContext(LanguageContext)
-  const { darkmodeBool } = useContext(ThemeContext)
-
-
+function ITInfrastructureInventory() {
+  const { t } = useContext(LanguageContext)
 
   return (
     <>
       <SubAppTitle />
-      <h1>netidn</h1>
+      <SliderWithText content={ t.itInfrastructureInventory } />
     </>
   );
 }

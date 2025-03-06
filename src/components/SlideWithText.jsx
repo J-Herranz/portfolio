@@ -5,11 +5,14 @@ import '../styles/slideWithText.css'
 import PropTypes from 'prop-types'
 
 
-function SlideWithText ({ mobileView, imgFolder, imageName, imageAlt, setHasMobileView }) {
+function SlideWithText ({ mobileView, imgFolder, imageName, imageAlt, imageText, setHasMobileView }) {
+
+  console.log(`/assets/${imgFolder}/${imageName}_${mobileView}.jpg`)
+
   return (
     <div className='slideContainerDiv'>
       <img src={`/assets/${imgFolder}/${imageName}_${mobileView}.jpg`} alt={imageAlt}/>
-      <p>{`${content?.text}`}</p>
+      <p>{`${imageText}`}</p>
     </div>
   );
 }
@@ -19,7 +22,8 @@ SlideWithText.propTypes = {
   imgFolder: PropTypes.string.isRequired,
   imageName: PropTypes.string.isRequired,
   imageAlt: PropTypes.string.isRequired,
-  setHasMobileView: PropTypes.function.isRequired
+  imageText: PropTypes.string.isRequired,
+  //setHasMobileView: PropTypes.function.isRequired
 }
 
 export { SlideWithText }

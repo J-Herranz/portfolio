@@ -1,18 +1,16 @@
 import { useContext } from 'react'
 
 import { LanguageContext } from '../../../context/LanguageContext.js'
-import { ThemeContext } from '../../../context/ThemeContext.js'
 import { SubAppTitle } from "../../../components/SubAppTitle"
+import { SliderWithText } from '../../../components/SliderWithText.jsx' 
 
-function FoodMenuPage ({ pepito }){
-  const { t, languageCode } = useContext(LanguageContext)
-  const { darkmodeBool } = useContext(ThemeContext)
-
+function FoodMenuPage(){
+  const { t } = useContext(LanguageContext)
   
   return (
     <>
       <SubAppTitle />
-      <h1>interrepas</h1>
+      <SliderWithText content={ t.foodMenuPage } />
     </>
   );
 }
