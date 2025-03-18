@@ -42,6 +42,12 @@ function App() {
                 return 'App background-calculator'
             case 'countryInfo':
                 return 'App backgroundImage-countryInfo'
+            case 'foodMenuPage':
+                return 'App background-foodMenuPage'
+            case 'hubPage':
+                return 'App background-hubPage'
+            case 'itInfrastructureInventory':
+                return 'App background-itInfrastructureInventory'
             case 'survey':
                 return 'App background-survey'
             case 'wordle':

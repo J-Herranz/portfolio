@@ -9,18 +9,18 @@
 }
 */
 
-.slideContainerDiv{
-  /*
-  flex: 0 0 100%;
-  text-align: center;text-align: center;
-  scroll-snap-align: start;*/
+.slideContainerDiv {
   flex: 0 0 100%; /* Cada div ocupa el 100% del ancho del contenedor */
   box-sizing: border-box;
   text-align: center;
   scroll-snap-align: start;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .slideContainerDiv img {
   width: 100%; /* La imagen se ajusta al 100% del ancho de su contenedor */
   height: auto; /* Mantiene la proporción original de la imagen */
+  margin-bottom: 1rem;
 }

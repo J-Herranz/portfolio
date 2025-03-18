@@ -1,23 +1,18 @@
-import { useState, useContext } from 'react'
+import { Fragment, useState, useContext } from 'react'
 import { SlideWithText } from './SlideWithText'
-//import { LanguageContext } from '../../../context/LanguageContext.js'
+import { SliderNavButton } from './SliderNavButton'
 import { ThemeContext } from '../context/ThemeContext'
 import '../styles/sliderWithText.css'
 import PropTypes from 'prop-types'
-// import { arrowLeft_black } from '/assets/app-icons/arrowLeft_black.png'
-// import { arrowLeft_white } from '/assets/app-icons/arrowLeft_white.png'
-// import { arrowRight_black } from '/assets/app-icons/arrowRight_black.png'
-// import { arrowRight_white } from '/assets/app-icons/arrowRight_white.png'
+
+import { useSliderNavigation } from '../hooks/useSliderNavigation'
+import { useSliderTheme } from '../hooks/useSliderTheme'
 
 function SliderWithText ({ content }) {
   const [mobileView, setMobileView] = useState('pc')
   const [hasMobileView, setHasMobileView] = useState(true)
-  const [slideIndex, setSlideIndex] = useState(0)
 
-  const totalSlides = content.imageSetInfo.length
-  //const { t, languageCode } = useContext(LanguageContext);
   const { darkmodeBool } = useContext(ThemeContext);
-
   const toggleButtonMessage = content?.toggleButtonMessage
 
   let toggleButtonText
@@ -32,45 +27,8 @@ function SliderWithText ({ content }) {
     slidesContainerSubClass = "pc"
   }
 
-
-
-  let leftArrow, rightArrow
-
-  if (darkmodeBool){
-    leftArrow = '/assets/app-icons/arrowLeft_white.png'
-    rightArrow = '/assets/app-icons/arrowRight_white.png'
-  } else {
-    leftArrow = '/assets/app-icons/arrowLeft_black.png'
-    rightArrow = '/assets/app-icons/arrowRight_black.png'
-  }
-  
-
-
-
-
-  function moveSlide(moveRight) {
-    const slides = document.querySelectorAll('.slideContainerDiv');
-    const slideWidth = slides[0].offsetWidth; // getting width from slide
-  
-    let currentIndex
-    // increasing index if moving right, decreasing if moving left
-    if (moveRight) {
-      currentIndex = (slideIndex + 1) % totalSlides;  // next slide
-    } else {
-      currentIndex = (slideIndex - 1 + totalSlides) % totalSlides;  // previous slide
-    }
-  
-    setSlideIndex(currentIndex) // setting curring slide index
-
-    const slider = document.querySelector('.slider');
-    slider.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
-  }
-
-
-
-
-
-
+  const [ moveSlide ] = useSliderNavigation({ totalSlides: content.imageSetInfo.length });
+  const { leftArrow, rightArrow } = useSliderTheme({ darkmodeBool });
 
   return (
     <div className='mainSliderDiv'>
@@ -87,6 +45,7 @@ function SliderWithText ({ content }) {
           !content || !Array.isArray(content.imageSetInfo) || content.imageSetInfo.length < 1 ? <h1>"App content not found"</h1> : 
           content.imageSetInfo.map((value, index) => {
             return (
+              <Fragment key={index}>
               <SlideWithText 
                 mobileView={ mobileView } 
                 imgFolder={content.imageFolder} 
@@ -94,17 +53,18 @@ function SliderWithText ({ content }) {
                 imageAlt={value?.imageAlt} 
                 setHasMobileView={ setHasMobileView } 
                 imageText= {value.imageText}
-                key={index} 
               />
+              { index !== content.imageSetInfo.length && <div className="slideContainerDiv" />}
+              </Fragment>
             )
           }) 
         }
         </div>
       </div>
-      <div className='sliderNavButtons'>
-        <button onClick={() => moveSlide(false)}><img src={ leftArrow } alt="Previous image icon" /></button>
-        <button onClick={() => moveSlide(true)}><img src={ rightArrow } alt="Next image icon" /></button>
-      </div>
+      <div className='sliderNavButtons-div'>
+        <SliderNavButton src={ leftArrow } alt='Previous image icon' darkmodeBool={ darkmodeBool } moveSlide = { () => moveSlide(false) } />
+        <SliderNavButton src={ rightArrow } alt='Next image icon' darkmodeBool={ darkmodeBool } moveSlide = { () => moveSlide(true) } />
+      </div> 
     </div>
   );
 }
