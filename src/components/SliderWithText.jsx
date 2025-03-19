@@ -14,6 +14,7 @@ function SliderWithText ({ content }) {
 
   const { darkmodeBool } = useContext(ThemeContext);
   const toggleButtonMessage = content?.toggleButtonMessage
+  const totalSlides = content?.imageSetInfo?.length
 
   let toggleButtonText
   let slidesContainerSubClass
@@ -27,14 +28,14 @@ function SliderWithText ({ content }) {
     slidesContainerSubClass = "pc"
   }
 
-  const [ moveSlide ] = useSliderNavigation({ totalSlides: content.imageSetInfo.length });
+  const [ moveSlide ] = useSliderNavigation({ totalSlides });
   const { leftArrow, rightArrow } = useSliderTheme({ darkmodeBool });
 
   return (
     <div className='mainSliderDiv'>
       {
         content?.multipleViewsForImage && (
-        <div className={`sliderMobileViewToggle ${hasMobileView ? 'sliderDisabledButton' : ''}`}>
+        <div className={`sliderMobileViewToggle ${hasMobileView ? '' : 'sliderDisabledButton' }`}>
           <button onClick={ () => setMobileView(mobileView === 'pc' ? 'mobile' : 'pc')}>{ toggleButtonText }</button>
         </div>
         )
@@ -62,8 +63,8 @@ function SliderWithText ({ content }) {
         </div>
       </div>
       <div className='sliderNavButtons-div'>
-        <SliderNavButton src={ leftArrow } alt='Previous image icon' darkmodeBool={ darkmodeBool } moveSlide = { () => moveSlide(false) } />
-        <SliderNavButton src={ rightArrow } alt='Next image icon' darkmodeBool={ darkmodeBool } moveSlide = { () => moveSlide(true) } />
+        <SliderNavButton src={ leftArrow } alt='Previous image icon' darkmodeBool={ darkmodeBool } moveSlide = { () => moveSlide(false) } totalSlides={totalSlides}/>
+        <SliderNavButton src={ rightArrow } alt='Next image icon' darkmodeBool={ darkmodeBool } moveSlide = { () => moveSlide(true) }  totalSlides={totalSlides}/>
       </div> 
     </div>
   );
