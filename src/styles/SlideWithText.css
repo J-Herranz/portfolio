@@ -1,16 +1,5 @@
-/*.slideContainerDiv {
-  width: 100%;
-  height: auto;
-}
-
-.slideContainerDiv>img {
-  width: 100%;
-  margin-bottom: 2rem;
-}
-*/
-
 .slideContainerDiv {
-  flex: 0 0 100%; /* Cada div ocupa el 100% del ancho del contenedor */
+  flex: 0 0 100%;
   box-sizing: border-box;
   text-align: center;
   scroll-snap-align: start;
@@ -20,7 +9,7 @@
 }
 
 .slideContainerDiv img {
-  width: 100%; /* La imagen se ajusta al 100% del ancho de su contenedor */
-  height: auto; /* Mantiene la proporción original de la imagen */
+  width: 100%;
+  height: auto;
   margin-bottom: 1rem;
 }

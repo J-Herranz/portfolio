@@ -1,4 +1,4 @@
-import { Fragment, useState, useContext } from 'react'
+import { Fragment, useState, useContext, useRef } from 'react'
 import { SlideWithText } from './SlideWithText'
 import { SliderNavButton } from './SliderNavButton'
 import { ThemeContext } from '../context/ThemeContext'
@@ -10,11 +10,18 @@ import { useSliderTheme } from '../hooks/useSliderTheme'
 
 function SliderWithText ({ content }) {
   const [mobileView, setMobileView] = useState('pc')
-  const [hasMobileView, setHasMobileView] = useState(true)
+  //const [hasMobileView, setHasMobileView] = useState([])
+  const imgViewTypes = useRef([])
 
   const { darkmodeBool } = useContext(ThemeContext);
+
   const toggleButtonMessage = content?.toggleButtonMessage
   const totalSlides = content?.imageSetInfo?.length
+  const [ currentSlideIndex, moveSlide ] = useSliderNavigation({ totalSlides });
+  const { leftArrow, rightArrow } = useSliderTheme({ darkmodeBool });
+
+
+  const hasMobileView = true // 0000000000000000000000000000000000000000000000000000000000000000
 
   let toggleButtonText
   let slidesContainerSubClass
@@ -28,14 +35,12 @@ function SliderWithText ({ content }) {
     slidesContainerSubClass = "pc"
   }
 
-  const [ moveSlide ] = useSliderNavigation({ totalSlides });
-  const { leftArrow, rightArrow } = useSliderTheme({ darkmodeBool });
-
+console.log(imgViewTypes)
   return (
     <div className='mainSliderDiv'>
       {
         content?.multipleViewsForImage && (
-        <div className={`sliderMobileViewToggle ${hasMobileView ? '' : 'sliderDisabledButton' }`}>
+        <div className={`sliderMobileViewToggle ${imgViewTypes[currentSlideIndex].mobile ? '' : 'sliderDisabledButton' }`}>
           <button onClick={ () => setMobileView(mobileView === 'pc' ? 'mobile' : 'pc')}>{ toggleButtonText }</button>
         </div>
         )
@@ -43,19 +48,21 @@ function SliderWithText ({ content }) {
       <div className={`sliderContainer ${slidesContainerSubClass}`}>
         <div className='slider'>
         {
-          !content || !Array.isArray(content.imageSetInfo) || content.imageSetInfo.length < 1 ? <h1>"App content not found"</h1> : 
+          !content || !Array.isArray(content.imageSetInfo) || content.imageSetInfo.length < 1 ? 
+          <div className="slideContainerDiv" style={{display:'flex', justifyContent:'center', alignItems:'center'}}><h1>"App content not found"</h1></div> : 
           content.imageSetInfo.map((value, index) => {
             return (
               <Fragment key={index}>
-              <SlideWithText 
-                mobileView={ mobileView } 
-                imgFolder={content.imageFolder} 
-                imageName={value?.imageName} 
-                imageAlt={value?.imageAlt} 
-                setHasMobileView={ setHasMobileView } 
-                imageText= {value.imageText}
-              />
-              { index !== content.imageSetInfo.length && <div className="slideContainerDiv" />}
+                <SlideWithText 
+                  mobileView={ mobileView } 
+                  imgFolder={content.imageFolder} 
+                  imageName={value?.imageName} 
+                  imageAlt={value?.imageAlt} 
+                  imgViewTypes={ imgViewTypes } 
+                  imageText= {value.imageText}
+                  slideIndex= {index}
+                />
+                { index !== content.imageSetInfo.length && <div className="slideContainerDiv" />}
               </Fragment>
             )
           }) 

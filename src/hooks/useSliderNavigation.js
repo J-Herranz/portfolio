@@ -63,7 +63,7 @@ function useSliderNavigation({ totalSlides }) {
     }
   }, [slideWidth]); // executed every time the slide width is change
 
-  return [ moveSlide ];
+  return [ currentSlideIndex, moveSlide ];
 }
 
 export { useSliderNavigation };
