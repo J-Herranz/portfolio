@@ -2,7 +2,7 @@ import { Fragment, useState, useContext } from 'react'
 import { SlideWithText } from './SlideWithText'
 import { SliderNavButton } from './SliderNavButton'
 import { ThemeContext } from '../context/ThemeContext'
-import '../styles/sliderWithText.css'
+import '../styles/SliderWithText.css'
 import PropTypes from 'prop-types'
 import { checkIfImageHasMultipleViews } from '../services/slideWithTextUtils'
 
