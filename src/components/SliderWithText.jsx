@@ -9,9 +9,9 @@ import { useSliderNavigation } from '../hooks/useSliderNavigation'
 import { useSliderTheme } from '../hooks/useSliderTheme'
 
 function SliderWithText ({ content }) {
-  const [mobileView, setMobileView] = useState('pc')
-  //const [hasMobileView, setHasMobileView] = useState([])
-  const imgViewTypes = useRef([])
+  const [viewNb, setViewNb] = useState(0)
+  //const imgViewTypes = useRef([])
+  const [imageViewTypes, setImageViewTypes] = useState([])
 
   const { darkmodeBool } = useContext(ThemeContext);
 
@@ -20,12 +20,10 @@ function SliderWithText ({ content }) {
   const [ currentSlideIndex, moveSlide ] = useSliderNavigation({ totalSlides });
   const { leftArrow, rightArrow } = useSliderTheme({ darkmodeBool });
 
+  let toggleButtonText = toggleButtonMessage?.[(viewNb + 1) % toggleButtonMessage.length]
+  let slidesContainerSubClass = content?.imageSuffixes?.[(viewNb) % content?.imageSuffixes.length]
 
-  const hasMobileView = true // 0000000000000000000000000000000000000000000000000000000000000000
-
-  let toggleButtonText
-  let slidesContainerSubClass
-
+  /*
   if(mobileView === 'mobile') {
     toggleButtonText = toggleButtonMessage?.pc
     slidesContainerSubClass = "mobile"
@@ -33,15 +31,41 @@ function SliderWithText ({ content }) {
   } else {
     toggleButtonText = toggleButtonMessage?.mobile
     slidesContainerSubClass = "pc"
+  }*/
+
+console.log(imageViewTypes)
+
+
+
+
+  const checkIfImageHasMultipleViews = () => {
+    let obj = imageViewTypes?.[currentSlideIndex]
+    let nbOfAvailableViews = 0
+
+    if (obj) {
+      for (let key in obj) {
+        if(key === 'url') continue
+        nbOfAvailableViews += obj[key] ? 1 : 0
+      }
+    }
+    return nbOfAvailableViews > 1
   }
 
-console.log(imgViewTypes)
+
+  const viewsButtonHandlerer = () => {
+    setViewNb((viewNb + 1) % toggleButtonMessage.length)
+    console.log(`boton toggle apretado ${viewNb}`)
+    console.log(`views disponibles: `)
+    console.log(imageViewTypes?.[currentSlideIndex])
+  }
+
+
   return (
     <div className='mainSliderDiv'>
       {
-        content?.multipleViewsForImage && (
-        <div className={`sliderMobileViewToggle ${imgViewTypes[currentSlideIndex].mobile ? '' : 'sliderDisabledButton' }`}>
-          <button onClick={ () => setMobileView(mobileView === 'pc' ? 'mobile' : 'pc')}>{ toggleButtonText }</button>
+        content?.toggleButtonMessage && (
+        <div className={`sliderMobileViewToggle ${checkIfImageHasMultipleViews() ? '' : 'sliderDisabledButton' }`}>
+          <button onClick={ viewsButtonHandlerer }>{ toggleButtonText }</button>
         </div>
         )
       }
@@ -54,13 +78,15 @@ console.log(imgViewTypes)
             return (
               <Fragment key={index}>
                 <SlideWithText 
-                  mobileView={ mobileView } 
+                  viewNb={ viewNb } 
                   imgFolder={content.imageFolder} 
                   imageName={value?.imageName} 
                   imageAlt={value?.imageAlt} 
-                  imgViewTypes={ imgViewTypes } 
+                  imageFormat={value?.imageFormat}
+                  imageSuffixes={content?.imageSuffixes}
                   imageText= {value.imageText}
                   slideIndex= {index}
+                  setImageViewTypes={ setImageViewTypes } 
                 />
                 { index !== content.imageSetInfo.length && <div className="slideContainerDiv" />}
               </Fragment>

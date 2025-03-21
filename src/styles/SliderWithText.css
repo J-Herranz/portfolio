@@ -29,6 +29,7 @@
   justify-content: flex-start;
   transition: transform 0.8s ease-out;
   height: 100%;
+  width: fit-content;
 }
 
 .slideContainerDiv {

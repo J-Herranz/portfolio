@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-function useSliderNavigation({ totalSlides }) {
+function useSliderNavigation({ totalSlides, mobileView }) {
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
   const [slideWidth, setSlideWidth] = useState(0);
 
@@ -47,6 +47,13 @@ function useSliderNavigation({ totalSlides }) {
     window.addEventListener('resize', updateSlideWidth); // updates the slide size when resizing the window size
     return () => window.removeEventListener('resize', updateSlideWidth); // removes the listener when unmounting
   }, []);
+  useEffect(() => {
+    updateSlideWidth(); // initialize the slide width
+    console.log('pepe')
+    console.log(slideWidth)
+    window.addEventListener('resize', updateSlideWidth); // updates the slide size when resizing the window size
+    return () => window.removeEventListener('resize', updateSlideWidth); // removes the listener when unmounting
+  }, [mobileView]);
 
   // Hook that changes the slider position when resizing the window
   useEffect(() => {
@@ -61,7 +68,7 @@ function useSliderNavigation({ totalSlides }) {
         slider.style.transition = 'transform 0.5s ease-in-out'; // activating transition again
       }, 10);
     }
-  }, [slideWidth]); // executed every time the slide width is change
+  }, [slideWidth, mobileView]); // executed every time the slide width is changed
 
   return [ currentSlideIndex, moveSlide ];
 }

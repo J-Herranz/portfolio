@@ -1,4 +1,4 @@
-const checkImagesExist = async ({ urls, imgSuffixes, imgFormat }) => {
+const checkImagesExist = async ({ urls, imageSuffixes, imgFormat }) => {
   // function to check if a image exist
   const checkImageExists = async (url) => {
     try {
@@ -23,7 +23,7 @@ const checkImagesExist = async ({ urls, imgSuffixes, imgFormat }) => {
     const result = {};
     result['url'] = url;
 
-    for (const suffix of imgSuffixes) {
+    for (const suffix of imageSuffixes) {
       // Construct the full URL and check if it exists
       const exist = await checkImageExists(`${url}_${suffix}.${imgFormat}`);
       result[suffix] = exist; // Set 'true' or 'false' based on image existence
