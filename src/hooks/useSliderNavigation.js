@@ -49,8 +49,6 @@ function useSliderNavigation({ totalSlides, mobileView }) {
   }, []);
   useEffect(() => {
     updateSlideWidth(); // initialize the slide width
-    console.log('pepe')
-    console.log(slideWidth)
     window.addEventListener('resize', updateSlideWidth); // updates the slide size when resizing the window size
     return () => window.removeEventListener('resize', updateSlideWidth); // removes the listener when unmounting
   }, [mobileView]);

@@ -21,7 +21,6 @@
 
 .sliderContainer.mobile{
   height: 60vh;
-  width: 500px;
 }
 
 .slider{
@@ -46,4 +45,42 @@
 .slideContainerDiv > p {
   width: 60%;
   margin: auto;
+}
+
+@media (orientation: portrait) {
+
+  .sliderMobileViewToggle {
+    margin: 0;
+  }
+
+
+  .slideContainerDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .slideContainerDiv > img {
+    height: auto;
+    max-height: 80%;
+    width: 95%;
+    border-radius: 10px;
+  }
+
+  .slideContainerDiv.vertical > img {
+    height: 80%;
+    width: auto;
+  }
+
+  .slideContainerDiv > p {
+    margin: 0;
+    width: 95%;
+    max-height: 20%;
+    overflow-y: scroll;
+  }
+
+  .sliderNavButtons-div{
+    margin-top: 1rem;
+  }
 }

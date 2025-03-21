@@ -1,16 +1,16 @@
-import { Fragment, useState, useContext, useRef } from 'react'
+import { Fragment, useState, useContext } from 'react'
 import { SlideWithText } from './SlideWithText'
 import { SliderNavButton } from './SliderNavButton'
 import { ThemeContext } from '../context/ThemeContext'
 import '../styles/sliderWithText.css'
 import PropTypes from 'prop-types'
+import { checkIfImageHasMultipleViews } from '../services/slideWithTextUtils'
 
 import { useSliderNavigation } from '../hooks/useSliderNavigation'
 import { useSliderTheme } from '../hooks/useSliderTheme'
 
 function SliderWithText ({ content }) {
   const [viewNb, setViewNb] = useState(0)
-  //const imgViewTypes = useRef([])
   const [imageViewTypes, setImageViewTypes] = useState([])
 
   const { darkmodeBool } = useContext(ThemeContext);
@@ -23,48 +23,15 @@ function SliderWithText ({ content }) {
   let toggleButtonText = toggleButtonMessage?.[(viewNb + 1) % toggleButtonMessage.length]
   let slidesContainerSubClass = content?.imageSuffixes?.[(viewNb) % content?.imageSuffixes.length]
 
-  /*
-  if(mobileView === 'mobile') {
-    toggleButtonText = toggleButtonMessage?.pc
-    slidesContainerSubClass = "mobile"
-
-  } else {
-    toggleButtonText = toggleButtonMessage?.mobile
-    slidesContainerSubClass = "pc"
-  }*/
-
-console.log(imageViewTypes)
-
-
-
-
-  const checkIfImageHasMultipleViews = () => {
-    let obj = imageViewTypes?.[currentSlideIndex]
-    let nbOfAvailableViews = 0
-
-    if (obj) {
-      for (let key in obj) {
-        if(key === 'url') continue
-        nbOfAvailableViews += obj[key] ? 1 : 0
-      }
-    }
-    return nbOfAvailableViews > 1
-  }
-
-
   const viewsButtonHandlerer = () => {
     setViewNb((viewNb + 1) % toggleButtonMessage.length)
-    console.log(`boton toggle apretado ${viewNb}`)
-    console.log(`views disponibles: `)
-    console.log(imageViewTypes?.[currentSlideIndex])
   }
-
 
   return (
     <div className='mainSliderDiv'>
       {
         content?.toggleButtonMessage && (
-        <div className={`sliderMobileViewToggle ${checkIfImageHasMultipleViews() ? '' : 'sliderDisabledButton' }`}>
+        <div className={`sliderMobileViewToggle ${checkIfImageHasMultipleViews({ imageViewTypes, currentSlideIndex }) ? '' : 'sliderDisabledButton' }`}>
           <button onClick={ viewsButtonHandlerer }>{ toggleButtonText }</button>
         </div>
         )
@@ -86,7 +53,8 @@ console.log(imageViewTypes)
                   imageSuffixes={content?.imageSuffixes}
                   imageText= {value.imageText}
                   slideIndex= {index}
-                  setImageViewTypes={ setImageViewTypes } 
+                  setImageViewTypes={ setImageViewTypes }
+                  portraitClass={viewNb === 1 && value.imageVerticalView ? 'vertical' : ''}
                 />
                 { index !== content.imageSetInfo.length && <div className="slideContainerDiv" />}
               </Fragment>

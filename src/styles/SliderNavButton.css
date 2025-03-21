@@ -35,3 +35,8 @@
   background-color: grey;
   opacity: 0.5;
 }
+
+
+@media (orientation: portrait) {
+
+}
