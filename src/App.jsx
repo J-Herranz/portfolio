@@ -33,7 +33,8 @@ function App() {
         if (a.appCode === 'home') return -1;
         if (b.appCode === 'home') return 1;
 
-        return a.appName.localeCompare(b.appName);
+        /*return a.appName.localeCompare(b.appName);*/
+        return a.priority - b.priority;
     }) : [];
 
     const appDivClassNameSelector = () => {

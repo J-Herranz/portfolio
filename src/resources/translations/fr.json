@@ -7,7 +7,8 @@
       "subAppThumbnailFileName": "calculator.jpg",
       "subAppDescription": "Une calculatrice simple et facile à utiliser, construite avec React, qui permet de réaliser des opérations mathématiques de base telles que l'addition, la soustraction, la multiplication et la division. Avec une interface intuitive, elle vous permet d'entrer des chiffres, de supprimer des chiffres et de gérer les opérations de manière efficace.",
       "toolTipInfo": "Construite avec React en utilisant le hook useReducer pour la gestion de l'état, cette calculatrice prend en charge les opérations arithmétiques de base<br>(+, -, *, ÷).<br><br>Elle gère des cas particuliers comme l'écrasement des opérandes, la prévention des points décimaux multiples et la gestion de l'historique des entrées.<br><br>L'application utilise <i>Intl.NumberFormat</i> pour afficher les grands nombres de manière formatée et assure une interaction fluide avec une interface utilisateur réactive.",
-      "appUrl": ""
+      "appUrl": "",
+      "priority": 7
     },
     {
       "appCode": "countryInfo",
@@ -16,7 +17,8 @@
       "subAppThumbnailFileName": "countryInfo.jpg",
       "subAppDescription": "Obtenez des informations sur un pays au hasard en utilisant deux API différentes, la deuxième requête dépendant des informations récupérées de la première.",
       "toolTipInfo": "Application qui tire au sort un pays en utilisant le package npm random-country.<br><br>Avec le code du pays obtenu, elle recherche son nom et son drapeau sur l'API restcountries.com.<br><br>Ensuite, elle utilise le nom commun obtenu de cette recherche pour récupérer des informations supplémentaires via l'API de Wikipedia.",
-      "appUrl": ""
+      "appUrl": "",
+      "priority": 6
     },
     {
       "appCode": "foodMenuPage",
@@ -25,7 +27,8 @@
       "subAppThumbnailFileName": "foodMenuPage.jpg",
       "subAppDescription": "L'application web permet aux employés d'une entreprise de passer leurs commandes de repas pour la semaine. Désormais, les employés peuvent passer leurs commandes facilement depuis l'extérieur de l'entreprise, simplifiant ainsi le processus et offrant plus de flexibilité.",
       "toolTipInfo": "L'application a été développée entièrement en utilisant HTML, CSS et JavaScript pour le frontend, et PHP pour le backend, sans recourir aux frameworks. Elle est responsive, s'adaptant à différents appareils. L'application se connecte à une base de données d'une application interne de l'entreprise via un connecteur ODBC. Lors de la validation de la sélection des menus de la semaine, un email est automatiquement envoyé à l'employé avec un résumé de sa sélection.",
-      "appUrl": ""
+      "appUrl": "",
+      "priority": 3
     },
     {
       "appCode": "home",
@@ -34,7 +37,8 @@
       "subAppThumbnailFileName": "",
       "subAppDescription": "",
       "toolTipInfo": "",
-      "appUrl": ""
+      "appUrl": "",
+      "priority": 0
     },
     {
       "appCode": "hubPage",
@@ -43,7 +47,8 @@
       "subAppThumbnailFileName": "hubPage.jpg",
       "subAppDescription": "L'application web est une page centralisée (hub) qui permet l'accès à diverses applications et plannings, y compris les horaires des travailleurs et les plannings internes de production. Elle dispose d'un système de gestion des droits d'accès basé sur le statut des utilisateurs, géré par login et mot de passe. De plus, elle offre des fonctions d'administration pour la gestion CRUD des utilisateurs.",
       "toolTipInfo": "L'application a été développée en utilisant HTML, CSS et JavaScript pour le frontend, et PHP pour le backend, sans recourir aux frameworks. Elle est responsive, garantissant une expérience optimale, quelle que soit le type d'appareil accédant à l'application, et dispose de mécanismes de rollback pour s'assurer que les opérations interconnectées sont correctement exécutées ou, en cas d'erreur, sont annulées et l'utilisateur est informé.",
-      "appUrl": ""
+      "appUrl": "",
+      "priority": 1
     },
     {
       "appCode": "itInfrastructureInventory",
@@ -52,7 +57,8 @@
       "subAppThumbnailFileName": "itInfrastructureInventory.jpg",
       "subAppDescription": "L'application, développée avec WinDev, permet d'enregistrer et de gérer tous les détails de l'infrastructure informatique de l'entreprise, y compris une cartographie du matériel, facilitant ainsi une gestion centralisée et efficace de l'ensemble de l'infrastructure technologique. Elle inclut des informations sur le matériel, les utilisateurs, les fournisseurs, entre autres.",
       "toolTipInfo": "L'application a été développée dès sa conception en utilisant WLanguage, couvrant tout, de la conception du Modèle Conceptuel de Données (MCD) à l'implémentation de la base de données HyperFileSQL. Au cours du développement, des fonctions globales personnalisées ont été utilisées pour gérer différents types de données, offrant ainsi au projet une grande maintenabilité, scalabilité et modularité. Ces pratiques ont permis de créer une conception flexible, facilement adaptable aux futures extensions et modifications, garantissant une structure robuste et facile à maintenir à long terme.",
-      "appUrl": ""
+      "appUrl": "",
+      "priority": 2
     },
     {
       "appCode": "survey",
@@ -61,7 +67,8 @@
       "subAppThumbnailFileName": "survey.jpg",
       "subAppDescription": "Cette application web propose un quiz où les utilisateurs voient une photo d'un membre de la famille des félidés et doivent sélectionner la bonne espèce parmi une liste d'options. Que ce soit un lion, un tigre, un léopard ou un chat domestique, l'utilisateur doit associer l'animal à son espèce. C’est un moyen amusant et interactif d’en apprendre davantage sur ces animaux fascinants et d’améliorer ses compétences en reconnaissance !",
       "toolTipInfo": "Le questionnaire est basé sur des informations et des images extraites de Wikipedia.<br><br>Il consiste en un tirage au sort de 10 images, dans lesquelles l'utilisateur doit identifier l'espèce montrée.<br><br>En cas d'échec, un indice sera tiré au hasard et affiché à l'utilisateur pour l'aider à répondre correctement.",
-      "appUrl": ""
+      "appUrl": "",
+      "priority": 5
     },
     {
       "appCode": "wordle",
@@ -69,7 +76,8 @@
       "appIconFile": "wordle1_white.png",
       "subAppThumbnailFileName": "wordle.jpg",
       "subAppDescription": "L'application du jeu \"Motus\" propose un défi de mots où les joueurs doivent deviner un mot en six essais, en recevant des indices sur les lettres correctes et leur position, favorisant la réflexion stratégique.",
-      "appUrl": ""
+      "appUrl": "",
+      "priority": 4
     }
   ],
   "footer": "Tous droits réservés.",

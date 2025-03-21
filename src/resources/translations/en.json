@@ -7,7 +7,8 @@
       "subAppThumbnailFileName": "calculator.jpg",
       "subAppDescription": "A simple and easy-to-use calculator built with React, allowing you to perform basic mathematical operations like addition, subtraction, multiplication, and division. With an intuitive interface, it enables you to enter numbers, delete digits, and manage operations efficiently.",
       "toolTipInfo": "Built with React using the useReducer hook for state management, this calculator supports basic arithmetic operations (+, -, *, ÷).<br><br>It handles edge cases like overwriting operands, preventing multiple decimal points, and managing input history.<br><br>The app utilizes <i>Intl.NumberFormat</i> for formatted display of large numbers and ensures smooth interaction with a responsive UI.",
-      "appUrl": ""
+      "appUrl": "",
+      "priority": 7
     },
     {
       "appCode": "countryInfo",
@@ -16,7 +17,8 @@
       "subAppThumbnailFileName": "countryInfo.jpg",
       "subAppDescription": "Get information about a random country using two different APIs, with the second query depending on the information fetched from the first.",
       "toolTipInfo": "Application that randomly selects a country using the npm package random-country.<br><br>With the country code obtained, it fetches the name and flag from the restcountries.com API.<br><br>Then, it uses the common name obtained from this fetch to retrieve additional information from the Wikipedia API.",
-      "appUrl": ""
+      "appUrl": "",
+      "priority": 6
     },
     {
       "appCode": "foodMenuPage",
@@ -25,7 +27,8 @@
       "subAppThumbnailFileName": "foodMenuPage.jpg",
       "subAppDescription": "The web application allows employees of a company to place their meal orders for the week. Now, employees can place their orders conveniently from outside the company, streamlining the process and offering greater flexibility.",
       "toolTipInfo": "The application was developed entirely using HTML, CSS, and JavaScript for the frontend, and PHP for the backend, without relying on frameworks. It is responsive, adapting to different devices. The application connects to an internal company database via an ODBC connector. Upon validating the weekly menu selection, an email is automatically sent to the employee with a summary of their selection.",
-      "appUrl": ""
+      "appUrl": "",
+      "priority": 3
     },
     {
       "appCode": "home",
@@ -34,7 +37,8 @@
       "subAppThumbnailFileName": "",
       "subAppDescription": "",
       "toolTipInfo": "",
-      "appUrl": ""
+      "appUrl": "",
+      "priority": 0
     },
     {
       "appCode": "hubPage",
@@ -43,7 +47,8 @@
       "subAppThumbnailFileName": "hubPage.jpg",
       "subAppDescription": "The web application is a centralized page (hub) that provides access to various applications and schedules, including worker schedules and internal production schedules. It has an access rights management system based on user status, managed by login and password. Additionally, it offers administration functions for CRUD management of users.",
       "toolTipInfo": "The application was developed using HTML, CSS, and JavaScript for the frontend, and PHP for the backend, without relying on frameworks. It is responsive, ensuring an optimal experience regardless of the type of device accessing the application, and features rollback mechanisms to ensure that interrelated operations are completed correctly or, in case of an error, are undone and the user is notified.",
-      "appUrl": ""
+      "appUrl": "",
+      "priority": 1
     },
     {
       "appCode": "itInfrastructureInventory",
@@ -52,7 +57,8 @@
       "subAppThumbnailFileName": "itInfrastructureInventory.jpg",
       "subAppDescription": "The application, developed with WinDev, allows the recording and management of all the details of the company's IT infrastructure, including a mapping of the hardware, thus enabling centralized and efficient management of the entire technological infrastructure. It includes information about hardware, users, suppliers, among others.",
       "toolTipInfo": "The application was developed from its inception using WLanguage, covering everything from the design of the Conceptual Data Model (CDM) to the implementation of the HyperFileSQL database. During development, custom global functions were used to manage different types of data, providing the project with excellent maintainability, scalability, and modularity. These practices enabled a flexible design that can easily adapt to future expansions and modifications, ensuring a robust structure that is easy to maintain in the long term.",
-      "appUrl": ""
+      "appUrl": "",
+      "priority": 2
     },
     {
       "appCode": "survey",
@@ -61,7 +67,8 @@
       "subAppThumbnailFileName": "survey.jpg",
       "subAppDescription": "This web app features a quiz where users are shown a photo of a member of the Felidae family and must select the correct species from a list of options. Whether it's a lion, tiger, leopard, or a domestic cat, the user’s task is to match the animal to its species. It’s a fun and interactive way to learn about these fascinating animals and sharpen your recognition skills!",
       "toolTipInfo": "The survey is based on information and images taken from Wikipedia.<br><br>It consists of a random selection of 10 images, where the user must correctly identify the species shown.<br><br>In case of failure, a hint will be randomly given and displayed to the user to help them with their answer.",
-      "appUrl": ""
+      "appUrl": "",
+      "priority": 5
     },
     {
       "appCode": "wordle",
@@ -70,7 +77,8 @@
       "subAppThumbnailFileName": "wordle.jpg",
       "subAppDescription": "The Wordle game app presents a word challenge where players must guess a word in six attempts, receiving clues about the correct letters and their positions, promoting strategic thinking.",
       "toolTipInfo": "Wordle challenges players to guess a hidden 5-letter word in 6 attempts.<br><br>Users can input letters using the PC or mobile keyboard, or a virtual keyboard.<br><br>With each attempt, the boxes display a yellow background for letters that are in the word but not in the correct position, and green for letters that are in the correct position.",
-      "appUrl": ""
+      "appUrl": "",
+      "priority": 4
     }
   ],
   "footer": "All rights reserved.",

@@ -8,9 +8,10 @@ function Home({ setCurrentApp }) {
   const { t } = useContext(LanguageContext)
 
   const sortedApps = t?.subAppInfo.sort((a, b) => {
-    if (a.appName < b.appName) return -1;
+    /*if (a.appName < b.appName) return -1;
     if (a.appName > b.appName) return 1;
-    return 0;
+    return 0;*/
+    return a.priority - b.priority;
   });
   return (
     <>

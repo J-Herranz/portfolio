@@ -7,7 +7,8 @@
       "subAppThumbnailFileName": "calculator.jpg",
       "subAppDescription": "Una calculadora sencilla y fácil de usar, construida con React, que permite realizar operaciones matemáticas básicas como suma, resta, multiplicación y división. Con una interfaz intuitiva, permite ingresar números, eliminar dígitos, y manejar operaciones de manera eficiente.",
       "toolTipInfo": "Construida con React utilizando el hook useReducer para la gestión del estado, esta calculadora admite operaciones aritméticas básicas (+, -, *, ÷).<br><br>Maneja casos especiales como la sobreescritura de operandos, la prevención de puntos decimales múltiples y la gestión del historial de entradas.<br><br>La aplicación utiliza <i>Intl.NumberFormat</i> para mostrar números grandes de forma formateada y garantiza una interacción fluida con una interfaz de usuario receptiva.",
-      "appUrl": ""
+      "appUrl": "",
+      "priority": 7
     },
     {
       "appCode": "countryInfo",
@@ -16,7 +17,8 @@
       "subAppThumbnailFileName": "countryInfo.jpg",
       "subAppDescription": "Obtén información sobre un país aleatorio utilizando dos APIs diferentes, siendo la segunda consulta dependiente de la información obtenida de la primera.",
       "toolTipInfo": "Aplicación que selecciona un país al azar utilizando el paquete npm random-country.<br><br>Con el código del país obtenido, se busca su nombre y bandera en la API de restcountries.com.<br><br>Luego, se utiliza el nombre común obtenido de este fetch para buscar información adicional en la API de Wikipedia.",
-      "appUrl": ""
+      "appUrl": "",
+      "priority": 6
     },
     {
       "appCode": "foodMenuPage",
@@ -25,7 +27,8 @@
       "subAppThumbnailFileName": "foodMenuPage.jpg",
       "subAppDescription": "La aplicación web permite a los empleados de una empresa realizar sus pedidos de comida para la semana. Ahora, los empleados pueden hacer sus pedidos cómodamente desde fuera de la empresa, facilitando el proceso y brindando mayor flexibilidad.",
       "toolTipInfo": "La aplicación fue desarrollada íntegramente utilizando HTML, CSS y JavaScript para el frontend, y PHP para el backend, sin el uso de frameworks. Es responsive, adaptándose a diferentes dispositivos. La aplicación se conecta a una base de datos de una aplicación interna de la empresa a través de un conector ODBC. Al validar la selección de los menús de la semana, se envía automáticamente un email al empleado con un resumen de su selección.",
-      "appUrl": ""
+      "appUrl": "",
+      "priority": 3
     },
     {
       "appCode": "home",
@@ -34,7 +37,8 @@
       "subAppThumbnailFileName": "",
       "subAppDescription": "",
       "toolTipInfo": "",
-      "appUrl": ""
+      "appUrl": "",
+      "priority": 0
     },
     {
       "appCode": "hubPage",
@@ -43,7 +47,8 @@
       "subAppThumbnailFileName": "hubPage.jpg",
       "subAppDescription": "La aplicación web es una página centralizada (hub) que permite el acceso a diversas aplicaciones y horarios, incluidos los horarios de los trabajadores y los plannings internos de producción. Dispone de un sistema de gestión de derechos de acceso basado en el estatus de los usuarios, gestionado por login y contraseña. Además, ofrece funciones de administración para la gestión CRUD de los usuarios.",
       "toolTipInfo": "La aplicación fue desarrollada utilizando HTML, CSS y JavaScript para el frontend, y PHP para el backend, sin recurrir a frameworks. Es responsive, garantizando una experiencia óptima con independencia del tipo de dispositivo que acceda a la aplicación, y cuenta con mecanismos de rollback para asegurar que las operaciones interrelacionadas se completen correctamente o, en caso de error, se deshagan y se notifique al usuario.",
-      "appUrl": ""
+      "appUrl": "",
+      "priority": 1
     },
     {
       "appCode": "itInfrastructureInventory",
@@ -52,7 +57,8 @@
       "subAppThumbnailFileName": "itInfrastructureInventory.jpg",
       "subAppDescription": "La aplicación, desarrollada con WinDev, permite registrar y gestionar todos los detalles de la infraestructura informática de la empresa, incluyendo un mapeo del hardware, facilitando así una gestión centralizada y eficaz de toda la infraestructura tecnológica. Incluye información sobre el hardware, los usuarios, los proveedores, entre otros.",
       "toolTipInfo": "La aplicación fue desarrollada desde su concepción utilizando WLanguage, abarcando desde el diseño del Modelo Conceptual de Datos (MCD) hasta la implementación de la base de datos HyperFileSQL. Durante el desarrollo, se emplearon funciones globales personalizadas para la gestión de diversos tipos de datos, lo que proporcionó al proyecto una gran mantenibilidad, escalabilidad y modularidad. Estas prácticas permitieron un diseño flexible y adaptable a futuras ampliaciones y modificaciones, asegurando una estructura robusta y fácil de mantener a largo plazo.",
-      "appUrl": ""
+      "appUrl": "",
+      "priority": 2
     },
     {
       "appCode": "survey",
@@ -61,7 +67,8 @@
       "subAppThumbnailFileName": "survey.jpg",
       "subAppDescription": "Esta aplicación web presenta un cuestionario en el que el usuario ve una foto de un miembro de la familia Felidae y debe seleccionar la especie correcta de entre varias opciones. Ya sea un león, un tigre, un leopardo o un gato doméstico, la tarea del usuario es asociar el animal con su especie. Es una forma divertida e interactiva de aprender sobre estos animales fascinantes y mejorar tus habilidades de reconocimiento.",
       "toolTipInfo": "El cuestionario está basado en información e imágenes extraídas de Wikipedia.<br><br>Consiste en un sorteo aleatorio de 10 imágenes, en las cuales el usuario debe identificar correctamente la especie que se muestra.<br><br>En caso de no acertar, se proporcionará una pista de forma aleatoria que será mostrada al usuario para ayudarle en su respuesta.",
-      "appUrl": ""
+      "appUrl": "",
+      "priority": 5
     },
     {
       "appCode": "wordle",
@@ -70,7 +77,8 @@
       "subAppThumbnailFileName": "wordle.jpg",
       "subAppDescription": "La aplicación del juego \"Wordle\" propone un desafío de palabras donde los jugadores deben adivinar una palabra en seis intentos, recibiendo pistas sobre las letras correctas y su posición, favoreciendo la reflexión estratégica.",
       "toolTipInfo": "Wordle desafía a los jugadores a adivinar una palabra oculta de 5 letras (sin acentos) en 6 intentos.<br><br>Los usuarios pueden escribir letras utilizando el teclado del PC o móvil, o con un teclado virtual.<br><br>En cada intento, las casillas muestran un fondo amarillo para las letras que están en la palabra pero no en la posición correcta, y verde para las letras que están en la posición correcta.",
-      "appUrl": ""
+      "appUrl": "",
+      "priority": 4
     }
   ],
   "footer": "Todos los derechos reservados.",
