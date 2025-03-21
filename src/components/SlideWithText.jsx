@@ -1,7 +1,7 @@
 import {  useContext, useState, useEffect } from 'react'
 //import { LanguageContext } from '../../../context/LanguageContext.js'
 import { ThemeContext } from '../context/ThemeContext'
-import '../styles/slideWithText.css'
+import '../styles/SlideWithText.css'
 import PropTypes from 'prop-types'
 import { getImageResults, imageToShow } from '../services/slideWithTextUtils'
 
