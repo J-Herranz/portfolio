@@ -76,6 +76,7 @@
       "appIconFile": "wordle1_white.png",
       "subAppThumbnailFileName": "wordle.jpg",
       "subAppDescription": "L'application du jeu \"Motus\" propose un défi de mots où les joueurs doivent deviner un mot en six essais, en recevant des indices sur les lettres correctes et leur position, favorisant la réflexion stratégique.",
+      "toolTipInfo": "Motus défie les joueurs de deviner un mot caché de 5 lettres (sans accents) en 6 essais.<br><br>Les utilisateurs peuvent saisir des lettres à l'aide du clavier de l'ordinateur ou du mobile, ou d'un clavier virtuel.<br><br>À chaque tentative, les cases affichent un fond jaune pour les lettres présentes dans le mot mais pas à la bonne position, et vert pour les lettres à la bonne position",
       "appUrl": "",
       "priority": 4
     }
